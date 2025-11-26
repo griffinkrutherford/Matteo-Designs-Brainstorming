@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Mattéo Designs</title>
+    <meta name="description" content="Review Mattéo Designs' residential, restaurant, commercial, and restoration services inspired by Sandra Costa Design Group.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c89c5d; --charcoal: #1c1f23; --muted: rgba(255,255,255,0.7); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #111518; color: #fff; font-family: 'Montserrat', sans-serif; line-height: 1.8; }
+        header { position: sticky; top: 0; background: rgba(17,21,24,0.95); border-bottom: 1px solid rgba(255,255,255,0.08); z-index: 10; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.8rem; }
+        nav ul { display: flex; gap: 2rem; list-style: none; }
+        nav a { text-decoration: none; color: inherit; }
+        .btn-outline { border: 1px solid #fff; padding: 0.6rem 1.4rem; border-radius: 999px; font-size: 0.72rem; }
+        main { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem 5rem; }
+        h1, h2, h3 { text-transform: uppercase; letter-spacing: 0.2em; }
+        h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .service-card { border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.02); }
+        .service-card span { display: block; color: var(--gold); letter-spacing: 0.3em; font-size: 0.7rem; margin-bottom: 0.5rem; }
+        .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 3rem; }
+        .photo-grid img { width: 100%; border-radius: 1rem; height: 220px; object-fit: cover; }
+        .cta { margin-top: 3rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--muted); }
+        footer { margin-top: 4rem; text-align: center; color: var(--muted); text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.7rem; }
+        @media (max-width: 640px) { nav ul { display: none; } main { padding: 3rem 1.5rem 4rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-inner">
+            <a href="index.html" style="color:#fff; text-decoration:none;">Mattéo Designs</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="btn-outline" href="contact.html">Book</a>
+        </div>
+    </header>
+
+    <main>
+        <p style="letter-spacing:0.35em; text-transform:uppercase; font-size:0.75rem; color:var(--muted);">Services</p>
+        <h1>Residential, hospitality, restoration.</h1>
+        <p style="max-width:720px;">Modeled after the Sandra Costa Design Group structure, our teams champion every phase from concept through installation.</p>
+
+        <div class="service-grid">
+            <article class="service-card">
+                <span>Residential & Villas</span>
+                <h3>Black Satin Estate</h3>
+                <p>Gallery-level finishes, private wellness wing, bespoke furniture suites.</p>
+            </article>
+            <article class="service-card">
+                <span>Residential & Villas</span>
+                <h3>Modern Deco Revival</h3>
+                <p>Curved plaster walls, smoked glass, mirrored ceilings reminiscent of Golden Age LA.</p>
+            </article>
+            <article class="service-card">
+                <span>Restaurants</span>
+                <h3>Buns N Roses LA</h3>
+                <p>Immersive dining theater with neon archways, brass canopy bar, and floral installations.</p>
+            </article>
+            <article class="service-card">
+                <span>Restaurants</span>
+                <h3>LeKa Steak House</h3>
+                <p>Dark timber, sculptural banquettes, walk-in wine gallery anchored by Vanderhoof cabinetry.</p>
+            </article>
+            <article class="service-card">
+                <span>Restorations</span>
+                <h3>Egyptian Theater</h3>
+                <p>Conservation work balancing storytelling murals with modern lighting + seating grids.</p>
+            </article>
+            <article class="service-card">
+                <span>Commercial</span>
+                <h3>Wilshire Corridor Penthouse</h3>
+                <p>Executive suite layering bronze screens, acoustic ceilings, and curated art.</p>
+            </article>
+        </div>
+
+        <div class="photo-grid">
+            <img src="../../../images/Vanderhoof%20Photos/Best%20Kitchen%202.jpg" alt="Residential kitchen">
+            <img src="../../../images/Vanderhoof%20Photos/Front%20Room.jpg" alt="Lobby lounge">
+            <img src="../../../images/Vanderhoof%20Photos/Play%20Room.jpg" alt="Creative studio">
+            <img src="../../../images/Vanderhoof%20Photos/Home%20Office.jpg" alt="Commercial-style office">
+        </div>
+
+        <p class="cta">Ready for a proposal? <a href="contact.html" style="color:#fff;">Contact Mattéo Designs</a>.</p>
+
+        <footer>&copy; 2025 Mattéo Designs · Santa Fe</footer>
+    </main>
+</body>
+</html>

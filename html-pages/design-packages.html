@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design Packages & Pricing | Mattéo Designs Santa Fe</title>
+    <meta name="description" content="Transparent interior design pricing and service packages. From consultations to full-service design, find the perfect package for your Santa Fe home or business.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .pricing-card.featured {
+            border: 3px solid #27ae60;
+            transform: scale(1.05);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .package-name {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            color: #27ae60;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .package-price-note {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .package-description {
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #2c3e50;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cta-button {
+            display: block;
+            text-align: center;
+            background: #27ae60;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #229954;
+            transform: translateY(-2px);
+        }
+
+        .cta-button-secondary {
+            background: white;
+            color: #27ae60;
+            border: 2px solid #27ae60;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 4rem 0;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #f8f9fa;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .check {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .faq-section {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-item p {
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" style="font-size: 1.5rem; font-weight: 700; color: #2c3e50; text-decoration: none;">Mattéo Designs</a>
+            <nav style="display: flex; gap: 2rem; align-items: center;">
+                <a href="/portfolio" style="color: #2c3e50; text-decoration: none;">Portfolio</a>
+                <a href="/services" style="color: #2c3e50; text-decoration: none;">Services</a>
+                <a href="/blog" style="color: #2c3e50; text-decoration: none;">Blog</a>
+                <a href="/contact" style="color: #2c3e50; text-decoration: none;">Contact</a>
+                <a href="/free-consultation" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 600;">Free Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Transparent Pricing, Exceptional Design</h1>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">Choose the package that fits your project and budget—from single-room consultations to full-service design</p>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section style="padding: 4rem 2rem;">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Consultation Package -->
+                <div class="pricing-card">
+                    <h3 class="package-name">Consultation</h3>
+                    <div class="package-price">$500</div>
+                    <p class="package-price-note">One-time fee</p>
+                    <p class="package-description">
+                        Perfect for homeowners who want expert guidance before starting a project.
+                    </p>
+                    <ul class="feature-list">
+                        <li>2-hour in-home consultation</li>
+                        <li>Design assessment & recommendations</li>
+                        <li>Color palette suggestions</li>
+                        <li>Space planning advice</li>
+                        <li>Furniture arrangement ideas</li>
+                        <li>Written summary of recommendations</li>
+                        <li>$500 credit toward full design services</li>
+                    </ul>
+                    <a href="/free-consultation" class="cta-button cta-button-secondary">Book Consultation</a>
+                </div>
+
+                <!-- Design Package (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="package-badge">MOST POPULAR</div>
+                    <h3 class="package-name">Full Design</h3>
+                    <div class="package-price">$5,000+</div>
+                    <p class="package-price-note">Starting price per room</p>
+                    <p class="package-description">
+                        Complete design service from concept to final installation for one or more rooms.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Everything in Consultation package</li>
+                        <li>Detailed floor plans & 3D renderings</li>
+                        <li>Complete material & finishes selection</li>
+                        <li>Furniture, fixtures & equipment sourcing</li>
+                        <li>Contractor coordination</li>
+                        <li>Budget management & procurement</li>
+                        <li>Project management & site visits</li>
+                        <li>Final installation & styling</li>
+                    </ul>
+                    <a href="/free-consultation" class="cta-button">Request Proposal</a>
+                </div>
+
+                <!-- Implementation Package -->
+                <div class="pricing-card">
+                    <h3 class="package-name">Turn-Key</h3>
+                    <div class="package-price">$15,000+</div>
+                    <p class="package-price-note">Starting price for whole home</p>
+                    <p class="package-description">
+                        Comprehensive whole-home design with full project implementation and white-glove service.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Everything in Full Design package</li>
+                        <li>Whole-home design planning</li>
+                        <li>Architectural coordination</li>
+                        <li>Custom millwork & cabinetry design</li>
+                        <li>Lighting design & selection</li>
+                        <li>Window treatments</li>
+                        <li>Art & accessories curation</li>
+                        <li>White-glove installation</li>
+                        <li>Post-project support</li>
+                    </ul>
+                    <a href="/free-consultation" class="cta-button">Request Proposal</a>
+                </div>
+            </div>
+
+            <!-- Custom Projects Note -->
+            <div style="background: white; border-radius: 12px; padding: 2rem; margin-top: 3rem; text-align: center; border: 2px solid #27ae60;">
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Custom & Commercial Projects</h3>
+                <p style="color: #7f8c8d; margin-bottom: 1.5rem;">
+                    Need something different? We create custom packages for unique projects, commercial spaces, and multi-property developments.
+                </p>
+                <a href="/contact" style="color: #27ae60; font-weight: 600; text-decoration: none;">Contact us for custom pricing →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Comparison -->
+    <section style="padding: 4rem 2rem; background: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #2c3e50;">Package Comparison</h2>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th style="text-align: center;">Consultation</th>
+                            <th style="text-align: center;">Full Design</th>
+                            <th style="text-align: center;">Turn-Key</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>In-home consultation</td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Design recommendations</td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Floor plans & 3D renderings</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Material & finishes selection</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Furniture sourcing & procurement</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Contractor coordination</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Project management</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Custom millwork design</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Lighting design</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Art & accessories curation</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>White-glove installation</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;">—</td>
+                            <td style="text-align: center;"><span class="check">✓</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment ROI -->
+    <section style="padding: 4rem 2rem;">
+        <div class="container">
+            <div style="background: linear-gradient(135deg, #27ae60 0%, #229954 100%); color: white; border-radius: 12px; padding: 4rem; text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">The Value of Professional Design</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.95;">
+                    Professional interior design isn't just about aesthetics—it's an investment in your property, well-being, and quality of life.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">10-15%</div>
+                        <div>Increase in Property Value</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">30%</div>
+                        <div>Reduction in Costly Mistakes</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">25-40%</div>
+                        <div>Energy Bill Savings (LEED)</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">100%</div>
+                        <div>Increased Daily Enjoyment</div>
+                    </div>
+                </div>
+
+                <a href="/free-consultation" style="background: white; color: #27ae60; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block;">Schedule Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" style="margin: 4rem auto; max-width: 900px;">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #2c3e50;">Pricing FAQs</h2>
+
+        <div class="faq-item">
+            <h3>How do you charge for your services?</h3>
+            <p>
+                Our pricing is project-based and depends on scope, complexity, and timeline. After an initial consultation, I provide a detailed proposal outlining all costs. No hidden fees or surprises.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What's not included in the design fee?</h3>
+            <p>
+                Design fees cover my professional services (design, planning, project management). Separate costs include furniture, materials, contractor labor, and any product purchases. I help you establish and manage a realistic budget for these items.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do you require a deposit?</h3>
+            <p>
+                Yes. I require a 50% deposit to begin work, with the balance due upon project completion. For larger projects, we can arrange a payment schedule tied to project milestones.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I use my own contractors?</h3>
+            <p>
+                Absolutely! I'm happy to work with contractors you trust. I can also recommend qualified professionals from my network of Santa Fe contractors, all vetted for quality and reliability.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What if my project budget changes?</h3>
+            <p>
+                We'll establish a budget during our initial consultation and I'll design within those parameters. If your budget changes, we can adjust the scope accordingly. My goal is to maximize value at any price point.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do you offer payment plans?</h3>
+            <p>
+                For larger projects, I can create a custom payment schedule that aligns with project phases. Contact me to discuss options that work for your situation.
+            </p>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <p style="color: #7f8c8d; margin-bottom: 1rem;">Still have questions?</p>
+            <a href="/resources/faq" style="color: #27ae60; font-weight: 600; text-decoration: none;">View All FAQs →</a>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="padding: 4rem 2rem; text-align: center;">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #2c3e50;">Ready to Get Started?</h2>
+            <p style="font-size: 1.2rem; color: #7f8c8d; margin-bottom: 2rem;">
+                Schedule a free consultation to discuss your project and receive a custom proposal tailored to your needs and budget.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="/free-consultation" style="background: #27ae60; color: white; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block;">Schedule Free Consultation</a>
+                <a href="tel:505XXXXXXX" style="background: transparent; color: #27ae60; border: 2px solid #27ae60; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block;">📞 Call (505) XXX-XXXX</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #2c3e50; color: white; padding: 4rem 2rem;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem;">
+                <div>
+                    <h3 style="margin-bottom: 1rem;">Mattéo Designs</h3>
+                    <p style="color: rgba(255,255,255,0.8);">LEED Certified Interior Designer<br>Santa Fe, New Mexico</p>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 1rem;">Services</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.5rem;"><a href="/services/residential" style="color: rgba(255,255,255,0.8); text-decoration: none;">Residential Design</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="/services/commercial" style="color: rgba(255,255,255,0.8); text-decoration: none;">Commercial Design</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="/services/leed-certified-design" style="color: rgba(255,255,255,0.8); text-decoration: none;">LEED Certified Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 1rem;">Contact</h3>
+                    <p style="color: rgba(255,255,255,0.8);">
+                        <strong>Phone:</strong> (505) XXX-XXXX<br>
+                        <strong>Email:</strong> info@matteodesigns.com<br>
+                        <strong>Location:</strong> Santa Fe, NM
+                    </p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.6);">
+                <p>&copy; 2025 Mattéo Designs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

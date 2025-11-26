@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mattéo Designs</title>
+    <meta name="description" content="Contact Mattéo Designs for bespoke interior design services inspired by Sandra Costa Design Group.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --charcoal: #111518; --gold: #c89c5d; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--charcoal); color: #fff; font-family: 'Montserrat', sans-serif; line-height: 1.7; }
+        header { position: sticky; top: 0; background: rgba(17,21,24,0.95); border-bottom: 1px solid rgba(255,255,255,0.08); z-index: 10; }
+        .nav-inner { max-width: 1000px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.8rem; }
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a { color: inherit; text-decoration: none; }
+        .btn-outline { border: 1px solid #fff; padding: 0.6rem 1.2rem; border-radius: 999px; font-size: 0.75rem; }
+        main { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem 5rem; }
+        h1 { text-transform: uppercase; letter-spacing: 0.25em; font-size: clamp(2rem, 5vw, 3rem); }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 2rem; }
+        .contact-card { border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.02); }
+        .contact-card strong { text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.75rem; color: var(--gold); }
+        .contact-card a { color: #fff; font-weight: 600; text-decoration: none; }
+        .questionnaire { margin-top: 3rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 1.2rem; padding: 2rem; background: rgba(255,255,255,0.03); }
+        .questionnaire h2 { letter-spacing: 0.3em; font-size: 1.1rem; margin-bottom: 1rem; }
+        .questionnaire p { color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; }
+        .questionnaire form { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+        .questionnaire label { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.65rem; color: rgba(255,255,255,0.7); display: flex; flex-direction: column; }
+        .questionnaire input,
+        .questionnaire select,
+        .questionnaire textarea { margin-top: 0.4rem; padding: 0.9rem 1rem; border-radius: 0.6rem; border: 1px solid rgba(255,255,255,0.15); background: rgba(0,0,0,0.3); color: #fff; font-family: inherit; }
+        .questionnaire textarea { min-height: 140px; resize: vertical; grid-column: 1 / -1; }
+        .questionnaire .full { grid-column: 1 / -1; }
+        .questionnaire button { grid-column: 1 / -1; margin-top: 0.5rem; padding: 0.9rem 1.5rem; border-radius: 999px; border: none; background: #fff; color: #000; letter-spacing: 0.25em; text-transform: uppercase; font-size: 0.75rem; cursor: pointer; }
+        footer { margin-top: 4rem; text-align: center; text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.7rem; color: rgba(255,255,255,0.6); }
+        @media (max-width: 640px) { nav ul { display: none; } main { padding: 3rem 1.5rem 4rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-inner">
+            <a href="index.html" style="color:#fff; text-decoration:none;">Mattéo Designs</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="btn-outline" href="tel:15058743739">Call</a>
+        </div>
+    </header>
+
+    <main>
+        <p style="letter-spacing:0.35em; text-transform:uppercase; font-size:0.75rem; color:rgba(255,255,255,0.7);">Contact</p>
+        <h1>Contact Mattéo Designs</h1>
+        <p style="max-width:640px;">Share your priorities for residential, hospitality, or restoration work. Inspired by Sandra Costa Design Group, we respond within one business day.</p>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <strong>Call or Text</strong>
+                <p><a href="tel:15058743739">1-505-874-3739</a></p>
+            </div>
+            <div class="contact-card">
+                <strong>Email</strong>
+                <p><a href="mailto:info@matteodesigns.com">info@matteodesigns.com</a></p>
+            </div>
+            <div class="contact-card">
+                <strong>Studio Hours</strong>
+                <p>By appointment · Wed-Sat</p>
+            </div>
+            <div class="contact-card">
+                <strong>Social</strong>
+                <p>Instagram · Houzz · LinkedIn</p>
+            </div>
+        </div>
+
+        <section class="questionnaire">
+            <h2>Interior Design Questionnaire</h2>
+            <p>Answer a few prompts so the Mattéo Designs team can respond with a Sandra Costa–level plan.</p>
+            <form>
+                <label>
+                    Name
+                    <input type="text" placeholder="Full name">
+                </label>
+                <label>
+                    Email
+                    <input type="email" placeholder="Email address">
+                </label>
+                <label>
+                    Phone
+                    <input type="tel" placeholder="(555) 000-0000">
+                </label>
+                <label>
+                    Project Location
+                    <input type="text" placeholder="City / Neighborhood">
+                </label>
+                <label>
+                    Project Type
+                    <select>
+                        <option>Residential &amp; Villas</option>
+                        <option>Restaurant / Hospitality</option>
+                        <option>Commercial / Workplace</option>
+                        <option>Historic Restoration</option>
+                    </select>
+                </label>
+                <label>
+                    Target Timeline
+                    <select>
+                        <option>0-3 months</option>
+                        <option>3-6 months</option>
+                        <option>6-12 months</option>
+                        <option>Flexible</option>
+                    </select>
+                </label>
+                <label class="full">
+                    Investment Range
+                    <input type="text" placeholder="e.g., $300K - $500K">
+                </label>
+                <label class="full">
+                    Style Priorities &amp; Goals
+                    <textarea placeholder="Tell us about inspiration, must-haves, sustainability considerations..."></textarea>
+                </label>
+                <button type="submit">Send Inquiry</button>
+            </form>
+        </section>
+
+        <footer>&copy; 2025 Mattéo Designs · Santa Fe</footer>
+    </main>
+</body>
+</html>

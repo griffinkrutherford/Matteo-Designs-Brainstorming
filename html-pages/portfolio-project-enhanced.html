@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historic Adobe Renovation - Santa Fe | Mattéo Designs Portfolio</title>
+    <meta name="description" content="See how we transformed this historic Santa Fe adobe home with sustainable design principles while preserving its authentic character.">
+
+    <!-- Creative Work Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Historic Adobe Renovation",
+      "description": "Sustainable renovation of historic Santa Fe adobe home",
+      "author": {
+        "@type": "Person",
+        "name": "Mattéo Bitetti"
+      },
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      "dateCreated": "2024"
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .project-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background: #27ae60;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .tag.secondary {
+            background: #3498db;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-description {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            line-height: 1.8;
+        }
+
+        .project-details {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            height: fit-content;
+        }
+
+        .detail-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-value {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .section {
+            margin: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .challenge-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .card.challenge {
+            border-left: 4px solid #e74c3c;
+        }
+
+        .card.solution {
+            border-left: 4px solid #27ae60;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .before-after img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .before-after-label {
+            text-align: center;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .testimonial-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            color: #7f8c8d;
+        }
+
+        .related-projects {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+            margin-top: 5rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project-card-content {
+            padding: 1.5rem;
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 4rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 5rem 0;
+        }
+
+        .cta-button {
+            background: white;
+            color: #27ae60;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-header,
+            .challenge-solution,
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" style="font-size: 1.5rem; font-weight: 700; color: #2c3e50; text-decoration: none;">Mattéo Designs</a>
+            <nav style="display: flex; gap: 2rem; align-items: center;">
+                <a href="/portfolio" style="color: #2c3e50; text-decoration: none;">Portfolio</a>
+                <a href="/services" style="color: #2c3e50; text-decoration: none;">Services</a>
+                <a href="/blog" style="color: #2c3e50; text-decoration: none;">Blog</a>
+                <a href="/contact" style="color: #2c3e50; text-decoration: none;">Contact</a>
+                <a href="/free-consultation" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 600;">Free Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Image -->
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600" alt="Historic Adobe Renovation Santa Fe" class="hero-image">
+
+    <!-- Project Header -->
+    <div class="container">
+        <div class="project-header">
+            <div>
+                <div class="project-tags">
+                    <span class="tag">Residential</span>
+                    <span class="tag">LEED Certified</span>
+                    <span class="tag secondary">Historic Renovation</span>
+                    <span class="tag secondary">Santa Fe</span>
+                </div>
+
+                <h1>Historic Adobe Renovation</h1>
+
+                <p class="project-description">
+                    Transforming a 1920s Santa Fe adobe home into a sustainable, modern living space while preserving its historic character and architectural integrity. This LEED certified renovation demonstrates how historic preservation and modern sustainability can coexist beautifully.
+                </p>
+            </div>
+
+            <div class="project-details">
+                <div class="detail-item">
+                    <div class="detail-label">Project Type</div>
+                    <div class="detail-value">Residential Renovation</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Location</div>
+                    <div class="detail-value">Santa Fe Historic District</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Size</div>
+                    <div class="detail-value">2,400 sq ft</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Timeline</div>
+                    <div class="detail-value">8 months</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Budget Range</div>
+                    <div class="detail-value">$250K - $300K</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">Certification</div>
+                    <div class="detail-value">LEED Gold</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Challenge & Solution -->
+        <div class="section">
+            <h2 class="section-title">The Challenge & Our Solution</h2>
+
+            <div class="challenge-solution">
+                <div class="card challenge">
+                    <h3>The Challenge</h3>
+                    <p style="color: #7f8c8d; line-height: 1.8;">
+                        The 100-year-old adobe home had significant structural issues, poor insulation, outdated systems, and a closed-off floor plan that didn't suit modern living. The clients wanted to preserve the home's historic character while achieving LEED certification and dramatically improving energy efficiency—a seemingly contradictory goal.
+                    </p>
+                    <ul style="margin-top: 1rem; color: #7f8c8d;">
+                        <li>Deteriorating adobe walls requiring stabilization</li>
+                        <li>Single-pane windows losing significant heat</li>
+                        <li>Inefficient heating system</li>
+                        <li>Dark, closed-off rooms</li>
+                        <li>Historic District restrictions on exterior changes</li>
+                    </ul>
+                </div>
+
+                <div class="card solution">
+                    <h3>Our Solution</h3>
+                    <p style="color: #7f8c8d; line-height: 1.8;">
+                        We developed a comprehensive renovation strategy that respected the home's heritage while incorporating modern sustainable technologies. By working closely with historic preservation authorities and using traditional materials in innovative ways, we achieved both goals.
+                    </p>
+                    <ul style="margin-top: 1rem; color: #7f8c8d;">
+                        <li>Restored adobe walls with traditional mud plaster</li>
+                        <li>Installed custom wood windows matching historic profiles</li>
+                        <li>Added radiant floor heating using solar thermal</li>
+                        <li>Created open flow while maintaining traditional vigas</li>
+                        <li>Achieved LEED Gold certification</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Before & After -->
+        <div class="section">
+            <h2 class="section-title">Before & After</h2>
+
+            <div class="before-after">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600" alt="Before renovation">
+                    <div class="before-after-label">Before</div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="After renovation">
+                    <div class="before-after-label">After</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Features -->
+        <div class="section">
+            <h2 class="section-title">Sustainable Features</h2>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">☀️</div>
+                    <h4>Solar Power</h4>
+                    <p>8kW rooftop solar array provides 90% of energy needs</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">♻️</div>
+                    <h4>Reclaimed Materials</h4>
+                    <p>70% of wood and stone sourced from salvage yards</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">💧</div>
+                    <h4>Water Conservation</h4>
+                    <p>40% reduction in water use through efficient fixtures</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🌡️</div>
+                    <h4>Radiant Heating</h4>
+                    <p>In-floor radiant system powered by solar thermal</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🪟</div>
+                    <h4>High-Performance Windows</h4>
+                    <p>Custom wood windows with low-E glazing</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🌿</div>
+                    <h4>Non-Toxic Materials</h4>
+                    <p>Zero-VOC paints and finishes throughout</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="section">
+            <h2 class="section-title">Project Gallery</h2>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="Kitchen">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600" alt="Living room">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Bathroom">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Exterior">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600" alt="Detail">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=600" alt="Bedroom">
+                </div>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="section">
+            <h2 class="section-title">Measurable Results</h2>
+
+            <div style="background: #f8f9fa; padding: 3rem; border-radius: 12px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center;">
+                    <div>
+                        <div style="font-size: 3rem; font-weight: bold; color: #27ae60; margin-bottom: 0.5rem;">65%</div>
+                        <div style="color: #7f8c8d;">Energy Cost Reduction</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; font-weight: bold; color: #27ae60; margin-bottom: 0.5rem;">40%</div>
+                        <div style="color: #7f8c8d;">Water Usage Reduction</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; font-weight: bold; color: #27ae60; margin-bottom: 0.5rem;">90%</div>
+                        <div style="color: #7f8c8d;">Solar Energy Coverage</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; font-weight: bold; color: #27ae60; margin-bottom: 0.5rem;">GOLD</div>
+                        <div style="color: #7f8c8d;">LEED Certification</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="testimonial-box">
+            <div class="testimonial-text">
+                "Mattéo understood our vision completely—a home that honored its 100-year history while being ready for the next 100 years. The transformation exceeded our expectations, and our energy bills dropped by more than half. We couldn't be happier."
+            </div>
+            <div class="testimonial-author">
+                — Sarah & Michael T., Homeowners
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Have a Historic Home That Needs Updating?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
+                Let's discuss how we can preserve your home's character while incorporating modern, sustainable solutions.
+            </p>
+            <a href="/free-consultation" class="cta-button">Schedule Free Consultation</a>
+        </div>
+    </div>
+
+    <!-- Related Projects -->
+    <div class="related-projects">
+        <div class="container">
+            <h2 class="section-title">Related Projects</h2>
+
+            <div class="project-grid">
+                <a href="/portfolio/modern-kitchen" class="project-card">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="Modern Kitchen">
+                    <div class="project-card-content">
+                        <h3>Contemporary Kitchen Remodel</h3>
+                        <p>Residential • Santa Fe</p>
+                    </div>
+                </a>
+
+                <a href="/portfolio/medical-office" class="project-card">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Medical Office">
+                    <div class="project-card-content">
+                        <h3>Medical Office Design</h3>
+                        <p>Commercial • Santa Fe</p>
+                    </div>
+                </a>
+
+                <a href="/portfolio/sustainable-living" class="project-card">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600" alt="Sustainable Living">
+                    <div class="project-card-content">
+                        <h3>Sustainable Living Space</h3>
+                        <p>Residential • LEED Certified</p>
+                    </div>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="/portfolio" style="background: #27ae60; color: white; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block;">View All Projects</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: #2c3e50; color: white; padding: 4rem 2rem;">
+        <div class="container" style="text-align: center;">
+            <p>&copy; 2025 Mattéo Designs. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

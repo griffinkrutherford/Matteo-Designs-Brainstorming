@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning Documents - Matteo Designs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .content {
+            padding: 3rem 2rem;
+        }
+
+        .intro {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .intro h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .document-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .document-item {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .document-item:hover {
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transform: translateX(5px);
+        }
+
+        .document-item h3 {
+            color: #333;
+            margin-bottom: 0.75rem;
+            font-size: 1.4rem;
+        }
+
+        .document-item p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .document-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .document-path {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .document-path code {
+            background: #eef2ff;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: #4c51bf;
+        }
+
+        .document-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .doc-link {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .doc-link:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .doc-link.secondary {
+            background: #6c757d;
+        }
+
+        .doc-link.secondary:hover {
+            background: #5a6268;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .document-links {
+                flex-direction: column;
+            }
+
+            .doc-link {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link">Back to Home</a>
+            <h1>Planning Documents</h1>
+            <p>Strategic plans, knowledge base, and recommendations</p>
+        </header>
+
+        <div class="content">
+            <div class="intro">
+                <h2>Overview</h2>
+                <p>This section contains non-technical planning documents, strategic recommendations, and knowledge resources for Matteo Designs. These documents provide insights into site structure, SEO strategies, conversion optimization, and business development.</p>
+            </div>
+
+            <div class="document-list">
+                <!-- Knowledge Base -->
+                <div class="document-item">
+                    <h3>Matteo Designs Knowledge Base</h3>
+                    <div class="document-meta">
+                        <span>Format: Markdown</span>
+                        <span>Category: Reference</span>
+                    </div>
+                    <div class="document-path">Path: <code>matteo-designs-knowledge-base.md</code></div>
+                    <p>Comprehensive knowledge base containing essential information about Matteo Designs, including brand positioning, target audience, services, and key differentiators. Essential reading for understanding the business foundation.</p>
+                    <div class="document-links">
+                        <a href="matteo-designs-knowledge-base.md" class="doc-link">View Document</a>
+                    </div>
+                </div>
+
+                <!-- Site Structure -->
+                <div class="document-item">
+                    <h3>Improved Site Structure</h3>
+                    <div class="document-meta">
+                        <span>Format: Markdown</span>
+                        <span>Category: Strategy</span>
+                    </div>
+                    <div class="document-path">Path: <code>matteodesigns-improved-site-structure.md</code></div>
+                    <p>Detailed recommendations for improving the website structure, navigation, and information architecture. Includes page hierarchy, content organization, and user flow optimization.</p>
+                    <div class="document-links">
+                        <a href="matteodesigns-improved-site-structure.md" class="doc-link">View Document</a>
+                    </div>
+                </div>
+
+                <!-- SEO & Conversion -->
+                <div class="document-item">
+                    <h3>SEO & Conversion Recommendations</h3>
+                    <div class="document-meta">
+                        <span>Format: HTML</span>
+                        <span>Category: Optimization</span>
+                    </div>
+                    <div class="document-path">Path: <code>matteo-designs-seo-conversion-recommendations.html</code></div>
+                    <p>Comprehensive guide covering SEO best practices, conversion rate optimization strategies, and technical recommendations to improve search visibility and user engagement.</p>
+                    <div class="document-links">
+                        <a href="matteo-designs-seo-conversion-recommendations.html" class="doc-link">View Document</a>
+                    </div>
+                </div>
+
+                <!-- Client-Friendly Overview -->
+                <div class="document-item">
+                    <h3>Client-Friendly Overview</h3>
+                    <div class="document-meta">
+                        <span>Format: HTML</span>
+                        <span>Category: Presentation</span>
+                    </div>
+                    <div class="document-path">Path: <code>matteo-designs-client-friendly.html</code></div>
+                    <p>Easy-to-understand overview of recommendations and strategies, designed for client presentations and stakeholder communication. Non-technical language with clear actionable insights.</p>
+                    <div class="document-links">
+                        <a href="matteo-designs-client-friendly.html" class="doc-link">View Document</a>
+                    </div>
+                </div>
+
+                <!-- Additional Resources -->
+                <div class="document-item">
+                    <h3>HTML Page Templates</h3>
+                    <div class="document-meta">
+                        <span>Format: Various</span>
+                        <span>Category: Templates</span>
+                    </div>
+                    <div class="document-path">Paths: <code>html-pages/</code> &amp; <code>html-pages-v2/</code></div>
+                    <p>Collection of HTML page templates and examples, including portfolio pages, service pages, and specialized content templates like LEED certification and design packages.</p>
+                    <div class="document-links">
+                        <a href="html-pages/README.md" class="doc-link">View V1 Templates</a>
+                        <a href="html-pages-v2/README.md" class="doc-link secondary">View V2 Templates</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><a href="index.html" class="footer-link">Return to Main Hub</a></p>
+            <p style="margin-top: 1rem; color: #999;">&copy; 2024 Matteo Designs Planning Resources</p>
+        </footer>
+    </div>
+</body>
+</html>

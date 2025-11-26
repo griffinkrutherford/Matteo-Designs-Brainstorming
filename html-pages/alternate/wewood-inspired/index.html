@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mattéo Designs | Crafted Interiors Inspired by Nature</title>
+    <meta name="description" content="An alternate Mattéo Designs home page inspired by contemporary European furniture houses. Explore crafted collections, bespoke interiors, and Santa Fe studio services that honor natural materials.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sand: #f4efe9;
+            --linen: #f8f5f0;
+            --charcoal: #1f1b17;
+            --stone: #a08d7f;
+            --clay: #c0a07a;
+            --white: #ffffff;
+            --border: rgba(31, 27, 23, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--sand);
+            color: var(--charcoal);
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(244, 239, 233, 0.98);
+            backdrop-filter: blur(6px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .header-cta {
+            border: 1px solid var(--charcoal);
+            padding: 0.65rem 1.4rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 5rem;
+        }
+
+        section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--charcoal);
+            letter-spacing: -0.01em;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+        }
+
+        .serif-label {
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-size: 0.75rem;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            align-items: center;
+            padding: 6rem 0 5rem;
+        }
+
+        .hero-image {
+            background: url('../../../images/Vanderhoof%20Photos/Front%20Room.jpg') center/cover no-repeat;
+            min-height: 420px;
+            border-radius: 1.5rem;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(31, 27, 23, 0.2);
+        }
+
+        .hero-image::after {
+            content: "Limited Series Nº07";
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.8);
+            border-radius: 999px;
+            font-size: 0.8rem;
+            letter-spacing: 0.3em;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+
+        .hero-meta div {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-actions a {
+            text-decoration: none;
+            padding: 0.85rem 1.8rem;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.8rem;
+        }
+
+        .hero-actions .primary {
+            background: var(--charcoal);
+            color: var(--sand);
+        }
+
+        .hero-actions .ghost {
+            border: 1px solid var(--charcoal);
+            color: var(--charcoal);
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .collection-card {
+            background: var(--white);
+            border-radius: 1.25rem;
+            padding: 2.5rem;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid var(--border);
+            box-shadow: 0 15px 30px rgba(31, 27, 23, 0.08);
+        }
+
+        .collection-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .collection-card p {
+            color: rgba(31, 27, 23, 0.75);
+            margin-bottom: 1.5rem;
+        }
+
+        .collection-card span {
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-size: 0.75rem;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .material-board {
+            background: url('../../../images/Vanderhoof%20Photos/Best%20Kitchen.jpg') center/cover;
+            border-radius: 1.2rem;
+            min-height: 420px;
+            box-shadow: 0 30px 60px rgba(31, 27, 23, 0.25);
+            position: relative;
+        }
+
+        .material-board::after {
+            content: "Hand-Turned Ash | Solid Brass Joinery";
+            position: absolute;
+            bottom: 1.25rem;
+            left: 1.25rem;
+            right: 1.25rem;
+            background: rgba(255,255,255,0.9);
+            padding: 1rem;
+            border-radius: 0.8rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .stat {
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 2rem;
+        }
+
+        .featured-pieces {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .piece-card {
+            background: var(--white);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .piece-image {
+            background: linear-gradient(140deg, #d8c3a5, #ede0d4);
+            border-radius: 0.8rem;
+            min-height: 220px;
+            position: relative;
+        }
+
+        .piece-image span {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            letter-spacing: 0.2em;
+        }
+
+        .piece-card footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        .studio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .studio-card {
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            background: var(--linen);
+        }
+
+        .journal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .journal-card {
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            background: var(--white);
+        }
+
+        .journal-card small {
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: rgba(31,27,23,0.6);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-card {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            height: 260px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: saturate(1.05);
+        }
+
+        .gallery-card figcaption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1rem;
+            background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.65));
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+        }
+
+        footer {
+            background: var(--charcoal);
+            color: var(--sand);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+        }
+
+        .floating-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--charcoal);
+            color: var(--sand);
+            padding: 1rem 1.8rem;
+            border-radius: 999px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 3rem;
+            }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .floating-cta {
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
+                bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">Mattéo Designs Studio</div>
+            <nav>
+                <ul>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="craft.html">Craft</a></li>
+                    <li><a href="studio.html">Studio</a></li>
+                    <li><a href="journal.html">Journal</a></li>
+                </ul>
+            </nav>
+            <a href="studio.html" class="header-cta">Book Studio Visit</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <p class="serif-label">Founded in Santa Fe · 2011</p>
+                <h1>Furniture & interiors with a modern desert soul.</h1>
+                <p>
+                    Inspired by European cabinetmaking houses like Wewood, this alternate Mattéo Designs home page celebrates rhythm, tactility, and the calm that natural materials bring to a space.
+                </p>
+                <div class="hero-meta">
+                    <div>Edition / 2025</div>
+                    <div>Lead Time / 8 Weeks</div>
+                    <div>Material / FSC Oak</div>
+                </div>
+                <div class="hero-actions">
+                    <a class="primary" href="collections.html">View Lookbook</a>
+                    <a class="ghost" href="studio.html">Visit the Studio</a>
+                </div>
+            </div>
+            <div class="hero-image" aria-label="Warm wooden living space"></div>
+        </section>
+
+        <section id="collections">
+            <div class="serif-label">Signatures</div>
+            <h2>Curated collections rooted in craftsmanship.</h2>
+            <p style="max-width: 720px; color: rgba(31,27,23,0.75); margin-bottom: 2.5rem;">
+                Each piece enters the studio as raw timber and leaves as a limited object designed for residential sanctuaries, boutique hospitality, and contemplative workplaces.
+            </p>
+            <div class="collection-grid">
+                <article class="collection-card">
+                    <div>
+                        <h3>Casa Sol Collection</h3>
+                        <p>Sunwashed palettes, travertine plinths, and hand-finished oak silhouettes that glow under New Mexico light.</p>
+                    </div>
+                    <span>View Collection →</span>
+                </article>
+                <article class="collection-card">
+                    <div>
+                        <h3>Porto Line</h3>
+                        <p>Inspired by Portuguese studios — soft curves, tambour doors, and integrated storage for connoisseurs of quiet luxury.</p>
+                    </div>
+                    <span>Discover Story →</span>
+                </article>
+                <article class="collection-card">
+                    <div>
+                        <h3>Desert Archivist</h3>
+                        <p>Modular shelving, wine walls, and gallery-length benches fabricated with mortise joints and burnished brass.</p>
+                    </div>
+                    <span>Explore Editions →</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="craft">
+            <div class="split">
+                <div>
+                    <p class="serif-label">Crafted by Hand</p>
+                    <h2>Slow furniture, made to order.</h2>
+                    <p>
+                        Our work mirrors the ethos of Wewood — refined joinery, monolithic surfaces, and the courage to keep natural imperfections. Every commission passes through four disciplines: design study, wood selection, prototyping, and final detailing.
+                    </p>
+                    <div class="stat-grid">
+                        <div class="stat">
+                            <strong>36</strong>
+                            <span>Local artisans involved across each season.</span>
+                        </div>
+                        <div class="stat">
+                            <strong>92%</strong>
+                            <span>Materials sourced within 500 miles.</span>
+                        </div>
+                        <div class="stat">
+                            <strong>15</strong>
+                            <span>Finishes curated in our pigment library.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="material-board" aria-label="Material board with wood samples"></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="serif-label">Editions</div>
+            <h2>Featured pieces from the studio floor.</h2>
+            <div class="featured-pieces">
+                <article class="piece-card">
+                    <div class="piece-image">
+                        <span>New</span>
+                    </div>
+                    <div>
+                        <h3>Lagos Dining Table</h3>
+                        <p>Solid European oak, chamfered edges, brass inset connectors. Seats eight.</p>
+                    </div>
+                    <footer>
+                        <span>$8,200</span>
+                        <span>Lead 10 wks</span>
+                    </footer>
+                </article>
+                <article class="piece-card">
+                    <div class="piece-image" style="background: linear-gradient(120deg, #f3d1b0, #faf1e7);">
+                        <span>Limited</span>
+                    </div>
+                    <div>
+                        <h3>Santa Fe Armoire</h3>
+                        <p>Tambour facade, leather-lined shelving, concealed LED gallery lighting.</p>
+                    </div>
+                    <footer>
+                        <span>$12,400</span>
+                        <span>15 units</span>
+                    </footer>
+                </article>
+                <article class="piece-card">
+                    <div class="piece-image" style="background: linear-gradient(120deg, #d1c0a8, #f6efe3);">
+                        <span>Custom</span>
+                    </div>
+                    <div>
+                        <h3>Verde Console</h3>
+                        <p>Patinated bronze frame with quartzite slab. Ideal for art-forward foyers.</p>
+                    </div>
+                    <footer>
+                        <span>On Request</span>
+                        <span>10-12 wks</span>
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="serif-label">Vanderhoof Residence</div>
+            <h2>Scenes from the crafted home.</h2>
+            <p style="max-width: 760px; color: rgba(31,27,23,0.7);">
+                A curated glimpse at the Vanderhoof project — capturing hand-built cabinetry, layered textiles, and the calm California light that informed this alternate home page concept.
+            </p>
+            <div class="gallery-grid">
+                <figure class="gallery-card">
+                    <img src="../../../images/Vanderhoof%20Photos/Best%20Kitchen.jpg" alt="Vanderhoof kitchen with oak cabinetry and brass accents">
+                    <figcaption>Chef's kitchen</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <img src="../../../images/Vanderhoof%20Photos/Front%20Room%202.jpg" alt="Living room with layered neutrals and sculptural lighting">
+                    <figcaption>Front room lounge</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <img src="../../../images/Vanderhoof%20Photos/Shower.jpg" alt="Spa shower with limestone surfaces">
+                    <figcaption>Stone-wrapped spa</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <img src="../../../images/Vanderhoof%20Photos/Master%20Bedroom.jpg" alt="Master bedroom with arched headboard and warm lighting">
+                    <figcaption>Owner's suite</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <img src="../../../images/Vanderhoof%20Photos/Boys%20Room.jpg" alt="Youth bedroom with custom storage and wall graphics">
+                    <figcaption>Children's wing</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <img src="../../../images/Vanderhoof%20Photos/Play%20Room.jpg" alt="Vanderhoof playroom with built-in shelving">
+                    <figcaption>Creative studio</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="studio">
+            <div class="serif-label">Santa Fe Studio</div>
+            <h2>Beyond product — a full interior practice.</h2>
+            <p style="max-width: 760px; color: rgba(31,27,23,0.75);">
+                Commission the full Mattéo Designs experience: spatial planning, millwork, and curated styling across residences, boutique hotels, tasting rooms, and cultural venues.
+            </p>
+            <div class="studio-grid">
+                <article class="studio-card">
+                    <h3>Made-to-Measure</h3>
+                    <p>Tailored versions of our core collections adapted to dimensions, power integration, and acoustic needs.</p>
+                </article>
+                <article class="studio-card">
+                    <h3>Full Service Interiors</h3>
+                    <p>Concept to installation: architecture collaboration, lighting specification, procurement, styling.</p>
+                </article>
+                <article class="studio-card">
+                    <h3>Hospitality Lab</h3>
+                    <p>Signature lounges, lobbies, and tasting bars with durable finishes that maintain gallery-grade warmth.</p>
+                </article>
+                <article class="studio-card">
+                    <h3>Collector Services</h3>
+                    <p>One-of-one commissions for art patrons, including archival documentation and white-glove delivery.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="journal">
+            <div class="serif-label">Journal</div>
+            <h2>Notes from the studio.</h2>
+            <div class="journal-grid">
+                <article class="journal-card">
+                    <small>April · Field Study</small>
+                    <h3>The geometry of curved tambour doors</h3>
+                    <p>Our design director shares sketches that translate 1950s Porto townhouses into contemporary storage.</p>
+                </article>
+                <article class="journal-card">
+                    <small>May · Collaboration</small>
+                    <h3>Textiles with Oaxaca-based artisans</h3>
+                    <p>Layered upholstery program with naturally dyed wool, created to partner with oak and walnut finishes.</p>
+                </article>
+                <article class="journal-card">
+                    <small>June · Material Study</small>
+                    <h3>Why we patina brass in the desert</h3>
+                    <p>Exploring the chemistry and humidity rituals that create durable bronze hues with subtle glow.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>Mattéo Designs · Santa Fe</div>
+            <div>By Appointment · Wed-Sat</div>
+            <div>info@matteodesigns.com · (505) XXX-XXXX</div>
+            <div>Instagram · Pinterest · Journal</div>
+        </div>
+    </footer>
+
+    <a href="studio.html#visit" class="floating-cta">Schedule Studio Tour</a>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "InteriorDesigner",
+        "name": "Mattéo Designs Studio",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Santa Fe",
+            "addressRegion": "NM",
+            "addressCountry": "US"
+        },
+        "url": "https://www.matteodesigns.com",
+        "telephone": "+1-505-XXX-XXXX",
+        "description": "Alternate home page inspired by European furniture houses, featuring limited collections and bespoke interior services.",
+        "sameAs": [
+            "https://www.instagram.com/matteodesigns",
+            "https://www.pinterest.com/matteodesigns"
+        ]
+    }
+    </script>
+</body>
+</html>

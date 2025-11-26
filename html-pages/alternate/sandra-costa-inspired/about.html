@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Mattéo Designs</title>
+    <meta name="description" content="Learn about Mattéo Designs, a global luxury studio inspired by Sandra Costa Design Group and the Vanderhoof residence portfolio.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c89c5d; --charcoal: #1c1f23; --muted: #9ea3a8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #111518; color: #fff; font-family: 'Montserrat', sans-serif; line-height: 1.8; }
+        header { position: sticky; top: 0; background: rgba(17,21,24,0.95); backdrop-filter: blur(6px); border-bottom: 1px solid rgba(255,255,255,0.08); z-index: 10; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.8rem; }
+        nav ul { display: flex; gap: 2rem; list-style: none; }
+        nav a { color: inherit; text-decoration: none; }
+        .btn-outline { border: 1px solid #fff; padding: 0.6rem 1.2rem; border-radius: 999px; font-size: 0.7rem; }
+        main { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem 5rem; }
+        h1, h2, h3 { text-transform: uppercase; letter-spacing: 0.2em; }
+        h1 { font-size: clamp(2rem, 5vw, 3rem); }
+        .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; align-items: center; }
+        .about-grid img { width: 100%; border-radius: 1.2rem; box-shadow: 0 25px 50px rgba(0,0,0,0.4); }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 3rem; }
+        .stat { padding: 1.2rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 0.8rem; background: rgba(255,255,255,0.02); }
+        .stat span { display: block; font-size: 2rem; letter-spacing: 0.1em; color: var(--gold); }
+        .timeline { margin-top: 3rem; border-left: 3px solid rgba(255,255,255,0.2); padding-left: 1.5rem; }
+        .timeline article { margin-bottom: 1.5rem; }
+        .timeline h3 { color: var(--gold); letter-spacing: 0.15em; }
+        footer { margin-top: 4rem; text-align: center; color: var(--muted); text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.7rem; }
+        @media (max-width: 640px) { nav ul { display: none; } main { padding: 3rem 1.5rem 4rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-inner">
+            <a href="index.html" style="color:#fff; text-decoration:none;">Mattéo Designs</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="btn-outline" href="tel:1505XXXXXXX">Call</a>
+        </div>
+    </header>
+
+    <main>
+        <p style="letter-spacing:0.35em; text-transform:uppercase; font-size:0.75rem; color:var(--muted);">About Mattéo</p>
+        <h1>Global studio, Santa Fe roots.</h1>
+        <p style="max-width:720px;">Mattéo Designs mirrors the ambition of Sandra Costa Design Group—delivering bespoke environments in Beverly Hills, Paris, Hong Kong, and Santa Fe while remaining grounded in the Vanderhoof residence craft.</p>
+
+        <div class="about-grid">
+            <div>
+                <h2 style="margin-bottom:1rem;">Design Leadership</h2>
+                <p>Women-led and LEED accredited since 2011. Our team directs architecture collaborations, furniture fabrication, and styling with sustainable sourcing.</p>
+                <p style="margin-top:1rem;">The Vanderhoof family home epitomizes our process: layered cabinetry, gallery lighting, and sculptural bathrooms that inspired this alternate home experience.</p>
+            </div>
+            <img src="../../../images/Vanderhoof%20Photos/Front%20Room%202.jpg" alt="Vanderhoof residence living room">
+        </div>
+
+        <div class="stats">
+            <div class="stat"><span>25+</span>Years combined leadership in architecture + interiors.</div>
+            <div class="stat"><span>4</span>Continents served with on-site project management.</div>
+            <div class="stat"><span>92%</span>Materials sourced from eco-certified partners.</div>
+        </div>
+
+        <div class="timeline">
+            <article>
+                <h3>1996-2010</h3>
+                <p>Founders worked alongside Los Angeles + Lisbon ateliers, studying high-touch hospitality design.</p>
+            </article>
+            <article>
+                <h3>2011</h3>
+                <p>Mattéo Designs launched in Santa Fe with a mission to blend desert calm and European craft.</p>
+            </article>
+            <article>
+                <h3>2020-2024</h3>
+                <p>Vanderhoof commission fueled a new wave of custom cabinetry, now offered to residential + hospitality clients.</p>
+            </article>
+        </div>
+
+        <footer>Mattéo Designs · Santa Fe · info@matteodesigns.com</footer>
+    </main>
+</body>
+</html>

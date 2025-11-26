@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matteo Designs - Recommendations Repository</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 3rem 2rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #555;
+        }
+
+        .intro h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .section-card {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
+        }
+
+        .section-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #333;
+        }
+
+        .section-card p {
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .file-structure {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.25rem;
+            border: 1px solid #e2e6ea;
+        }
+
+        .file-structure .label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+
+        .file-structure code {
+            display: inline-block;
+            background: #eef2ff;
+            color: #4c51bf;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .file-structure ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .file-structure ul li {
+            color: #444;
+        }
+
+        .file-structure ul li span {
+            color: #777;
+            font-size: 0.9rem;
+            display: block;
+        }
+
+        .file-structure ul li a {
+            font-weight: 600;
+            color: #2d3a8c;
+            text-decoration: none;
+        }
+
+        .file-structure ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .cta {
+            display: inline-block;
+            margin-top: 1.25rem;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .directory-overview {
+            margin-top: 3rem;
+            border-top: 2px solid #f0f0f0;
+            padding-top: 3rem;
+        }
+
+        .directory-overview h2 {
+            font-size: 1.7rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .directory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .directory-card {
+            background: #f8f9fb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid #e2e6ea;
+        }
+
+        .directory-card h4 {
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            color: #2d3a8c;
+        }
+
+        .directory-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .directory-card ul li {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .directory-card code {
+            background: #fff;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .sections {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Matteo Designs</h1>
+            <p>Design Recommendations & Resources Repository</p>
+        </header>
+
+        <div class="content">
+            <div class="intro">
+                <h2>Repository Overview</h2>
+                <p>Use this hub to navigate between the three main areas of the project: WeWood-inspired design explorations, Sandra Costa-inspired layouts, and a library of non-technical planning documents.</p>
+            </div>
+
+            <div class="sections">
+                <div class="section-card">
+                    <h3>WeWood Inspired Pages</h3>
+                    <p>Minimalist, nature-focused design explorations highlighting craftsmanship and sustainability. Use these files for WeWood-style experiences.</p>
+                    <div class="file-structure">
+                        <p class="label">Directory</p>
+                        <code>html-pages/alternate/wewood-inspired/</code>
+                        <ul>
+                            <li>
+                                <a href="html-pages/alternate/wewood-inspired/index.html">index.html</a>
+                                <span>Main landing page</span>
+                            </li>
+                            <li>
+                                <a href="html-pages/alternate/wewood-inspired/collections.html">collections.html</a>
+                                <span>Collections showcase and lookbook</span>
+                            </li>
+                            <li>
+                                <a href="html-pages/alternate/wewood-inspired/studio.html">studio.html</a>
+                                <span>Studio overview and process</span>
+                            </li>
+                            <li>
+                                <a href="html-pages/alternate/wewood-inspired/craft.html">craft.html</a>
+                                <span>Craftsmanship spotlight</span>
+                            </li>
+                            <li>
+                                <a href="html-pages/alternate/wewood-inspired/journal.html">journal.html</a>
+                                <span>Editorial and journal layout</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="html-pages/alternate/wewood-inspired/index.html" class="cta">Open WeWood Reference</a>
+                </div>
+
+                <div class="section-card">
+                    <h3>Sandra Costa Inspired Pages</h3>
+                    <p>Elevated, hospitality-style layouts inspired by Sandra Costa. Use these templates for luxury-focused narratives.</p>
+                    <div class="file-structure">
+                        <p class="label">Directory</p>
+                        <code>html-pages/alternate/sandra-costa-inspired/</code>
+                        <ul>
+                            <li>
+                                <a href="html-pages/alternate/sandra-costa-inspired/index.html">index.html</a>
+                                <span>Primary landing page</span>
+                            </li>
+                            <li>
+                                <a href="html-pages/alternate/sandra-costa-inspired/gallery.html">gallery.html</a>
+                                <span>Gallery showcase</span>
+                            </li>
+                            <li>
+                                <a href="html-pages/alternate/sandra-costa-inspired/services.html">services.html</a>
+                                <span>Service overview</span>
+                            </li>
+                            <li>
+                                <a href="html-pages/alternate/sandra-costa-inspired/about.html">about.html</a>
+                                <span>About presentation</span>
+                            </li>
+                            <li>
+                                <a href="html-pages/alternate/sandra-costa-inspired/contact.html">contact.html</a>
+                                <span>Contact information layout</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="html-pages/alternate/sandra-costa-inspired/index.html" class="cta">Open Sandra Costa Reference</a>
+                </div>
+
+                <div class="section-card">
+                    <h3>Non-Technical Plans</h3>
+                    <p>Centralized planning resources, strategy documents, and briefs supporting decision-making and client communication.</p>
+                    <div class="file-structure">
+                        <p class="label">Primary Files</p>
+                        <code>/*.md &amp; *.html</code>
+                        <ul>
+                            <li>
+                                <a href="matteo-designs-knowledge-base.md">matteo-designs-knowledge-base.md</a>
+                                <span>Business and brand reference</span>
+                            </li>
+                            <li>
+                                <a href="matteodesigns-improved-site-structure.md">matteodesigns-improved-site-structure.md</a>
+                                <span>Site structure plan</span>
+                            </li>
+                            <li>
+                                <a href="matteo-designs-seo-conversion-recommendations.html">matteo-designs-seo-conversion-recommendations.html</a>
+                                <span>SEO and conversion strategy</span>
+                            </li>
+                            <li>
+                                <a href="matteo-designs-client-friendly.html">matteo-designs-client-friendly.html</a>
+                                <span>Client-facing overview</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="planning-documents.html" class="cta">Browse Planning Documents</a>
+                </div>
+            </div>
+
+            <div class="directory-overview">
+                <h2>Additional Directory Highlights</h2>
+                <div class="directory-grid">
+                    <div class="directory-card">
+                        <h4>HTML Templates</h4>
+                        <ul>
+                            <li><code>html-pages/base-template.html</code></li>
+                            <li><code>html-pages/blog-post-template.html</code></li>
+                            <li><code>html-pages/design-packages.html</code></li>
+                            <li><code>html-pages/portfolio-project-enhanced.html</code></li>
+                        </ul>
+                    </div>
+                    <div class="directory-card">
+                        <h4>V2 Experiments</h4>
+                        <ul>
+                            <li><code>html-pages-v2/design-packages.html</code></li>
+                            <li><code>html-pages-v2/leed-certified-design.html</code></li>
+                            <li><code>html-pages-v2/santa-fe-interior-designer.html</code></li>
+                        </ul>
+                    </div>
+                    <div class="directory-card">
+                        <h4>Assets</h4>
+                        <ul>
+                            <li><code>images/Vanderhoof Photos/...</code></li>
+                            <li><code>images/matteo-cartoon.png</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Matteo Designs. Design recommendations and resources for strategic growth.</p>
+        </footer>
+    </div>
+</body>
+</html>

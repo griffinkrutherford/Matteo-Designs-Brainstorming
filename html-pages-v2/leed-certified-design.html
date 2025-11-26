@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEED Certified Interior Designer | Sustainable Design | Mattéo Designs</title>
+    <meta name="description" content="LEED certified interior designer specializing in sustainable, eco-friendly design. Reduce environmental impact while creating beautiful, healthy spaces.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --bg-primary: #ffffff;
+            --bg-secondary: #fafafa;
+            --border: #e5e5e5;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+
+        header {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 1.5rem 3vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+        }
+
+        nav a.cta {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .hero {
+            margin-top: 80px;
+            padding: 6vw 3vw;
+            text-align: center;
+            max-width: 1500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            margin-bottom: 3vw;
+        }
+
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 3vw;
+        }
+
+        .section {
+            padding: 6vw 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .card {
+            padding: 0;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .process-list {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .process-step {
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .process-step:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-step p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .stat {
+            padding: 2rem 0;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            background: var(--bg-secondary);
+            padding: 6vw 3vw;
+            text-align: center;
+            margin-top: 6vw;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1px solid var(--text-primary);
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+        }
+
+        .button:hover {
+            background: var(--text-primary);
+            color: white;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 4vw 3vw 3vw;
+            margin-top: 6vw;
+        }
+
+        .footer-content {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-column h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-column a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-bottom {
+            max-width: 1500px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">MATTÉO DESIGNS</a>
+            <nav>
+                <a href="/portfolio">PORTFOLIO</a>
+                <a href="/services">SERVICES</a>
+                <a href="/media">MEDIA</a>
+                <a href="/about">ABOUT</a>
+                <a href="/contact">CONTACT</a>
+                <a href="/free-consultation" class="cta">COMPLIMENTARY CONSULTATION</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>LEED Certified Sustainable Design</h1>
+        <p class="hero-subtitle">
+            Creating beautiful, eco-friendly spaces that reduce environmental impact, lower operating costs,
+            and improve health. LEED certified professional with 15+ years of sustainable design experience.
+        </p>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" alt="Sustainable interior design" class="hero-image">
+
+    <div class="container">
+        <section class="section">
+            <div class="section-header">
+                <h2>Why Choose LEED Certified Design</h2>
+                <p>Sustainable design isn't about sacrifice—it's about creating better spaces for people and planet.</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Lower Operating Costs</h3>
+                    <p>Energy-efficient designs reduce utility bills by 25-40%. Most LEED investments pay for themselves within 3-5 years through savings.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Healthier Spaces</h3>
+                    <p>Improved indoor air quality, natural lighting, and non-toxic materials create environments that boost wellbeing and productivity.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Environmental Impact</h3>
+                    <p>Reduce carbon footprint, water usage, and waste. Sustainable materials and practices protect the environment for future generations.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Property Value</h3>
+                    <p>LEED certified properties command higher resale values and rental rates. Buyers increasingly seek sustainable, efficient homes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header" style="text-align: center;">
+                <h2>Design Process</h2>
+                <p style="margin-left: auto; margin-right: auto;">Our comprehensive approach to sustainable design</p>
+            </div>
+
+            <div class="process-list">
+                <div class="process-step">
+                    <div class="step-number">Step 01</div>
+                    <h3>Assessment & Goals</h3>
+                    <p>Evaluate your space, define sustainability goals, and determine LEED certification level targets.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">Step 02</div>
+                    <h3>Sustainable Design Strategy</h3>
+                    <p>Develop designs incorporating energy efficiency, water conservation, sustainable materials, and indoor air quality improvements.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">Step 03</div>
+                    <h3>Material Selection</h3>
+                    <p>Source eco-friendly, low-VOC materials from responsible suppliers. Prioritize recycled content and local sourcing.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">Step 04</div>
+                    <h3>Implementation</h3>
+                    <p>Execute design with LEED-qualified contractors. Document all requirements for certification submission.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">Step 05</div>
+                    <h3>Certification Support</h3>
+                    <p>Assist with LEED certification application, documentation review, and submission to USGBC.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header" style="text-align: center;">
+                <h2>Measurable Impact</h2>
+                <p style="margin-left: auto; margin-right: auto;">Real results from sustainable design</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number">25-40%</div>
+                    <div class="stat-label">Energy Cost Reduction</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">30-50%</div>
+                    <div class="stat-label">Water Savings</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">70%</div>
+                    <div class="stat-label">Indoor Air Quality Improvement</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">10-15%</div>
+                    <div class="stat-label">Property Value Increase</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Sustainable Features</h2>
+                <p>Key elements of LEED certified design</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Energy Efficiency</h3>
+                    <p>High-performance windows, efficient HVAC systems, LED lighting, and solar power integration.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Water Conservation</h3>
+                    <p>Low-flow fixtures, dual-flush toilets, rainwater harvesting, and drought-tolerant landscaping.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Sustainable Materials</h3>
+                    <p>Recycled content, rapidly renewable resources, locally sourced materials, and FSC-certified wood.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Indoor Air Quality</h3>
+                    <p>Low-VOC paints, formaldehyde-free materials, improved ventilation, and natural fiber textiles.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Waste Reduction</h3>
+                    <p>Construction waste management, material reuse, recycling systems, and composting infrastructure.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Smart Systems</h3>
+                    <p>Automated controls, energy monitoring, smart thermostats, and integrated building management.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="cta-section">
+        <h2>Begin Your Sustainable Design Project</h2>
+        <p>Schedule a complimentary consultation to discuss how LEED certified design can enhance your space while reducing environmental impact and operating costs.</p>
+        <a href="/free-consultation" class="button">Schedule Consultation</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/services/residential">Residential</a></li>
+                    <li><a href="/services/commercial">Commercial</a></li>
+                    <li><a href="/services/real-estate-development">Real Estate Development</a></li>
+                    <li><a href="/services/leed-certified-design">LEED Certified</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Portfolio</h4>
+                <ul>
+                    <li><a href="/portfolio">All Projects</a></li>
+                    <li><a href="/portfolio#residential">Residential</a></li>
+                    <li><a href="/portfolio#commercial">Commercial</a></li>
+                    <li><a href="/portfolio#sustainable">Sustainable</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="/about">About Mattéo</a></li>
+                    <li><a href="/media">Press & Media</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:505XXXXXXX">(505) XXX-XXXX</a></li>
+                    <li><a href="mailto:info@matteodesigns.com">info@matteodesigns.com</a></li>
+                    <li>Santa Fe, NM</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mattéo Designs. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

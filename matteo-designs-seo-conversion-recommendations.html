@@ -1,0 +1,3583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matteo Designs - SEO & Conversion Optimization Recommendations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .toc {
+            background: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .toc h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .toc ul {
+            list-style: none;
+        }
+
+        .toc li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .toc li:last-child {
+            border-bottom: none;
+        }
+
+        .toc a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .toc a:hover {
+            color: #2980b9;
+        }
+
+        .section {
+            background: white;
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .section h3 {
+            color: #34495e;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .section h4 {
+            color: #555;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .priority {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+
+        .priority-high {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .priority-medium {
+            background: #f39c12;
+            color: white;
+        }
+
+        .priority-low {
+            background: #95a5a6;
+            color: white;
+        }
+
+        .recommendation {
+            background: #ecf0f1;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+
+        .recommendation h4 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .issue {
+            background: #ffe6e6;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #e74c3c;
+            border-radius: 4px;
+        }
+
+        .issue h4 {
+            margin-top: 0;
+            color: #c0392b;
+        }
+
+        .example {
+            background: #e8f8f5;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #27ae60;
+            border-radius: 4px;
+        }
+
+        .example h4 {
+            margin-top: 0;
+            color: #27ae60;
+        }
+
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e74c3c;
+        }
+
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        pre code {
+            background: none;
+            color: #ecf0f1;
+            padding: 0;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .metric {
+            background: #fff;
+            border: 2px solid #3498db;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .metric strong {
+            color: #2c3e50;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li:before {
+            content: "☐ ";
+            color: #3498db;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #34495e;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        @media print {
+            .toc {
+                page-break-after: always;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Matteo Designs</h1>
+        <p>TrueFlow AI Implementation Plan</p>
+        <p style="font-size: 0.9em; margin-top: 10px;">Technical Specifications & Platform Integration - Technical Version</p>
+        <p style="font-size: 0.85em; margin-top: 15px;">
+            <a href="matteo-designs-client-friendly.html" style="color: #3498db; text-decoration: none; background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 4px; display: inline-block;">
+                📖 View Client-Friendly Version
+            </a>
+        </p>
+    </header>
+
+    <div class="container">
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#executive-summary">1. Executive Summary</a></li>
+                <li><a href="#platform-integration">2. TrueFlow Platform Integration</a></li>
+                <li><a href="#technical-seo">3. Technical SEO Issues & Fixes</a></li>
+                <li><a href="#on-page-seo">4. On-Page SEO Optimization</a></li>
+                <li><a href="#content-strategy">5. Content Strategy & Marketing</a></li>
+                <li><a href="#local-seo">6. Location-Based SEO Strategy</a></li>
+                <li><a href="#conversion-optimization">7. Conversion Rate Optimization (CRO)</a></li>
+                <li><a href="#user-experience">8. User Experience Improvements</a></li>
+                <li><a href="#lead-generation">9. GHL Lead Generation & Automation</a></li>
+                <li><a href="#social-proof">10. Social Proof & Trust Building</a></li>
+                <li><a href="#analytics">11. Analytics & Tracking Dashboard</a></li>
+                <li><a href="#competitive-analysis">12. Competitive Analysis Strategy</a></li>
+                <li><a href="#implementation">13. Implementation Roadmap</a></li>
+                <li><a href="#squarespace-implementation">14. Squarespace-Specific Implementation Plan</a></li>
+            </ul>
+        </div>
+
+        <section id="executive-summary" class="section">
+            <h2>1. Executive Summary</h2>
+
+            <h3>Platform Integration Overview</h3>
+            <p>This implementation plan outlines how TrueFlow's integrated platform (GoHighLevel + Lead Hacker + Instantly.AI) will transform Matteo Designs' online presence. The current Squarespace website has strong visual appeal but lacks lead capture automation, conversion optimization, and systematic outreach. We'll deploy our full tech stack to create an automated lead generation and nurturing system.</p>
+
+            <h3>Technology Stack</h3>
+            <ul>
+                <li><strong>GoHighLevel:</strong> CRM, landing pages, forms, email/SMS automation, pipeline management, unified analytics dashboard</li>
+                <li><strong>Lead Machine:</strong> Keyword-based prospect identification and capture (40 keywords: 20 local, 20 national)</li>
+                <li><strong>Instantly.AI:</strong> Cold email outreach with domain warming and deliverability optimization</li>
+                <li><strong>AI Conversion Management:</strong> Behavior-based automation and prospect scoring integrated within GoHighLevel</li>
+            </ul>
+
+            <h3>Business Model: Local + National Strategy</h3>
+            <p><strong>Recommended Approach:</strong> Position Matteo Designs as a Santa Fe-based firm with national reach. This strategy allows you to:</p>
+            <ul>
+                <li>Dominate local Santa Fe market (easier to rank, higher conversion rates)</li>
+                <li>Capture high-value national clients seeking your specific expertise</li>
+                <li>Leverage Santa Fe's design reputation and aesthetic as a brand differentiator</li>
+                <li>Serve clients remotely through virtual consultations and project management</li>
+            </ul>
+
+            <h3>Key Findings</h3>
+
+            <div class="issue">
+                <h4>Critical Issues Identified:</h4>
+                <ul>
+                    <li><strong>Location Strategy Unclear:</strong> Website needs to clearly communicate "Santa Fe-based, serving clients nationwide" positioning</li>
+                    <li><strong>No National vs. Local Distinction:</strong> Service offerings don't clarify which services are available remotely vs. requiring local presence</li>
+                    <li><strong>Weak CTAs:</strong> Limited clear calls-to-action throughout the site</li>
+                    <li><strong>Missing Contact Forms:</strong> No visible contact forms on most pages, requiring users to navigate to contact page</li>
+                    <li><strong>No Pricing Transparency:</strong> Zero pricing information or service packages visible</li>
+                    <li><strong>Limited Content:</strong> No blog, case studies, or detailed project descriptions</li>
+                    <li><strong>Poor Keyword Optimization:</strong> Generic meta descriptions and page titles - missing both local AND national keywords</li>
+                    <li><strong>Minimal Lead Capture:</strong> No newsletter signup, consultation requests, or lead magnets</li>
+                </ul>
+            </div>
+
+            <div class="recommendation">
+                <h4>Opportunity Impact Summary:</h4>
+                <ul>
+                    <li><strong>SEO Improvements:</strong> Potential to increase organic traffic by 150-300% within 6-12 months</li>
+                    <li><strong>Conversion Rate:</strong> Industry average for design firms is 2-4%; with optimization, could reach 5-7%</li>
+                    <li><strong>Lead Quality:</strong> Better qualification through service packages and clear pricing can improve client fit by 40%+</li>
+                    <li><strong>Local Visibility:</strong> Proper local SEO could capture 60-80% of "interior design [location]" searches in target market</li>
+                </ul>
+            </div>
+
+            <h3>Implementation Priority (TrueFlow Platform)</h3>
+            <ol>
+                <li><strong>GoHighLevel Setup:</strong> Configure CRM, pipelines, automation workflows, and unified dashboard</li>
+                <li><strong>Lead Machine Deployment:</strong> Activate 40 keywords (20 Santa Fe-local, 20 national sustainable design)</li>
+                <li><strong>Landing Page Creation:</strong> Build conversion-optimized pages in GHL with embedded forms and tracking</li>
+                <li><strong>Email Automation:</strong> Set up welcome sequences, nurture campaigns, and abandoned lead re-engagement in GHL</li>
+                <li><strong>Instantly.AI Configuration:</strong> Domain setup, warming protocol, and initial cold email campaigns</li>
+                <li><strong>Content Hub Integration:</strong> Blog connected to GHL for automatic lead capture and segmentation</li>
+                <li><strong>Analytics Dashboard:</strong> Configure GHL dashboard for real-time tracking of all lead sources and campaign performance</li>
+            </ol>
+        </section>
+
+        <section id="platform-integration" class="section">
+            <h2>2. TrueFlow Platform Integration <span class="priority priority-high">High Priority</span></h2>
+
+            <h3>GoHighLevel (GHL) Setup</h3>
+            <div class="recommendation">
+                <h4>Core Configuration:</h4>
+                <ul class="checklist">
+                    <li><strong>CRM Pipeline Structure:</strong>
+                        <ul>
+                            <li>Stage 1: Lead Captured (from Lead Hacker, forms, or Instantly.AI)</li>
+                            <li>Stage 2: Initial Contact Made</li>
+                            <li>Stage 3: Consultation Scheduled</li>
+                            <li>Stage 4: Proposal Sent</li>
+                            <li>Stage 5: Closed Won/Lost</li>
+                        </ul>
+                    </li>
+                    <li><strong>Lead Source Tracking:</strong>
+                        <ul>
+                            <li>Lead Machine - Santa Fe Keywords</li>
+                            <li>Lead Machine - National Keywords</li>
+                            <li>Instantly.AI Cold Outreach</li>
+                            <li>Website Form Submission</li>
+                            <li>Direct Inquiry</li>
+                            <li>Referral</li>
+                        </ul>
+                    </li>
+                    <li><strong>Custom Fields:</strong>
+                        <ul>
+                            <li>Project Type (Residential/Commercial/Real Estate)</li>
+                            <li>Estimated Budget Range</li>
+                            <li>Timeline (Urgent/3-6 months/6-12 months/Exploring)</li>
+                            <li>Location (Local Santa Fe/National Remote)</li>
+                            <li>LEED Interest (Yes/No/Not Sure)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Lead Machine Integration</h3>
+            <div class="recommendation">
+                <h4>Keyword Campaign Setup:</h4>
+                <p><strong>Campaign 1: Santa Fe Local (20 keywords)</strong></p>
+                <pre><code>interior designer near me, kitchen remodeling, bathroom renovation,
+home interior designer, sustainable interior design, residential interior design,
+custom kitchen design, bathroom remodel cost, interior design services,
+home renovation, LEED certified designer, kitchen designer,
+commercial interior design, luxury interior design, historic home restoration,
+adobe restoration, custom home design, interior design consultation,
+eco friendly design, full service design</code></pre>
+
+                <p><strong>Campaign 2: National Sustainable (20 keywords)</strong></p>
+                <pre><code>sustainable interior designer, LEED certified designer, eco friendly design,
+green interior designer, sustainable home design, eco conscious designer,
+sustainable commercial design, LEED residential design, sustainable luxury design,
+sustainable kitchen design, green certified designer, sustainable office design,
+LEED interior design, energy efficient design, eco luxury design,
+green building design, sustainable bathroom design, LEED interior designer,
+virtual interior designer, sustainable design services</code></pre>
+
+                <p><strong>Lead Capture Settings:</strong></p>
+                <ul>
+                    <li>Daily contact cap: 10 per campaign (20 total/day)</li>
+                    <li>Re-identification time: 6 months (design project sales cycles)</li>
+                    <li>Auto-import to GHL: Yes, with campaign source tag</li>
+                    <li>Initial automation: Trigger welcome email within 5 minutes</li>
+                </ul>
+            </div>
+
+            <h3>Instantly.AI Cold Email Setup</h3>
+            <div class="recommendation">
+                <h4>Domain Configuration:</h4>
+                <ul class="checklist">
+                    <li><strong>Primary domain:</strong> matteodesigns.com (keep for website)</li>
+                    <li><strong>Outreach domains:</strong> Register 3-5 similar domains for sending
+                        <ul>
+                            <li>matteo-design.com</li>
+                            <li>matteointeriors.com</li>
+                            <li>matteo-sustainable-design.com</li>
+                        </ul>
+                    </li>
+                    <li><strong>Domain warming:</strong> 2-week warmup before full campaigns</li>
+                    <li><strong>Daily send limits:</strong> Start 20/day per domain, scale to 50/day</li>
+                    <li><strong>SPF/DKIM/DMARC:</strong> Configure all domains for deliverability</li>
+                </ul>
+
+                <h4>Campaign Structure:</h4>
+                <p><strong>Campaign 1: Santa Fe Real Estate Developers</strong></p>
+                <ul>
+                    <li>Target: Property developers in Santa Fe, Albuquerque, Taos</li>
+                    <li>Angle: Sustainable design increases property value</li>
+                    <li>Sequence: 4 emails over 14 days</li>
+                </ul>
+
+                <p><strong>Campaign 2: National LEED Projects</strong></p>
+                <ul>
+                    <li>Target: Companies with "sustainability" or "LEED" on website</li>
+                    <li>Angle: LEED-certified interior design expertise</li>
+                    <li>Sequence: 5 emails over 21 days</li>
+                </ul>
+
+                <p><strong>Campaign 3: Luxury Homeowners</strong></p>
+                <ul>
+                    <li>Target: High-value residential properties needing renovation</li>
+                    <li>Angle: Sustainable luxury doesn't compromise design</li>
+                    <li>Sequence: 3 emails over 10 days</li>
+                </ul>
+            </div>
+
+            <h3>AI-Powered Conversion Management</h3>
+            <div class="recommendation">
+                <h4>Lead Scoring Algorithm:</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Score</th>
+                            <th>Automation Trigger</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Filled out project inquiry form</td>
+                            <td>+50</td>
+                            <td>Immediate SMS notification + consultation booking email</td>
+                        </tr>
+                        <tr>
+                            <td>Clicked link in cold email</td>
+                            <td>+15</td>
+                            <td>Move to "Engaged" sequence</td>
+                        </tr>
+                        <tr>
+                            <td>Visited pricing page 2+ times</td>
+                            <td>+25</td>
+                            <td>Send pricing guide + case study</td>
+                        </tr>
+                        <tr>
+                            <td>Downloaded lead magnet</td>
+                            <td>+20</td>
+                            <td>Start 5-email nurture sequence</td>
+                        </tr>
+                        <tr>
+                            <td>Viewed 3+ portfolio projects</td>
+                            <td>+15</td>
+                            <td>Send "Similar projects" email</td>
+                        </tr>
+                        <tr>
+                            <td>Opened 4+ emails</td>
+                            <td>+10</td>
+                            <td>Tag as "Highly Engaged"</td>
+                        </tr>
+                        <tr>
+                            <td>Lead Machine capture</td>
+                            <td>+10</td>
+                            <td>Start educational sequence</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Score ranges:</strong></p>
+                <ul>
+                    <li>0-20: Cold lead - nurture sequence</li>
+                    <li>21-40: Warm lead - increase touch frequency</li>
+                    <li>41-60: Hot lead - direct outreach within 24 hours</li>
+                    <li>61+: Ultra-hot - immediate phone call + SMS</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="technical-seo" class="section">
+            <h2>3. Technical SEO Issues & Fixes <span class="priority priority-high">High Priority</span></h2>
+
+            <h3>Page Speed Optimization</h3>
+            <div class="issue">
+                <h4>Current Issue:</h4>
+                <p>Image-heavy portfolio sites often suffer from slow load times. Images appear to be served through Squarespace CDN but may not be fully optimized.</p>
+            </div>
+
+            <div class="recommendation">
+                <h4>Actionable Fixes:</h4>
+                <ul class="checklist">
+                    <li>Compress all images to WebP format (saves 25-35% file size)</li>
+                    <li>Implement lazy loading for portfolio images below the fold</li>
+                    <li>Set up browser caching for static assets (1 year expiration)</li>
+                    <li>Minimize CSS and JavaScript files</li>
+                    <li>Remove unused Squarespace widgets and plugins</li>
+                    <li>Target: PageSpeed Insights score of 85+ on mobile, 90+ on desktop</li>
+                </ul>
+            </div>
+
+            <h3>Mobile Responsiveness</h3>
+            <div class="recommendation">
+                <h4>Optimization Checklist:</h4>
+                <ul class="checklist">
+                    <li>Test all forms on mobile devices (tap targets must be 48x48px minimum)</li>
+                    <li>Ensure phone number is click-to-call on mobile</li>
+                    <li>Verify portfolio images display properly on small screens</li>
+                    <li>Check navigation menu accessibility on mobile</li>
+                    <li>Test page load speed on 3G connections (should be under 3 seconds)</li>
+                </ul>
+            </div>
+
+            <h3>Structured Data (Schema Markup)</h3>
+            <div class="issue">
+                <h4>Current State:</h4>
+                <p>Basic WebSite schema present, but missing critical business and service markup.</p>
+            </div>
+
+            <div class="example">
+                <h4>Implement LocalBusiness Schema:</h4>
+                <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "InteriorDesignService",
+  "name": "Matteo Designs",
+  "image": "https://www.matteodesigns.com/logo.jpg",
+  "description": "Sustainable interior design services in Santa Fe specializing in residential, commercial, and real estate development with LEED certification focus",
+  "@id": "https://www.matteodesigns.com",
+  "url": "https://www.matteodesigns.com",
+  "telephone": "818-568-2405",
+  "email": "matteo@matteodesigns.com",
+  "priceRange": "$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[Your Street Address]",
+    "addressLocality": "Santa Fe",
+    "addressRegion": "NM",
+    "postalCode": "[ZIP Code]",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": [Your Latitude],
+    "longitude": [Your Longitude]
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "17:00"
+  },
+  "sameAs": [
+    "https://www.instagram.com/matteodesigns/",
+    "https://www.facebook.com/MatteoBitetti"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "4"
+  }
+}
+&lt;/script&gt;</code></pre>
+            </div>
+
+            <div class="example">
+                <h4>Add Service Schema for Each Service Page:</h4>
+                <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Residential Interior Design",
+  "provider": {
+    "@type": "InteriorDesignService",
+    "name": "Matteo Designs"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "New Mexico"
+  },
+  "description": "Full-service residential interior design including space planning, custom kitchens and bathrooms, furniture design, and sustainable material selection",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "Contact for quote"
+  }
+}
+&lt;/script&gt;</code></pre>
+            </div>
+
+            <h3>XML Sitemap & Robots.txt</h3>
+            <div class="recommendation">
+                <h4>Sitemap Optimization:</h4>
+                <ul class="checklist">
+                    <li>Verify sitemap.xml is accessible at matteodesigns.com/sitemap.xml</li>
+                    <li>Submit sitemap to Google Search Console and Bing Webmaster Tools</li>
+                    <li>Include all portfolio projects with priority 0.8</li>
+                    <li>Set homepage priority to 1.0</li>
+                    <li>Set services and about pages to priority 0.9</li>
+                    <li>Update sitemap whenever new projects are added</li>
+                </ul>
+            </div>
+
+            <h3>SSL & Security</h3>
+            <div class="recommendation">
+                <h4>Security Checklist:</h4>
+                <p>✓ HTTPS is enabled - Good!</p>
+                <p>✓ HSTS is implemented - Good!</p>
+                <ul class="checklist">
+                    <li>Verify all internal links use HTTPS (no mixed content)</li>
+                    <li>Ensure contact form uses encryption for data transmission</li>
+                    <li>Add security headers: X-Frame-Options, X-Content-Type-Options</li>
+                    <li>Display trust badges near contact forms (SSL seal, payment security)</li>
+                </ul>
+            </div>
+
+            <h3>URL Structure</h3>
+            <div class="issue">
+                <h4>Current Observations:</h4>
+                <p>Squarespace typically generates clean URLs, but optimization is still possible.</p>
+            </div>
+
+            <div class="recommendation">
+                <h4>URL Best Practices:</h4>
+                <ul>
+                    <li><strong>Portfolio Projects:</strong> Use descriptive URLs
+                        <ul>
+                            <li>❌ Bad: <code>/portfolio/item-1</code></li>
+                            <li>✓ Good: <code>/portfolio/coastal-farmhouse-renovation-santa-fe</code></li>
+                        </ul>
+                    </li>
+                    <li><strong>Service Pages:</strong> Include service type and location
+                        <ul>
+                            <li>✓ Example: <code>/services/residential-interior-design-santa-fe</code></li>
+                            <li>✓ Example: <code>/services/kitchen-remodeling-new-mexico</code></li>
+                        </ul>
+                    </li>
+                    <li><strong>Blog Posts:</strong> Keep URLs under 75 characters, include primary keyword
+                        <ul>
+                            <li>✓ Example: <code>/blog/sustainable-interior-design-tips</code></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="on-page-seo" class="section">
+            <h2>4. On-Page SEO Optimization <span class="priority priority-high">High Priority</span></h2>
+
+            <h3>Homepage Optimization</h3>
+
+            <div class="issue">
+                <h4>Current Title Tag Issues:</h4>
+                <p>Current: <code>&lt;title&gt;Mattéo Designs&lt;/title&gt;</code></p>
+                <p>This is far too generic and misses valuable keyword opportunities.</p>
+            </div>
+
+            <div class="example">
+                <h4>Optimized Title Tag (For Santa Fe Market):</h4>
+                <pre><code>&lt;title&gt;Mattéo Designs | Sustainable Interior Design in Santa Fe, NM | Residential & Commercial&lt;/title&gt;</code></pre>
+
+                <h4>Alternate Title Tag (For National Market):</h4>
+                <pre><code>&lt;title&gt;Mattéo Designs | LEED-Certified Interior Design | Sustainable Residential & Commercial Design&lt;/title&gt;</code></pre>
+
+                <p><strong>Strategy:</strong> Use location-specific titles for pages targeting local search, and expertise-based titles for pages targeting national clients.</p>
+            </div>
+
+            <div class="example">
+                <h4>Meta Description:</h4>
+                <pre><code>&lt;meta name="description" content="Award-winning sustainable interior design firm in Santa Fe, NM. Specializing in LEED-certified residential, commercial, and real estate development projects. Transform your space with eco-friendly design. Free consultation available."&gt;</code></pre>
+                <p><strong>Optimal length:</strong> 150-160 characters (currently 235 - good for context, will be truncated in SERPs)</p>
+                <p><strong>Includes:</strong> Keywords, location, unique selling proposition, call-to-action</p>
+            </div>
+
+            <h3>Heading Structure Optimization</h3>
+
+            <div class="issue">
+                <h4>Current Structure:</h4>
+                <p>Generic headings that don't incorporate keywords or clear hierarchy.</p>
+            </div>
+
+            <div class="example">
+                <h4>Recommended Homepage Heading Structure:</h4>
+                <pre><code>&lt;h1&gt;Sustainable Interior Design in Santa Fe, NM&lt;/h1&gt;
+&lt;p class="subheading"&gt;LEED-Certified Design Services for Residential, Commercial & Real Estate Development&lt;/p&gt;
+
+&lt;h2&gt;Our Design Approach: Where Beauty Meets Sustainability&lt;/h2&gt;
+[Design philosophy content]
+
+&lt;h2&gt;Interior Design Services in Santa Fe&lt;/h2&gt;
+  &lt;h3&gt;Residential Interior Design&lt;/h3&gt;
+  [Content]
+
+  &lt;h3&gt;Commercial Interior Design&lt;/h3&gt;
+  [Content]
+
+  &lt;h3&gt;Real Estate Development Consultation&lt;/h3&gt;
+  [Content]
+
+&lt;h2&gt;Featured Projects&lt;/h2&gt;
+  &lt;h3&gt;Coastal Farmhouse Renovation&lt;/h3&gt;
+  &lt;h3&gt;Urban Garage Conversion&lt;/h3&gt;
+  [etc.]</code></pre>
+            </div>
+
+            <h3>Keyword Strategy by Page</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Primary Keyword</th>
+                        <th>Secondary Keywords</th>
+                        <th>Search Volume Est.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Homepage</td>
+                        <td>interior design santa fe</td>
+                        <td>sustainable interior designer, LEED interior design</td>
+                        <td>High (500-1K/mo)</td>
+                    </tr>
+                    <tr>
+                        <td>Residential Services</td>
+                        <td>residential interior designer santa fe</td>
+                        <td>home interior design, custom home design NM</td>
+                        <td>Medium (200-500/mo)</td>
+                    </tr>
+                    <tr>
+                        <td>Commercial Services</td>
+                        <td>commercial interior design santa fe</td>
+                        <td>office design, retail space design</td>
+                        <td>Medium (200-500/mo)</td>
+                    </tr>
+                    <tr>
+                        <td>Kitchen Remodeling</td>
+                        <td>kitchen remodeling santa fe</td>
+                        <td>custom kitchen design, kitchen renovation</td>
+                        <td>High (1K-5K/mo)</td>
+                    </tr>
+                    <tr>
+                        <td>Bathroom Remodeling</td>
+                        <td>bathroom remodeling santa fe</td>
+                        <td>bathroom renovation, custom bathroom</td>
+                        <td>High (1K-5K/mo)</td>
+                    </tr>
+                    <tr>
+                        <td>Historic Restoration</td>
+                        <td>historic home restoration santa fe</td>
+                        <td>adobe restoration, preservation design</td>
+                        <td>Low (50-200/mo)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="recommendation">
+                <h4>Geographic Positioning Strategy:</h4>
+                <p><strong>Primary Messaging:</strong> "Santa Fe-based, serving clients nationwide"</p>
+                <p><strong>Homepage Hero:</strong> Feature Santa Fe prominently while mentioning national reach</p>
+                <p><strong>Service Pages:</strong> Clarify which services require in-person presence vs. remote capability</p>
+                <p><strong>Location Pages:</strong> Create individual pages for target markets with virtual design services</p>
+            </div>
+
+            <h3>Content Optimization Guidelines</h3>
+
+            <div class="recommendation">
+                <h4>Word Count Targets:</h4>
+                <ul>
+                    <li><strong>Homepage:</strong> 800-1,200 words (currently appears short)</li>
+                    <li><strong>Service Pages:</strong> 1,000-1,500 words each</li>
+                    <li><strong>Portfolio Projects:</strong> 300-500 words per project</li>
+                    <li><strong>About Page:</strong> 600-800 words</li>
+                    <li><strong>Blog Posts:</strong> 1,500-2,500 words (long-form performs best)</li>
+                </ul>
+            </div>
+
+            <h3>Image Optimization</h3>
+
+            <div class="recommendation">
+                <h4>Every Image Must Include:</h4>
+                <ul class="checklist">
+                    <li><strong>Descriptive File Names:</strong>
+                        <ul>
+                            <li>❌ Bad: <code>IMG_2048.jpg</code></li>
+                            <li>✓ Good: <code>santa-fe-kitchen-remodel-sustainable-materials.jpg</code></li>
+                        </ul>
+                    </li>
+                    <li><strong>Alt Text with Keywords:</strong>
+                        <ul>
+                            <li>Example: <code>alt="Modern sustainable kitchen design in Santa Fe featuring custom cabinetry and eco-friendly countertops by Matteo Designs"</code></li>
+                        </ul>
+                    </li>
+                    <li><strong>Title Attributes:</strong> Brief descriptions for hover text</li>
+                    <li><strong>Captions:</strong> Describe the project, materials used, and design philosophy</li>
+                    <li><strong>Proper Sizing:</strong> Serve appropriate sizes for device (don't load 4K images on mobile)</li>
+                </ul>
+            </div>
+
+            <h3>Internal Linking Strategy</h3>
+
+            <div class="recommendation">
+                <h4>Link Architecture:</h4>
+                <ul>
+                    <li><strong>Homepage links to:</strong> All service pages, featured portfolio projects, about page, blog (min 8-10 internal links)</li>
+                    <li><strong>Service pages link to:</strong> Relevant portfolio projects, related services, contact page, relevant blog posts</li>
+                    <li><strong>Portfolio projects link to:</strong> Related projects, service pages, contact page with CTA</li>
+                    <li><strong>Blog posts link to:</strong> Relevant services, portfolio examples, other related blog posts</li>
+                </ul>
+
+                <p><strong>Anchor Text Best Practices:</strong></p>
+                <ul>
+                    <li>Use descriptive anchor text with keywords: "sustainable kitchen design" instead of "click here"</li>
+                    <li>Vary anchor text - don't use the same phrase repeatedly</li>
+                    <li>Make sure every page is within 3 clicks from homepage</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="content-strategy" class="section">
+            <h2>5. Content Strategy & Marketing <span class="priority priority-high">High Priority</span></h2>
+
+            <h3>Blog Implementation</h3>
+
+            <div class="issue">
+                <h4>Current State:</h4>
+                <p>No blog or content marketing visible. This is a massive missed opportunity for SEO and establishing authority.</p>
+            </div>
+
+            <div class="recommendation">
+                <h4>Why a Blog is Critical:</h4>
+                <ul>
+                    <li>Companies that blog receive <strong>97% more inbound links</strong></li>
+                    <li>Websites with blogs have <strong>434% more indexed pages</strong></li>
+                    <li>Blog posts can rank for long-tail keywords that service pages miss</li>
+                    <li>Positions you as an industry expert and builds trust</li>
+                    <li>Provides content for social media and email marketing</li>
+                    <li>Keeps website fresh, which Google favors</li>
+                </ul>
+            </div>
+
+            <h3>Content Calendar - First 12 Blog Posts</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Blog Post Title</th>
+                        <th>Target Keywords</th>
+                        <th>Content Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>10 Sustainable Interior Design Ideas for Your Santa Fe Home</td>
+                        <td>sustainable interior design, eco-friendly home</td>
+                        <td>List</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>What is LEED Certification and Why It Matters for Your Home</td>
+                        <td>LEED certification, green building</td>
+                        <td>Educational</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Kitchen Remodeling Costs in Santa Fe: 2025 Complete Guide</td>
+                        <td>kitchen remodeling cost, santa fe renovation</td>
+                        <td>Guide</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Before & After: Historic Santa Fe Adobe Home Restoration</td>
+                        <td>adobe restoration, historic home renovation</td>
+                        <td>Case Study</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>How to Choose Eco-Friendly Materials for Your Home Renovation</td>
+                        <td>eco-friendly materials, sustainable renovation</td>
+                        <td>How-To</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Santa Fe Style: Blending Traditional and Modern Design</td>
+                        <td>santa fe style, southwestern design</td>
+                        <td>Style Guide</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Top 5 Bathroom Design Trends for 2025</td>
+                        <td>bathroom design trends, modern bathroom</td>
+                        <td>Trends</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>What to Expect When Hiring an Interior Designer</td>
+                        <td>hiring interior designer, design process</td>
+                        <td>Educational</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Commercial Space Planning: Maximizing Function & Aesthetics</td>
+                        <td>commercial space planning, office design</td>
+                        <td>Service Focus</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>The ROI of Professional Interior Design for Real Estate Investors</td>
+                        <td>real estate design, property value</td>
+                        <td>Business Case</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Custom Furniture vs. Store-Bought: What's Right for You?</td>
+                        <td>custom furniture, bespoke design</td>
+                        <td>Comparison</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Energy-Efficient Home Design: Lower Bills, Higher Comfort</td>
+                        <td>energy efficient home, green design</td>
+                        <td>Benefits</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Case Study Template</h3>
+
+            <div class="example">
+                <h4>Structure for Portfolio Case Studies:</h4>
+                <pre><code><strong>Title:</strong> [Project Name]: [Result Achieved]
+Example: "Coastal Farmhouse Renovation: Blending Sustainability with Timeless Elegance"
+
+<strong>1. The Challenge (100-150 words)</strong>
+   - Client background and needs
+   - Specific problems to solve
+   - Budget and timeline constraints
+   - Unique requirements
+
+<strong>2. Our Approach (200-300 words)</strong>
+   - Design philosophy applied
+   - Materials selected and why
+   - Sustainable features incorporated
+   - Collaboration with contractors/architects
+   - Timeline and process
+
+<strong>3. Sustainable Features (150-200 words)</strong>
+   - LEED points achieved
+   - Energy-efficient systems
+   - Eco-friendly materials
+   - Long-term sustainability benefits
+
+<strong>4. The Results (100-150 words)</strong>
+   - Before and after metrics
+   - Client satisfaction quote
+   - Awards or recognition
+   - Measurable outcomes (energy savings, increased home value, etc.)
+
+<strong>5. Photo Gallery</strong>
+   - 15-25 high-quality images
+   - Before and after shots
+   - Detail shots of custom work
+   - Room-by-room coverage
+
+<strong>6. Project Details Sidebar</strong>
+   - Location: [City, State]
+   - Square Footage: [SF]
+   - Project Type: [Renovation/New Build/etc.]
+   - Timeline: [X months]
+   - Services: [List services provided]
+   - Certifications: [LEED level, etc.]
+
+<strong>7. Call-to-Action</strong>
+   "Ready to transform your space with sustainable design? Schedule your free consultation today."
+   [Contact Form or Button]</code></pre>
+            </div>
+
+            <h3>Content Upgrades & Lead Magnets</h3>
+
+            <div class="recommendation">
+                <h4>Free Resources to Capture Leads:</h4>
+                <ol>
+                    <li><strong>"The Ultimate Kitchen Remodel Planning Checklist"</strong> (PDF)
+                        <ul>
+                            <li>Timeline planning tool</li>
+                            <li>Budget worksheet</li>
+                            <li>Material selection guide</li>
+                            <li>Contractor questions to ask</li>
+                        </ul>
+                    </li>
+                    <li><strong>"Santa Fe Sustainable Design Guide"</strong> (eBook)
+                        <ul>
+                            <li>Local sustainable material sources</li>
+                            <li>Climate-appropriate design tips</li>
+                            <li>LEED certification process</li>
+                            <li>Case studies</li>
+                        </ul>
+                    </li>
+                    <li><strong>"Interior Design ROI Calculator"</strong> (Interactive Tool)
+                        <ul>
+                            <li>Estimate return on investment for renovations</li>
+                            <li>Compare DIY vs. professional design costs</li>
+                            <li>Calculate potential home value increase</li>
+                        </ul>
+                    </li>
+                    <li><strong>"Design Style Quiz"</strong> (Interactive)
+                        <ul>
+                            <li>Help visitors identify their design preferences</li>
+                            <li>Provide personalized style recommendations</li>
+                            <li>Capture email to send results</li>
+                        </ul>
+                    </li>
+                    <li><strong>"15 Questions to Ask Before Hiring an Interior Designer"</strong> (PDF)
+                        <ul>
+                            <li>Positions you as helpful expert</li>
+                            <li>Educates prospects on your process</li>
+                            <li>Builds trust before sales conversation</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Implementation:</strong> Place opt-in forms in blog posts, create dedicated landing pages, add popup forms (exit-intent), and promote on social media.</p>
+            </div>
+
+            <h3>Video Content Strategy</h3>
+
+            <div class="recommendation">
+                <h4>YouTube Channel Ideas:</h4>
+                <ul>
+                    <li><strong>Project Tours:</strong> 5-10 minute walkthroughs of completed projects</li>
+                    <li><strong>Design Tips:</strong> Short educational videos (2-3 minutes)</li>
+                    <li><strong>Before & After:</strong> Transformation stories with client interviews</li>
+                    <li><strong>Material Spotlights:</strong> Showcase sustainable materials and their benefits</li>
+                    <li><strong>Process Videos:</strong> Behind-the-scenes of design process</li>
+                    <li><strong>Q&A Sessions:</strong> Answer common client questions</li>
+                </ul>
+
+                <p><strong>SEO Benefits:</strong> Videos keep visitors on site longer (dwell time), YouTube is owned by Google (helps rankings), videos appear in search results, creates backlink opportunities.</p>
+            </div>
+        </section>
+
+        <section id="local-seo" class="section">
+            <h2>6. Location-Based SEO Strategy (Local + National) <span class="priority priority-high">High Priority</span></h2>
+
+            <h3>Dual Market Strategy</h3>
+            <div class="recommendation">
+                <h4>Two-Pronged Approach:</h4>
+                <p><strong>1. Santa Fe Local Domination (60% of effort)</strong></p>
+                <ul>
+                    <li>Focus: Rank #1 for "interior designer santa fe" and related local keywords</li>
+                    <li>Benefits: Higher conversion rates, easier to rank, word-of-mouth referrals</li>
+                    <li>Tactics: Google Business Profile, local citations, community involvement</li>
+                </ul>
+
+                <p><strong>2. National Expertise Positioning (40% of effort)</strong></p>
+                <ul>
+                    <li>Focus: Rank for "sustainable interior designer" and LEED-related keywords nationwide</li>
+                    <li>Benefits: Higher-value projects, less competition for specialty niche</li>
+                    <li>Tactics: Thought leadership content, industry publications, case studies</li>
+                    <li>Target Cities: Create location pages for major markets (NYC, LA, San Francisco, Chicago, etc.)</li>
+                </ul>
+            </div>
+
+            <h3>Google Business Profile (formerly Google My Business)</h3>
+
+            <div class="issue">
+                <h4>Critical Action Required:</h4>
+                <p>Verify that Google Business Profile is claimed, complete, and optimized. This is THE most important local SEO factor.</p>
+            </div>
+
+            <div class="recommendation">
+                <h4>GBP Optimization Checklist:</h4>
+                <ul class="checklist">
+                    <li><strong>Claim and verify your listing</strong> at business.google.com</li>
+                    <li><strong>Complete ALL fields:</strong>
+                        <ul>
+                            <li>Business name: Mattéo Designs</li>
+                            <li>Category: Interior Designer (primary), Interior Design Service, Kitchen Remodeler</li>
+                            <li>Address: [MUST be consistent across all platforms]</li>
+                            <li>Service area: List all cities served (Santa Fe, Los Alamos, Taos, Albuquerque, etc.)</li>
+                            <li>Phone number: (818) 568-2405 [verify this is correct]</li>
+                            <li>Website: https://www.matteodesigns.com</li>
+                            <li>Hours: Set accurate business hours or "By Appointment Only"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Write compelling business description</strong> (750 character limit):
+                        <ul>
+                            <li>Include keywords naturally</li>
+                            <li>Highlight sustainable/LEED focus</li>
+                            <li>Mention services offered</li>
+                            <li>Add call-to-action</li>
+                        </ul>
+                    </li>
+                    <li><strong>Upload high-quality photos:</strong>
+                        <ul>
+                            <li>Logo (square, min 720x720px)</li>
+                            <li>Cover photo (landscape, min 1024x576px)</li>
+                            <li>Interior and exterior of your office</li>
+                            <li>Team photos</li>
+                            <li>15-20 portfolio project photos (upload weekly)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Add attributes:</strong>
+                        <ul>
+                            <li>"Identifies as women-owned" (if applicable)</li>
+                            <li>"By appointment only"</li>
+                            <li>"Free consultation"</li>
+                            <li>"LGBTQ+ friendly"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Create services:</strong> List specific services with descriptions and price ranges</li>
+                    <li><strong>Enable messaging:</strong> Allow potential clients to message directly through GBP</li>
+                    <li><strong>Add Q&A:</strong> Proactively add and answer 10-15 common questions</li>
+                    <li><strong>Post weekly updates:</strong>
+                        <ul>
+                            <li>New project completions</li>
+                            <li>Design tips</li>
+                            <li>Special offers</li>
+                            <li>Company news</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Review Generation Strategy</h3>
+
+            <div class="metric">
+                <strong>Target:</strong> 25+ Google reviews with 4.8+ average rating within 6 months
+            </div>
+
+            <div class="recommendation">
+                <h4>Review Generation Process:</h4>
+                <ol>
+                    <li><strong>Create a Review Generation System:</strong>
+                        <ul>
+                            <li>After project completion, send personalized email requesting review</li>
+                            <li>Include direct link to Google review page</li>
+                            <li>Make it easy with one-click access</li>
+                            <li>Time the request 1-2 weeks after project completion</li>
+                        </ul>
+                    </li>
+                    <li><strong>Email Template:</strong>
+<pre><code>Subject: We'd love your feedback on your [Project Type]
+
+Hi [Client Name],
+
+Thank you for trusting Mattéo Designs with your [project type]. It was a pleasure working with you to create your [describe space].
+
+Your feedback helps us improve and helps other homeowners make confident decisions about their design projects.
+
+Would you mind taking 2 minutes to share your experience on Google?
+
+[Direct Review Link Button]
+
+Thank you again for your business!
+
+Best regards,
+Mattéo</code></pre>
+                    </li>
+                    <li><strong>Respond to ALL Reviews:</strong>
+                        <ul>
+                            <li>Positive reviews: Thank them, mention specific project details, invite them back</li>
+                            <li>Negative reviews: Respond professionally, take conversation offline, show commitment to resolution</li>
+                            <li>Response time: Within 24-48 hours</li>
+                        </ul>
+                    </li>
+                    <li><strong>Showcase Reviews:</strong>
+                        <ul>
+                            <li>Feature testimonials on homepage</li>
+                            <li>Create dedicated testimonials page</li>
+                            <li>Share positive reviews on social media</li>
+                            <li>Include in email signatures</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <h3>Local Citations & Directory Listings</h3>
+
+            <div class="recommendation">
+                <h4>Essential Directory Listings (NAP must be consistent):</h4>
+
+                <p><strong>Priority Citations:</strong></p>
+                <ol>
+                    <li>Google Business Profile ✓ (most important)</li>
+                    <li>Bing Places for Business</li>
+                    <li>Apple Maps (via Apple Business Connect)</li>
+                    <li>Yelp for Business</li>
+                    <li>Facebook Business Page</li>
+                    <li>LinkedIn Company Page</li>
+                </ol>
+
+                <p><strong>Industry-Specific Directories:</strong></p>
+                <ul>
+                    <li>Houzz (critical for interior designers - includes portfolio)</li>
+                    <li>Porch</li>
+                    <li>Thumbtack</li>
+                    <li>HomeAdvisor</li>
+                    <li>Angi (formerly Angie's List)</li>
+                    <li>Expertise.com</li>
+                    <li>Interior Design Society</li>
+                    <li>ASID (American Society of Interior Designers)</li>
+                    <li>USGBC (US Green Building Council) - for LEED credentials</li>
+                </ul>
+
+                <p><strong>Local Directories:</strong></p>
+                <ul>
+                    <li>Santa Fe Chamber of Commerce</li>
+                    <li>Visit Santa Fe</li>
+                    <li>Santa Fe New Mexican (local newspaper)</li>
+                    <li>Santa Fe Reporter</li>
+                    <li>Local business associations</li>
+                </ul>
+            </div>
+
+            <div class="warning">
+                <strong>⚠️ NAP Consistency is Critical:</strong>
+                <p>Name, Address, Phone number must be EXACTLY the same across ALL platforms. Even small differences (St. vs Street, Suite 100 vs Ste 100) hurt local SEO.</p>
+            </div>
+
+            <h3>Local Content Strategy</h3>
+
+            <div class="recommendation">
+                <h4>Location-Specific Content Ideas:</h4>
+                <ul>
+                    <li><strong>Service Area Pages:</strong> Create individual pages for each city served
+                        <ul>
+                            <li>Interior Design Services in Santa Fe, NM</li>
+                            <li>Taos Interior Designer</li>
+                            <li>Albuquerque Commercial Design Services</li>
+                        </ul>
+                    </li>
+                    <li><strong>Local Blog Posts:</strong>
+                        <ul>
+                            <li>"Best Sustainable Material Sources in Santa Fe"</li>
+                            <li>"Designing for Santa Fe's Climate: Tips and Tricks"</li>
+                            <li>"Historic Preservation Guidelines in Santa Fe"</li>
+                            <li>"Top Kitchen and Bath Showrooms in New Mexico"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Community Involvement:</strong>
+                        <ul>
+                            <li>Sponsor local events (Santa Fe Home Show, etc.)</li>
+                            <li>Partner with local businesses</li>
+                            <li>Participate in community projects</li>
+                            <li>Host design workshops or seminars</li>
+                        </ul>
+                    </li>
+                    <li><strong>Local Link Building:</strong>
+                        <ul>
+                            <li>Get featured in local publications</li>
+                            <li>Contribute guest posts to local blogs</li>
+                            <li>Partner with local contractors, architects, and suppliers</li>
+                            <li>Join local business associations</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="conversion-optimization" class="section">
+            <h2>7. Conversion Rate Optimization (CRO) <span class="priority priority-high">High Priority</span></h2>
+
+            <h3>Homepage Conversion Elements</h3>
+
+            <div class="issue">
+                <h4>Current Issues:</h4>
+                <ul>
+                    <li>No clear call-to-action above the fold</li>
+                    <li>No visible contact form on homepage</li>
+                    <li>Unclear next steps for interested prospects</li>
+                    <li>Social media links don't convert to leads</li>
+                </ul>
+            </div>
+
+            <div class="recommendation">
+                <h4>Hero Section Redesign:</h4>
+                <pre><code>=====================================
+HERO SECTION (Above the Fold)
+=====================================
+
+[Background: Stunning project image or video]
+
+HEADLINE:
+Transform Your Space with Sustainable Design
+Serving Santa Fe & Northern New Mexico
+
+SUBHEADLINE:
+Award-winning interior design services for residential, commercial,
+and real estate development. LEED-certified, eco-friendly, timeless.
+
+[Primary CTA Button]      [Secondary CTA Button]
+Schedule Free Consultation     View Portfolio
+=====================================</code></pre>
+            </div>
+
+            <h3>Call-to-Action Strategy</h3>
+
+            <div class="recommendation">
+                <h4>Primary CTAs (Use These Consistently):</h4>
+
+                <p><strong>1. Free Consultation CTA</strong> (Highest Intent)</p>
+                <ul>
+                    <li>Button text: "Schedule Your Free Consultation"</li>
+                    <li>Use on: Homepage hero, service pages, portfolio pages, about page</li>
+                    <li>Links to: Dedicated consultation booking page with Calendly integration</li>
+                    <li>Color: Contrasting color (e.g., gold/bronze to complement Santa Fe aesthetic)</li>
+                </ul>
+
+                <p><strong>2. Project Inquiry CTA</strong> (Medium Intent)</p>
+                <ul>
+                    <li>Button text: "Start Your Project" or "Get a Quote"</li>
+                    <li>Use on: Service-specific pages</li>
+                    <li>Links to: Simple project inquiry form</li>
+                </ul>
+
+                <p><strong>3. Portfolio CTA</strong> (Low Intent, Educational)</p>
+                <ul>
+                    <li>Button text: "View Our Work" or "Browse Portfolio"</li>
+                    <li>Use on: Homepage, about page</li>
+                    <li>Links to: Portfolio page</li>
+                </ul>
+
+                <p><strong>4. Lead Magnet CTAs</strong> (Nurture)</p>
+                <ul>
+                    <li>"Download Our Kitchen Planning Guide"</li>
+                    <li>"Get the Sustainable Design Checklist"</li>
+                    <li>Use on: Blog posts, service pages</li>
+                </ul>
+            </div>
+
+            <h3>Forms Optimization</h3>
+
+            <div class="recommendation">
+                <h4>Contact Form Best Practices:</h4>
+
+                <p><strong>Short Form (Homepage & Quick Contact):</strong></p>
+                <pre><code>Contact Us
+
+Name: [____________]
+Email: [____________]
+Phone: [____________]
+Project Type: [Dropdown: Residential / Commercial / Real Estate / Other]
+Message: [Text area]
+
+☐ I'd like to schedule a free consultation
+
+[Submit Button: "Send Message"]
+
+We typically respond within 24 hours.
+Your information is never shared.</code></pre>
+
+                <p><strong>Detailed Project Inquiry Form:</strong></p>
+                <pre><code>Start Your Project
+
+Step 1: About You
+Name: [____________]
+Email: [____________]
+Phone: [____________]
+Preferred contact method: [Email / Phone / Text]
+
+Step 2: Your Project
+Project type: [Dropdown]
+- New construction
+- Full renovation
+- Kitchen remodel
+- Bathroom remodel
+- Commercial space
+- Other
+
+Project location: [____________]
+Property type: [Dropdown: Single-family home / Condo / Commercial / etc.]
+Square footage (if known): [____________]
+
+Step 3: Timeline & Budget
+Desired start date: [Date picker]
+Project budget: [Dropdown]
+- Under $50,000
+- $50,000 - $100,000
+- $100,000 - $250,000
+- $250,000 - $500,000
+- $500,000+
+- Not sure yet
+
+Step 4: Your Vision
+Tell us about your project: [Large text area]
+- What spaces need design?
+- What's your style preference?
+- Any specific requirements?
+
+How did you hear about us? [Dropdown]
+
+☐ Yes, I'm interested in sustainable/LEED-certified design
+☐ Sign me up for design tips and inspiration emails
+
+[Submit Button: "Submit Project Inquiry"]
+
+✓ Free consultation included
+✓ No obligation
+✓ 24-hour response time</code></pre>
+            </div>
+
+            <div class="recommendation">
+                <h4>Form Placement Strategy:</h4>
+                <ul class="checklist">
+                    <li>Short contact form on EVERY page (sticky sidebar or footer)</li>
+                    <li>Detailed inquiry form on dedicated "Start Your Project" page</li>
+                    <li>Popup form (exit-intent) offering free consultation or lead magnet</li>
+                    <li>Inline forms within blog posts (relevant to content)</li>
+                    <li>Chatbot or live chat option for immediate engagement</li>
+                </ul>
+            </div>
+
+            <h3>Service Package Presentation</h3>
+
+            <div class="issue">
+                <h4>Current Issue:</h4>
+                <p>No pricing information or service packages visible. This creates uncertainty and may prevent qualified leads from contacting you.</p>
+            </div>
+
+            <div class="recommendation">
+                <h4>Recommended Service Packages:</h4>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Package</th>
+                            <th>Services Included</th>
+                            <th>Best For</th>
+                            <th>Investment Range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Design Consultation</strong></td>
+                            <td>
+                                - 2-hour in-home consultation<br>
+                                - Design direction & recommendations<br>
+                                - Material & color suggestions<br>
+                                - Space planning concepts<br>
+                                - Written summary report
+                            </td>
+                            <td>DIYers who need professional guidance</td>
+                            <td>$500 - $1,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Room Design Package</strong></td>
+                            <td>
+                                - Full design for one room<br>
+                                - 3D renderings<br>
+                                - Furniture & fixture selections<br>
+                                - Floor plans & elevations<br>
+                                - Shopping list & sources<br>
+                                - 2 revision rounds
+                            </td>
+                            <td>Single room renovation (kitchen, bath, living room)</td>
+                            <td>$3,000 - $8,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Full-Service Design</strong></td>
+                            <td>
+                                - Complete design services<br>
+                                - Architectural drawings<br>
+                                - 3D renderings & walkthroughs<br>
+                                - Material & fixture selection<br>
+                                - Project management<br>
+                                - Contractor coordination<br>
+                                - Sustainability consulting<br>
+                                - LEED certification assistance<br>
+                                - Installation & styling
+                            </td>
+                            <td>Whole-home renovation, new construction, commercial projects</td>
+                            <td>15-20% of construction budget<br>(Minimum $15,000)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Commercial Design</strong></td>
+                            <td>
+                                - Space planning & layout<br>
+                                - Brand integration<br>
+                                - Code compliance<br>
+                                - FF&E specifications<br>
+                                - 3D renderings<br>
+                                - Project management<br>
+                                - Sustainable design solutions
+                            </td>
+                            <td>Office, retail, hospitality, medical spaces</td>
+                            <td>Custom quote<br>(Based on project scope)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="warning">
+                    <strong>Note:</strong> These are suggested ranges. Adjust based on your actual pricing structure and market positioning.
+                </div>
+            </div>
+
+            <h3>Trust Signals & Credibility</h3>
+
+            <div class="recommendation">
+                <h4>Add These Trust Elements:</h4>
+
+                <p><strong>Homepage Trust Bar (Below Hero):</strong></p>
+                <ul>
+                    <li>Number of projects completed: "150+ Projects Completed"</li>
+                    <li>Years in business: "15+ Years of Excellence"</li>
+                    <li>Client satisfaction: "98% Client Satisfaction Rate"</li>
+                    <li>Awards: Display any design awards or recognition</li>
+                </ul>
+
+                <p><strong>Certifications & Associations:</strong></p>
+                <ul>
+                    <li>Display LEED AP certification prominently</li>
+                    <li>Show professional association memberships (ASID, IDS, etc.)</li>
+                    <li>Feature sustainability certifications</li>
+                    <li>Include insurance and licensing information</li>
+                </ul>
+
+                <p><strong>Social Proof:</strong></p>
+                <ul>
+                    <li>Rotate 3-4 client testimonials on homepage</li>
+                    <li>Display Google review rating with review count</li>
+                    <li>Show logos of publications where you've been featured</li>
+                    <li>Include photos of happy clients (with permission)</li>
+                </ul>
+
+                <p><strong>Process Transparency:</strong></p>
+                <ul>
+                    <li>Show clear design process (Discovery → Design → Implementation → Reveal)</li>
+                    <li>Set expectations for timelines</li>
+                    <li>Explain pricing structure</li>
+                    <li>Describe what clients can expect at each stage</li>
+                </ul>
+            </div>
+
+            <h3>Mobile Conversion Optimization</h3>
+
+            <div class="recommendation">
+                <h4>Mobile-Specific Elements:</h4>
+                <ul class="checklist">
+                    <li><strong>Click-to-call button</strong> prominently displayed:
+                        <pre><code>&lt;a href="tel:+18185682405" class="mobile-cta"&gt;
+  📞 Call Now: (818) 568-2405
+&lt;/a&gt;</code></pre>
+                    </li>
+                    <li><strong>Sticky mobile CTA bar</strong> at bottom of screen</li>
+                    <li><strong>Simplified forms</strong> for mobile (max 3-4 fields)</li>
+                    <li><strong>Large tap targets</strong> (minimum 48x48px for buttons)</li>
+                    <li><strong>One-tap email</strong> links properly formatted</li>
+                    <li><strong>Google Maps integration</strong> for easy directions</li>
+                    <li><strong>WhatsApp/SMS option</strong> for instant messaging</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="user-experience" class="section">
+            <h2>8. User Experience Improvements <span class="priority priority-medium">Medium Priority</span></h2>
+
+            <h3>Navigation Optimization</h3>
+
+            <div class="recommendation">
+                <h4>Recommended Navigation Structure:</h4>
+                <pre><code>PRIMARY NAVIGATION:
+├── Home
+├── Services ▼
+│   ├── Residential Design
+│   ├── Commercial Design
+│   ├── Kitchen Remodeling
+│   ├── Bathroom Remodeling
+│   ├── Historic Restoration
+│   └── Sustainable Design / LEED
+├── Portfolio ▼
+│   ├── Residential Projects
+│   ├── Commercial Projects
+│   ├── Kitchen Projects
+│   └── Bathroom Projects
+├── Process
+├── About
+├── Blog
+└── Contact
+
+UTILITY NAVIGATION (Top Right):
+├── Free Consultation [CTA Button]
+└── (818) 568-2405 [Click-to-call]</code></pre>
+            </div>
+
+            <h3>Portfolio Page Improvements</h3>
+
+            <div class="recommendation">
+                <h4>Enhanced Portfolio Features:</h4>
+                <ul>
+                    <li><strong>Filtering System:</strong>
+                        <ul>
+                            <li>Filter by: Project Type / Style / Room Type / Budget Range</li>
+                            <li>Makes it easy for visitors to find relevant projects</li>
+                        </ul>
+                    </li>
+                    <li><strong>Project Previews:</strong>
+                        <ul>
+                            <li>Hover effect showing project name and type</li>
+                            <li>Quick stats: Square footage, location, year</li>
+                            <li>"View Project" button overlay</li>
+                        </ul>
+                    </li>
+                    <li><strong>Individual Project Pages Must Include:</strong>
+                        <ul>
+                            <li>15-25 high-quality photos</li>
+                            <li>Before & after comparison slider</li>
+                            <li>Project story (300-500 words)</li>
+                            <li>Challenge / Solution / Result format</li>
+                            <li>Sustainability features highlighted</li>
+                            <li>Client testimonial</li>
+                            <li>Project details sidebar (location, SF, timeline, services)</li>
+                            <li>Related projects section</li>
+                            <li>CTA: "Want similar results? Schedule a consultation"</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>About Page Enhancement</h3>
+
+            <div class="recommendation">
+                <h4>About Page Must-Haves:</h4>
+                <ol>
+                    <li><strong>Personal Story:</strong>
+                        <ul>
+                            <li>Your journey into interior design</li>
+                            <li>Why sustainability matters to you</li>
+                            <li>Your design philosophy</li>
+                            <li>Professional background and credentials</li>
+                        </ul>
+                    </li>
+                    <li><strong>Professional Photos:</strong>
+                        <ul>
+                            <li>Headshot (professional but approachable)</li>
+                            <li>Action shots (at work, with clients, on job sites)</li>
+                            <li>Team photos if applicable</li>
+                        </ul>
+                    </li>
+                    <li><strong>Credentials:</strong>
+                        <ul>
+                            <li>Education and degrees</li>
+                            <li>LEED AP certification</li>
+                            <li>Professional memberships</li>
+                            <li>Awards and recognition</li>
+                            <li>Years of experience</li>
+                        </ul>
+                    </li>
+                    <li><strong>Values & Approach:</strong>
+                        <ul>
+                            <li>What makes your process different</li>
+                            <li>Your commitment to sustainability</li>
+                            <li>How you work with clients</li>
+                            <li>Your design philosophy in practice</li>
+                        </ul>
+                    </li>
+                    <li><strong>Personal Touch:</strong>
+                        <ul>
+                            <li>Interesting facts about you</li>
+                            <li>Community involvement</li>
+                            <li>Hobbies that influence your design</li>
+                            <li>What you love about Santa Fe/your location</li>
+                        </ul>
+                    </li>
+                    <li><strong>CTA:</strong> "Let's Work Together" button leading to contact form</li>
+                </ol>
+            </div>
+
+            <h3>Service Pages Structure</h3>
+
+            <div class="example">
+                <h4>Template for Service Pages:</h4>
+                <pre><code><strong>RESIDENTIAL INTERIOR DESIGN IN SANTA FE</strong>
+
+HERO SECTION:
+- Stunning image of residential project
+- H1: "Residential Interior Design Services in Santa Fe, NM"
+- Subheading: Brief value proposition
+- CTA: "Schedule Free Consultation"
+
+INTRODUCTION (200 words):
+- What makes your residential design services unique
+- Your approach to creating livable, sustainable homes
+- Who you serve (homeowners, builders, developers)
+
+YOUR PROCESS (400 words):
+1. Discovery & Consultation
+   - Initial meeting and site visit
+   - Understanding your lifestyle and vision
+   - Budget and timeline discussion
+
+2. Concept Development
+   - Space planning and layouts
+   - Material and color palettes
+   - 3D renderings and presentations
+
+3. Design Documentation
+   - Detailed drawings and specifications
+   - Sustainable material selections
+   - Contractor bid packages
+
+4. Implementation
+   - Project management
+   - Contractor coordination
+   - Quality control
+
+5. Installation & Styling
+   - Furniture and fixture installation
+   - Art placement and styling
+   - Final reveal
+
+SERVICES INCLUDED (200 words):
+✓ Space planning and layouts
+✓ 3D renderings and visualizations
+✓ Custom kitchen and bathroom design
+✓ Furniture and fixture selection
+✓ Color consultation
+✓ Sustainable material selection
+✓ LEED certification assistance
+✓ Project management
+✓ Contractor coordination
+
+FEATURED PROJECTS:
+- 3-6 residential project examples with photos
+
+SUSTAINABLE DESIGN FOCUS (200 words):
+- Your LEED expertise
+- Energy-efficient solutions
+- Eco-friendly materials
+- Long-term value and health benefits
+
+TESTIMONIALS:
+- 2-3 residential client testimonials
+
+SERVICE PACKAGES:
+- Overview of consultation, room design, and full-service packages
+- Link to pricing/packages page
+
+FAQ SECTION:
+- 8-10 common questions answered
+- How much does interior design cost?
+- How long does a project take?
+- Do you work with my contractor?
+- What's included in your design fee?
+- etc.
+
+FINAL CTA:
+"Ready to Transform Your Home?"
+[Large CTA button] + Contact form</code></pre>
+            </div>
+        </section>
+
+        <section id="lead-generation" class="section">
+            <h2>9. GHL Lead Generation & Automation <span class="priority priority-high">High Priority</span></h2>
+
+            <h3>Email Marketing Strategy</h3>
+
+            <div class="recommendation">
+                <h4>Build Your Email List:</h4>
+                <p><strong>Where to Add Email Signup:</strong></p>
+                <ul class="checklist">
+                    <li>Homepage footer with compelling offer</li>
+                    <li>Blog sidebar subscription box</li>
+                    <li>End of each blog post</li>
+                    <li>Exit-intent popup</li>
+                    <li>After form submissions (automatic addition with permission)</li>
+                    <li>In-person at events and consultations</li>
+                </ul>
+
+                <p><strong>Email List Incentives:</strong></p>
+                <ul>
+                    <li>"Get monthly design tips and inspiration"</li>
+                    <li>"Download our free Kitchen Planning Guide"</li>
+                    <li>"Access exclusive before & after reveals"</li>
+                    <li>"Get our Sustainable Design Checklist"</li>
+                </ul>
+            </div>
+
+            <div class="recommendation">
+                <h4>Email Sequences:</h4>
+
+                <p><strong>1. Welcome Sequence (5 emails over 2 weeks):</strong></p>
+                <ol>
+                    <li><strong>Day 0:</strong> Welcome + Deliver promised lead magnet
+                        <ul>
+                            <li>Thank them for subscribing</li>
+                            <li>Deliver the free resource</li>
+                            <li>Set expectations for future emails</li>
+                            <li>Introduce yourself and your philosophy</li>
+                        </ul>
+                    </li>
+                    <li><strong>Day 2:</strong> Your Story + Design Philosophy
+                        <ul>
+                            <li>Share your background</li>
+                            <li>Why sustainability matters</li>
+                            <li>What makes your approach different</li>
+                        </ul>
+                    </li>
+                    <li><strong>Day 5:</strong> How the Design Process Works
+                        <ul>
+                            <li>Demystify the interior design process</li>
+                            <li>Explain what to expect</li>
+                            <li>Address common concerns</li>
+                            <li>CTA: "Schedule a free consultation"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Day 9:</strong> Showcase a Transformation
+                        <ul>
+                            <li>Feature a before & after project</li>
+                            <li>Tell the story behind the project</li>
+                            <li>Include client testimonial</li>
+                            <li>CTA: "View more projects"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Day 14:</strong> Special Offer
+                        <ul>
+                            <li>Offer discounted consultation for new subscribers</li>
+                            <li>Or offer free 30-minute design advice call</li>
+                            <li>Create urgency (expires in 7 days)</li>
+                            <li>Strong CTA to book</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>2. Project Inquiry Follow-Up Sequence:</strong></p>
+                <ol>
+                    <li><strong>Immediately:</strong> Auto-reply confirmation
+                        <ul>
+                            <li>"Thanks for your inquiry, we'll respond within 24 hours"</li>
+                            <li>Link to portfolio or relevant blog post</li>
+                        </ul>
+                    </li>
+                    <li><strong>Within 24 hours:</strong> Personal response
+                        <ul>
+                            <li>Answer their specific questions</li>
+                            <li>Suggest consultation</li>
+                            <li>Provide relevant project examples</li>
+                        </ul>
+                    </li>
+                    <li><strong>Day 3:</strong> If no response, send helpful resource
+                        <ul>
+                            <li>Send relevant case study or blog post</li>
+                            <li>"I thought you might find this helpful"</li>
+                            <li>Soft CTA to continue conversation</li>
+                        </ul>
+                    </li>
+                    <li><strong>Day 7:</strong> Check-in email
+                        <ul>
+                            <li>"Just following up on your project"</li>
+                            <li>"Do you have any questions I can answer?"</li>
+                            <li>Offer phone call or video chat</li>
+                        </ul>
+                    </li>
+                    <li><strong>Day 14:</strong> Final follow-up
+                        <ul>
+                            <li>"I know timing isn't always perfect"</li>
+                            <li>Invite them to reach out when ready</li>
+                            <li>Add to newsletter list (with permission)</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>3. Monthly Newsletter:</strong></p>
+                <ul>
+                    <li>Featured project of the month</li>
+                    <li>Design tip or trend spotlight</li>
+                    <li>Sustainable material spotlight</li>
+                    <li>Links to recent blog posts</li>
+                    <li>Upcoming events or workshops</li>
+                    <li>Client spotlight or testimonial</li>
+                </ul>
+            </div>
+
+            <h3>Lead Scoring & Qualification</h3>
+
+            <div class="recommendation">
+                <h4>Prioritize Leads Based on:</h4>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Score</th>
+                            <th>Priority Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Completed detailed project inquiry form</td>
+                            <td>+50</td>
+                            <td>HOT - Contact within 4 hours</td>
+                        </tr>
+                        <tr>
+                            <td>Requested consultation</td>
+                            <td>+40</td>
+                            <td>HOT - Contact within 4 hours</td>
+                        </tr>
+                        <tr>
+                            <td>Visited pricing/services page 3+ times</td>
+                            <td>+30</td>
+                            <td>WARM - Contact within 24 hours</td>
+                        </tr>
+                        <tr>
+                            <td>Downloaded lead magnet</td>
+                            <td>+15</td>
+                            <td>WARM - Add to nurture sequence</td>
+                        </tr>
+                        <tr>
+                            <td>Viewed 5+ portfolio projects</td>
+                            <td>+20</td>
+                            <td>WARM - Consider proactive outreach</td>
+                        </tr>
+                        <tr>
+                            <td>Opened 3+ emails</td>
+                            <td>+10</td>
+                            <td>ENGAGED - Continue nurturing</td>
+                        </tr>
+                        <tr>
+                            <td>Subscribed to newsletter</td>
+                            <td>+5</td>
+                            <td>COLD - Nurture sequence</td>
+                        </tr>
+                        <tr>
+                            <td>Visited site but no action</td>
+                            <td>+1</td>
+                            <td>COLD - Retargeting ad candidate</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Consultation Optimization</h3>
+
+            <div class="recommendation">
+                <h4>Free Consultation Page Structure:</h4>
+
+                <pre><code>HEADLINE: Schedule Your Free Design Consultation
+
+SUBHEADLINE:
+Let's discuss your project and explore how sustainable design
+can transform your space.
+
+WHAT TO EXPECT:
+✓ 30-minute video or phone consultation
+✓ Discuss your project goals and vision
+✓ Explore design possibilities
+✓ Learn about our process and services
+✓ Get preliminary budget guidance
+✓ Receive honest advice - no pressure
+
+WHO THIS IS FOR:
+✓ Homeowners planning a renovation
+✓ Those building a new home
+✓ Commercial property owners
+✓ Real estate developers
+✓ Anyone exploring design possibilities
+
+CONSULTATION OPTIONS:
+○ Video Call (Zoom)
+○ Phone Call
+○ In-Person (Santa Fe area)
+
+[CALENDLY BOOKING WIDGET - Embedded]
+
+OR CALL DIRECTLY:
+📞 (818) 568-2405
+
+TESTIMONIALS:
+"The consultation was incredibly valuable. [Name]
+helped us understand what was possible within our
+budget and gave us confidence to move forward."
+- [Client Name], Santa Fe
+
+FAQ:
+Q: Is the consultation really free?
+A: Yes! We offer complimentary consultations to ensure
+we're a good fit for your project.
+
+Q: What should I prepare?
+A: Photos of your space, any inspiration images, and
+your budget range if known.
+
+Q: Is there any obligation?
+A: Absolutely not. This is an opportunity for us both
+to see if we're a good match.</code></pre>
+            </div>
+
+            <h3>Retargeting Strategy</h3>
+
+            <div class="recommendation">
+                <h4>Retargeting Campaigns:</h4>
+
+                <p><strong>Pixel Installation:</strong></p>
+                <ul class="checklist">
+                    <li>Install Facebook Pixel on all pages</li>
+                    <li>Install Google Ads Remarketing tag</li>
+                    <li>Set up custom audiences based on behavior</li>
+                </ul>
+
+                <p><strong>Audience Segments:</strong></p>
+                <ol>
+                    <li><strong>Service Page Visitors:</strong>
+                        <ul>
+                            <li>Visited specific service pages but didn't convert</li>
+                            <li>Show ads highlighting that service with testimonials</li>
+                            <li>CTA: "Schedule Your Free Consultation"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Portfolio Browsers:</strong>
+                        <ul>
+                            <li>Viewed 3+ portfolio projects</li>
+                            <li>Show ads with before/after transformations</li>
+                            <li>CTA: "Start Your Project"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pricing Page Visitors:</strong>
+                        <ul>
+                            <li>Viewed pricing/packages information</li>
+                            <li>Show limited-time consultation offer</li>
+                            <li>Create urgency</li>
+                        </ul>
+                    </li>
+                    <li><strong>Blog Readers:</strong>
+                        <ul>
+                            <li>Read blog but didn't download lead magnet</li>
+                            <li>Show ads offering free downloadable guides</li>
+                            <li>Build email list</li>
+                        </ul>
+                    </li>
+                    <li><strong>Form Abandoners:</strong>
+                        <ul>
+                            <li>Started form but didn't complete</li>
+                            <li>Show ads addressing common objections</li>
+                            <li>Offer to answer questions via phone</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="social-proof" class="section">
+            <h2>10. Social Proof & Trust Building <span class="priority priority-medium">Medium Priority</span></h2>
+
+            <h3>Testimonial Strategy</h3>
+
+            <div class="recommendation">
+                <h4>Collecting Powerful Testimonials:</h4>
+
+                <p><strong>Questions to Ask Clients:</strong></p>
+                <ol>
+                    <li>What was your biggest concern before starting the project?</li>
+                    <li>What made you choose Mattéo Designs?</li>
+                    <li>What was your favorite part of working with us?</li>
+                    <li>How has the new design improved your daily life?</li>
+                    <li>What would you tell someone considering working with us?</li>
+                    <li>On a scale of 1-10, how likely are you to recommend us?</li>
+                </ol>
+
+                <p><strong>Testimonial Format:</strong></p>
+                <ul>
+                    <li><strong>Text testimonial</strong> (quote + name + project type + location)</li>
+                    <li><strong>Photo</strong> (client in their new space)</li>
+                    <li><strong>Video testimonial</strong> (most powerful - even phone video works)</li>
+                </ul>
+
+                <p><strong>Where to Display:</strong></p>
+                <ul>
+                    <li>Homepage (rotating carousel of 3-5)</li>
+                    <li>Service pages (relevant testimonials)</li>
+                    <li>Portfolio project pages (project-specific)</li>
+                    <li>Dedicated testimonials page</li>
+                    <li>In email signatures</li>
+                    <li>On social media</li>
+                    <li>In proposals and presentations</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <h4>Effective Testimonial Example:</h4>
+                <blockquote>
+                    <p>"We were nervous about renovating our 1920s adobe home - we wanted to modernize it without losing its character. Mattéo completely understood our vision. The result is stunning: a kitchen that feels both timeless and contemporary, with sustainable materials that will last for generations. The solar panels and energy-efficient systems have cut our utility bills by 60%. We couldn't be happier!"</p>
+                    <footer>
+                        <strong>— Sarah & Michael Rodriguez</strong><br>
+                        Historic Home Renovation, Santa Fe<br>
+                        ⭐⭐⭐⭐⭐
+                    </footer>
+                </blockquote>
+            </div>
+
+            <h3>Social Media Strategy</h3>
+
+            <div class="recommendation">
+                <h4>Instagram Content Plan:</h4>
+
+                <p><strong>Content Mix (Weekly):</strong></p>
+                <ul>
+                    <li><strong>3-4 Project Photos:</strong> Showcase completed work, detail shots, before & afters</li>
+                    <li><strong>1-2 Design Tips:</strong> Educational carousel posts</li>
+                    <li><strong>1 Behind-the-Scenes:</strong> Process photos, site visits, material selection</li>
+                    <li><strong>1 Personal/Brand:</strong> Your story, team, values, community involvement</li>
+                    <li><strong>Stories Daily:</strong> Day-in-the-life, Q&As, polls, project progress</li>
+                </ul>
+
+                <p><strong>Hashtag Strategy:</strong></p>
+                <ul>
+                    <li>Create branded hashtag: #MattéoDesignsHome</li>
+                    <li>Use local hashtags: #SantaFeDesign #NewMexicoInteriors #SantaFeHomes</li>
+                    <li>Use niche hashtags: #SustainableDesign #LEEDCertified #EcoFriendlyHome</li>
+                    <li>Use popular hashtags: #InteriorDesign #HomeRenovation #KitchenDesign</li>
+                    <li>Mix of large (1M+ posts), medium (100K-1M), and small (10K-100K)</li>
+                    <li>Limit to 15-20 hashtags per post</li>
+                </ul>
+
+                <p><strong>Instagram Bio Optimization:</strong></p>
+                <pre><code>Mattéo Designs | Santa Fe
+🌿 Sustainable Interior Design
+🏆 LEED Certified
+✨ Creating spaces that change lives
+📍 Santa Fe, NM
+👇 Schedule your free consultation
+[Link to booking page]</code></pre>
+            </div>
+
+            <div class="recommendation">
+                <h4>Houzz Profile Optimization:</h4>
+                <p>Houzz is THE platform for interior designers. Optimize your presence:</p>
+                <ul class="checklist">
+                    <li>Complete 100% of profile information</li>
+                    <li>Upload 50+ project photos (minimum)</li>
+                    <li>Add detailed project descriptions</li>
+                    <li>Include costs/budget ranges for projects (drives higher quality leads)</li>
+                    <li>Request reviews from every client</li>
+                    <li>Respond to all reviews within 48 hours</li>
+                    <li>Answer questions in Houzz community</li>
+                    <li>Create ideabooks and save relevant photos</li>
+                    <li>Consider Houzz Pro subscription for lead generation</li>
+                    <li>Participate in "Ask a Pro" discussions</li>
+                </ul>
+            </div>
+
+            <h3>Media & PR Strategy</h3>
+
+            <div class="recommendation">
+                <h4>Get Featured in Publications:</h4>
+
+                <p><strong>Target Publications:</strong></p>
+                <ul>
+                    <li><strong>National:</strong> Architectural Digest, Elle Decor, Dwell, House Beautiful</li>
+                    <li><strong>Regional:</strong> Santa Fe New Mexican, Santa Fe Reporter, New Mexico Magazine</li>
+                    <li><strong>Industry:</strong> Interior Design Magazine, Metropolis, Contract</li>
+                    <li><strong>Online:</strong> Apartment Therapy, Remodelista, Design Milk, Curbed</li>
+                    <li><strong>Sustainability-focused:</strong> Green Building & Design, Sustainable Design Magazine</li>
+                </ul>
+
+                <p><strong>PR Tactics:</strong></p>
+                <ol>
+                    <li><strong>Press Kit Creation:</strong>
+                        <ul>
+                            <li>High-res professional headshot</li>
+                            <li>Company logo (various formats)</li>
+                            <li>Bio and credentials</li>
+                            <li>Notable projects (with high-res photos)</li>
+                            <li>Awards and recognition</li>
+                            <li>Contact information</li>
+                        </ul>
+                    </li>
+                    <li><strong>Story Pitches:</strong>
+                        <ul>
+                            <li>"Historic Santa Fe Adobe Restoration Wins Sustainability Award"</li>
+                            <li>"How LEED Certification is Transforming Santa Fe Homes"</li>
+                            <li>"Designer Spotlight: Bringing Eco-Luxury to the Southwest"</li>
+                            <li>Tie projects to trends, seasons, or current events</li>
+                        </ul>
+                    </li>
+                    <li><strong>Submit Projects to Awards:</strong>
+                        <ul>
+                            <li>ASID Design Excellence Awards</li>
+                            <li>Regional design awards</li>
+                            <li>Sustainability awards</li>
+                            <li>Best of Houzz</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="analytics" class="section">
+            <h2>11. Analytics & Tracking Dashboard <span class="priority priority-high">High Priority</span></h2>
+
+            <h3>GoHighLevel Analytics Integration</h3>
+            <div class="recommendation">
+                <h4>Built-in Dashboard Metrics:</h4>
+                <p>All data flows into GHL's unified dashboard, eliminating need for multiple tools:</p>
+                <ul>
+                    <li><strong>Lead Source Performance:</strong> Real-time tracking of which sources generate most leads
+                        <ul>
+                            <li>Lead Machine - Santa Fe keywords</li>
+                            <li>Lead Machine - National keywords</li>
+                            <li>Instantly.AI campaigns</li>
+                            <li>Website forms</li>
+                            <li>Direct inquiries</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pipeline Velocity:</strong> Average time leads spend in each stage</li>
+                    <li><strong>Conversion Rates:</strong> Percentage moving from each stage to next</li>
+                    <li><strong>Email Performance:</strong> Open rates, click rates, reply rates by sequence</li>
+                    <li><strong>Landing Page Analytics:</strong> Conversion rates for each page/offer</li>
+                    <li><strong>Revenue Attribution:</strong> Which campaigns drove actual clients</li>
+                </ul>
+            </div>
+
+            <h3>Essential Tracking Setup</h3>
+
+            <div class="recommendation">
+                <h4>Must-Have Analytics Tools:</h4>
+
+                <ol>
+                    <li><strong>Google Analytics 4 (GA4)</strong>
+                        <ul class="checklist">
+                            <li>Install GA4 tracking code on all pages</li>
+                            <li>Set up conversion goals (form submissions, consultation bookings, phone clicks)</li>
+                            <li>Create custom dashboards for key metrics</li>
+                            <li>Set up enhanced measurement (scroll depth, outbound clicks, site search)</li>
+                            <li>Link to Google Search Console</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Google Search Console</strong>
+                        <ul class="checklist">
+                            <li>Verify property ownership</li>
+                            <li>Submit sitemap</li>
+                            <li>Monitor search queries bringing traffic</li>
+                            <li>Fix crawl errors and indexing issues</li>
+                            <li>Track search appearance and click-through rates</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Google Tag Manager</strong>
+                        <ul class="checklist">
+                            <li>Install GTM container</li>
+                            <li>Manage all tracking codes through GTM (easier maintenance)</li>
+                            <li>Set up event tracking for:
+                                <ul>
+                                    <li>Form submissions</li>
+                                    <li>Button clicks (all CTAs)</li>
+                                    <li>Phone number clicks</li>
+                                    <li>Email clicks</li>
+                                    <li>PDF downloads</li>
+                                    <li>Video plays</li>
+                                    <li>Scroll depth</li>
+                                    <li>Exit intent</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Hotjar or Microsoft Clarity</strong>
+                        <ul class="checklist">
+                            <li>Install heatmap tracking</li>
+                            <li>Record user sessions (see how people navigate)</li>
+                            <li>Identify pain points and confusion areas</li>
+                            <li>Set up feedback polls</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Call Tracking</strong>
+                        <ul class="checklist">
+                            <li>Use CallRail or similar service</li>
+                            <li>Track which marketing sources drive phone calls</li>
+                            <li>Record calls for quality and training</li>
+                            <li>Integrate with Google Analytics</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <h3>Key Performance Indicators (KPIs)</h3>
+
+            <div class="recommendation">
+                <h4>Track These Metrics Weekly/Monthly:</h4>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Target</th>
+                            <th>How to Measure</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Website Traffic</strong></td>
+                            <td>Month-over-month growth of 10-15%</td>
+                            <td>Google Analytics (Sessions)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Organic Search Traffic</strong></td>
+                            <td>60%+ of total traffic</td>
+                            <td>GA4 > Acquisition > Traffic Acquisition</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bounce Rate</strong></td>
+                            <td>< 60% (lower is better)</td>
+                            <td>GA4 > Engagement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Average Session Duration</strong></td>
+                            <td>> 2 minutes</td>
+                            <td>GA4 > Engagement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pages per Session</strong></td>
+                            <td>> 3 pages</td>
+                            <td>GA4 > Engagement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Conversion Rate</strong></td>
+                            <td>3-5% (form submissions, calls, bookings)</td>
+                            <td>GA4 > Conversions</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lead Generation</strong></td>
+                            <td>20-40 qualified leads/month</td>
+                            <td>Form submissions + calls + bookings</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cost per Lead</strong></td>
+                            <td>$50-150 (if running paid ads)</td>
+                            <td>Ad spend ÷ total leads</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lead-to-Client Conversion</strong></td>
+                            <td>15-25%</td>
+                            <td>CRM tracking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Business Profile Views</strong></td>
+                            <td>500+ views/month</td>
+                            <td>Google Business Profile Insights</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Reviews</strong></td>
+                            <td>+2-3 new reviews/month</td>
+                            <td>GBP dashboard</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email List Growth</strong></td>
+                            <td>+50-100 subscribers/month</td>
+                            <td>Email platform (Mailchimp, etc.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email Open Rate</strong></td>
+                            <td>> 25%</td>
+                            <td>Email platform</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email Click Rate</strong></td>
+                            <td>> 3%</td>
+                            <td>Email platform</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Social Media Followers Growth</strong></td>
+                            <td>+5-10% monthly</td>
+                            <td>Instagram/Facebook Insights</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Keyword Rankings</strong></td>
+                            <td>Top 10 for 5-10 target keywords</td>
+                            <td>SEMrush, Ahrefs, or Google Search Console</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Monthly Reporting Dashboard</h3>
+
+            <div class="example">
+                <h4>Create a Simple Monthly Report:</h4>
+                <pre><code>MATTÉO DESIGNS - MONTHLY MARKETING REPORT
+[Month, Year]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WEBSITE PERFORMANCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Total Sessions: [X] (±X% vs last month)
+Organic Traffic: [X] ([X%] of total)
+Pages/Session: [X.X]
+Avg Session Duration: [X:XX]
+Bounce Rate: [X%]
+
+Top Pages:
+1. [Page name] - [X] views
+2. [Page name] - [X] views
+3. [Page name] - [X] views
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+LEAD GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Total Leads: [X] (±X% vs last month)
+- Contact forms: [X]
+- Phone calls: [X]
+- Consultation bookings: [X]
+- Email signups: [X]
+
+Conversion Rate: [X%]
+Cost per Lead: $[X]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SEO PERFORMANCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Keyword Rankings in Top 10: [X]
+Keyword Rankings in Top 3: [X]
+Total Impressions: [X]
+Average Position: [X.X]
+
+Top Keywords:
+1. [Keyword] - Position [X]
+2. [Keyword] - Position [X]
+3. [Keyword] - Position [X]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+LOCAL SEO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GBP Views: [X]
+GBP Actions:
+- Website clicks: [X]
+- Phone calls: [X]
+- Direction requests: [X]
+
+New Reviews: [X]
+Total Reviews: [X]
+Average Rating: [X.X] ⭐
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONTENT & EMAIL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Blog Posts Published: [X]
+Email Subscribers: [X] (±X%)
+Email Open Rate: [X%]
+Email Click Rate: [X%]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SOCIAL MEDIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Instagram Followers: [X] (±X%)
+Engagement Rate: [X%]
+Posts Published: [X]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RECOMMENDATIONS FOR NEXT MONTH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. [Action item based on data]
+2. [Action item based on data]
+3. [Action item based on data]</code></pre>
+            </div>
+        </section>
+
+        <section id="competitive-analysis" class="section">
+            <h2>12. Competitive Analysis Strategy <span class="priority priority-medium">Medium Priority</span></h2>
+
+            <h3>Competitor Research</h3>
+
+            <div class="recommendation">
+                <h4>Identify Your Top Competitors:</h4>
+                <p>Research 3-5 interior design firms in Santa Fe/New Mexico area and nationally recognized firms.</p>
+
+                <p><strong>What to Analyze:</strong></p>
+                <ol>
+                    <li><strong>Their Website:</strong>
+                        <ul>
+                            <li>Services offered and how they're presented</li>
+                            <li>Pricing transparency</li>
+                            <li>Portfolio quality and quantity</li>
+                            <li>Content marketing efforts (blog, resources)</li>
+                            <li>Conversion elements (CTAs, forms, chat)</li>
+                            <li>User experience and navigation</li>
+                        </ul>
+                    </li>
+                    <li><strong>Their SEO:</strong>
+                        <ul>
+                            <li>What keywords are they ranking for?</li>
+                            <li>Check with tools like SEMrush or Ahrefs</li>
+                            <li>How many backlinks do they have?</li>
+                            <li>How strong is their domain authority?</li>
+                        </ul>
+                    </li>
+                    <li><strong>Their Local Presence:</strong>
+                        <ul>
+                            <li>Google Business Profile optimization</li>
+                            <li>Number and quality of reviews</li>
+                            <li>How they respond to reviews</li>
+                            <li>Directory listings and citations</li>
+                        </ul>
+                    </li>
+                    <li><strong>Their Content:</strong>
+                        <ul>
+                            <li>Blog frequency and quality</li>
+                            <li>Social media activity and engagement</li>
+                            <li>Email marketing (sign up for their lists)</li>
+                            <li>Lead magnets and free resources</li>
+                        </ul>
+                    </li>
+                    <li><strong>Their Positioning:</strong>
+                        <ul>
+                            <li>What makes them unique?</li>
+                            <li>Who are they targeting?</li>
+                            <li>Price positioning (luxury, mid-range, budget)</li>
+                            <li>Brand voice and messaging</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <h3>Differentiation Strategy</h3>
+
+            <div class="recommendation">
+                <h4>Your Competitive Advantages to Emphasize:</h4>
+
+                <ol>
+                    <li><strong>Sustainability Focus</strong>
+                        <ul>
+                            <li>LEED certification expertise</li>
+                            <li>Eco-friendly material knowledge</li>
+                            <li>Energy efficiency specialization</li>
+                            <li>Not all competitors emphasize this</li>
+                        </ul>
+                    </li>
+                    <li><strong>Full-Service Offering</strong>
+                        <ul>
+                            <li>Residential + Commercial + Real Estate Development</li>
+                            <li>From concept through installation</li>
+                            <li>Historic restoration expertise</li>
+                        </ul>
+                    </li>
+                    <li><strong>Santa Fe Expertise</strong>
+                        <ul>
+                            <li>Understanding of local architecture</li>
+                            <li>Knowledge of local building codes and restrictions</li>
+                            <li>Relationships with local contractors and suppliers</li>
+                            <li>Respect for regional design traditions</li>
+                        </ul>
+                    </li>
+                    <li><strong>Design Philosophy</strong>
+                        <ul>
+                            <li>"Design that changes lives"</li>
+                            <li>Long-term value and future-proofing</li>
+                            <li>Health and wellness focus</li>
+                            <li>Timeless aesthetic that doesn't go out of style</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Messaging Example:</strong></p>
+                <blockquote>
+                    "While many designers focus solely on aesthetics, we believe your space should be beautiful, sustainable, AND healthy. Our LEED-certified approach ensures your investment increases your home's value while decreasing your environmental impact - creating a space that's better for you and better for the planet."
+                </blockquote>
+            </div>
+
+            <h3>Gap Analysis</h3>
+
+            <div class="recommendation">
+                <h4>Opportunities Based on Competitor Gaps:</h4>
+                <ul>
+                    <li>If competitors lack blogs → Prioritize content marketing</li>
+                    <li>If competitors have weak portfolios → Invest in professional photography</li>
+                    <li>If competitors don't show pricing → Be more transparent (competitive advantage)</li>
+                    <li>If competitors ignore sustainability → Double down on your green credentials</li>
+                    <li>If competitors have poor reviews → Focus on exceptional service and review generation</li>
+                    <li>If competitors lack video → Create video tours and testimonials</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="implementation" class="section">
+            <h2>13. Implementation Roadmap <span class="priority priority-high">High Priority</span></h2>
+
+            <h3>Phase 1: Quick Wins (Weeks 1-2)</h3>
+            <div class="metric">
+                <strong>Goal:</strong> Fix critical issues and implement highest-impact changes
+            </div>
+
+            <div class="recommendation">
+                <h4>Week 1 Tasks:</h4>
+                <ul class="checklist">
+                    <li><strong>Location Clarity:</strong> Resolve Santa Fe vs LA confusion immediately
+                        <ul>
+                            <li>Update all website references to be consistent</li>
+                            <li>Update Google Business Profile</li>
+                            <li>Update all directory listings</li>
+                        </ul>
+                    </li>
+                    <li><strong>Google Business Profile:</strong>
+                        <ul>
+                            <li>Claim/verify listing</li>
+                            <li>Complete all fields</li>
+                            <li>Upload 15-20 photos</li>
+                            <li>Add services</li>
+                            <li>Create first weekly post</li>
+                        </ul>
+                    </li>
+                    <li><strong>Contact Forms:</strong>
+                        <ul>
+                            <li>Add simple contact form to homepage footer</li>
+                            <li>Create dedicated consultation booking page</li>
+                            <li>Set up Calendly or similar scheduling tool</li>
+                        </ul>
+                    </li>
+                    <li><strong>Critical SEO Fixes:</strong>
+                        <ul>
+                            <li>Update homepage title tag</li>
+                            <li>Update homepage meta description</li>
+                            <li>Fix heading structure (H1, H2, H3)</li>
+                            <li>Add click-to-call phone number on mobile</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Week 2 Tasks:</h4>
+                <ul class="checklist">
+                    <li><strong>Analytics Setup:</strong>
+                        <ul>
+                            <li>Install/verify Google Analytics 4</li>
+                            <li>Set up Google Search Console</li>
+                            <li>Install Google Tag Manager</li>
+                            <li>Set up conversion tracking</li>
+                            <li>Install Hotjar or Clarity</li>
+                        </ul>
+                    </li>
+                    <li><strong>Schema Markup:</strong>
+                        <ul>
+                            <li>Add LocalBusiness schema to homepage</li>
+                            <li>Add Service schema to service pages</li>
+                        </ul>
+                    </li>
+                    <li><strong>Image Optimization:</strong>
+                        <ul>
+                            <li>Rename image files with descriptive names</li>
+                            <li>Add alt text to all images</li>
+                            <li>Compress images for faster loading</li>
+                        </ul>
+                    </li>
+                    <li><strong>Review Generation:</strong>
+                        <ul>
+                            <li>Create email template for review requests</li>
+                            <li>Reach out to 5-10 past clients</li>
+                            <li>Set up system for automatic review requests</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Phase 2: Foundation Building (Weeks 3-6)</h3>
+            <div class="metric">
+                <strong>Goal:</strong> Build content and marketing infrastructure
+            </div>
+
+            <div class="recommendation">
+                <h4>Month 1 Tasks:</h4>
+                <ul class="checklist">
+                    <li><strong>Service Pages Optimization:</strong>
+                        <ul>
+                            <li>Expand each service page to 1,000+ words</li>
+                            <li>Add detailed process descriptions</li>
+                            <li>Include relevant portfolio examples</li>
+                            <li>Add FAQ sections</li>
+                            <li>Optimize meta tags and headers</li>
+                        </ul>
+                    </li>
+                    <li><strong>Service Packages:</strong>
+                        <ul>
+                            <li>Create 3-4 service package tiers</li>
+                            <li>Develop pricing page or packages page</li>
+                            <li>Add clear service descriptions and what's included</li>
+                        </ul>
+                    </li>
+                    <li><strong>Portfolio Enhancement:</strong>
+                        <ul>
+                            <li>Write detailed case studies for 5 top projects</li>
+                            <li>Follow case study template provided</li>
+                            <li>Include before/after photos</li>
+                            <li>Add sustainability features for each</li>
+                            <li>Include client testimonials</li>
+                        </ul>
+                    </li>
+                    <li><strong>Blog Setup:</strong>
+                        <ul>
+                            <li>Create blog section on website</li>
+                            <li>Design blog post template</li>
+                            <li>Write and publish first 2 blog posts</li>
+                            <li>Set up categories and tags</li>
+                        </ul>
+                    </li>
+                    <li><strong>Lead Magnet Creation:</strong>
+                        <ul>
+                            <li>Create "Kitchen Planning Checklist" PDF</li>
+                            <li>Set up email delivery system</li>
+                            <li>Create landing page for download</li>
+                            <li>Add opt-in forms to website</li>
+                        </ul>
+                    </li>
+                    <li><strong>Email Marketing Setup:</strong>
+                        <ul>
+                            <li>Choose email platform (Mailchimp, ConvertKit, etc.)</li>
+                            <li>Design email templates</li>
+                            <li>Write welcome email sequence (5 emails)</li>
+                            <li>Set up automation</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Phase 3: Growth & Optimization (Weeks 7-12)</h3>
+            <div class="metric">
+                <strong>Goal:</strong> Scale content production and refine based on data
+            </div>
+
+            <div class="recommendation">
+                <h4>Months 2-3 Tasks:</h4>
+                <ul class="checklist">
+                    <li><strong>Content Production:</strong>
+                        <ul>
+                            <li>Publish 2 blog posts per week</li>
+                            <li>Add 2-3 new portfolio case studies per month</li>
+                            <li>Create second lead magnet</li>
+                            <li>Start YouTube channel (optional but recommended)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Local SEO Expansion:</strong>
+                        <ul>
+                            <li>Create location-specific service pages</li>
+                            <li>Complete all directory listings (50+ citations)</li>
+                            <li>Reach 15-25 Google reviews</li>
+                            <li>Post weekly to Google Business Profile</li>
+                        </ul>
+                    </li>
+                    <li><strong>Link Building:</strong>
+                        <ul>
+                            <li>Partner with local contractors and architects for backlinks</li>
+                            <li>Guest post on local blogs</li>
+                            <li>Get listed in "Best of" roundups</li>
+                            <li>Submit projects to design publications</li>
+                        </ul>
+                    </li>
+                    <li><strong>Social Media Growth:</strong>
+                        <ul>
+                            <li>Post 5-7 times per week on Instagram</li>
+                            <li>Engage with local community</li>
+                            <li>Run Instagram Stories daily</li>
+                            <li>Optimize Houzz profile with 50+ photos</li>
+                        </ul>
+                    </li>
+                    <li><strong>Conversion Optimization:</strong>
+                        <ul>
+                            <li>A/B test different CTA button text</li>
+                            <li>Test different form lengths</li>
+                            <li>Analyze heatmaps and session recordings</li>
+                            <li>Optimize pages with high bounce rates</li>
+                        </ul>
+                    </li>
+                    <li><strong>Email Marketing:</strong>
+                        <ul>
+                            <li>Send monthly newsletter</li>
+                            <li>Segment email list by interest</li>
+                            <li>Create lead nurture sequences</li>
+                            <li>Track and optimize open/click rates</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Phase 4: Scale & Maintain (Months 4-6)</h3>
+            <div class="metric">
+                <strong>Goal:</strong> Maintain momentum and scale what's working
+            </div>
+
+            <div class="recommendation">
+                <h4>Months 4-6 Focus:</h4>
+                <ul class="checklist">
+                    <li><strong>Double Down on Winners:</strong>
+                        <ul>
+                            <li>Identify top-performing content and create more</li>
+                            <li>Focus on keywords that are ranking well</li>
+                            <li>Invest more in channels driving best leads</li>
+                        </ul>
+                    </li>
+                    <li><strong>Advanced SEO:</strong>
+                        <ul>
+                            <li>Build backlinks systematically</li>
+                            <li>Update and expand existing content</li>
+                            <li>Target long-tail keywords</li>
+                            <li>Create pillar content and topic clusters</li>
+                        </ul>
+                    </li>
+                    <li><strong>Paid Advertising (Optional):</strong>
+                        <ul>
+                            <li>Start Google Ads campaigns (target high-intent keywords)</li>
+                            <li>Facebook/Instagram retargeting ads</li>
+                            <li>Houzz Pro subscription for leads</li>
+                        </ul>
+                    </li>
+                    <li><strong>PR & Recognition:</strong>
+                        <ul>
+                            <li>Submit projects to design publications</li>
+                            <li>Apply for design awards</li>
+                            <li>Seek local media coverage</li>
+                            <li>Speak at local events</li>
+                        </ul>
+                    </li>
+                    <li><strong>Automation:</strong>
+                        <ul>
+                            <li>Automate review requests</li>
+                            <li>Set up chatbot for instant responses</li>
+                            <li>Automate social media scheduling</li>
+                            <li>Streamline lead follow-up process</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Success Metrics Timeline</h3>
+
+            <div class="metric">
+                <h4>Expected Results by Timeline:</h4>
+
+                <p><strong>After 3 Months:</strong></p>
+                <ul>
+                    <li>Website traffic increased by 50-100%</li>
+                    <li>Ranking for 10-15 target keywords in top 20</li>
+                    <li>15-20 Google reviews with 4.8+ rating</li>
+                    <li>10-20 qualified leads per month</li>
+                    <li>Email list of 100-200 subscribers</li>
+                    <li>Social media growth of 20-30%</li>
+                </ul>
+
+                <p><strong>After 6 Months:</strong></p>
+                <ul>
+                    <li>Website traffic increased by 150-250%</li>
+                    <li>Ranking in top 10 for 5-8 target keywords</li>
+                    <li>25-30 Google reviews with 4.8+ rating</li>
+                    <li>20-40 qualified leads per month</li>
+                    <li>Email list of 300-500 subscribers</li>
+                    <li>Social media growth of 50-75%</li>
+                    <li>Featured in 1-2 publications</li>
+                </ul>
+
+                <p><strong>After 12 Months:</strong></p>
+                <ul>
+                    <li>Website traffic increased by 300-500%</li>
+                    <li>Ranking in top 5 for primary keywords</li>
+                    <li>40+ Google reviews with 4.9+ rating</li>
+                    <li>40-60 qualified leads per month</li>
+                    <li>Email list of 800-1,200 subscribers</li>
+                    <li>Established as top design firm in local market</li>
+                    <li>Organic leads are primary source of new business</li>
+                </ul>
+            </div>
+
+            <h3>Budget Considerations</h3>
+
+            <div class="recommendation">
+                <h4>Estimated Monthly Budget:</h4>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Cost Range (Monthly)</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Professional Photography (Portfolio)</td>
+                            <td>$500-1,500 (one-time per project)</td>
+                            <td>HIGH</td>
+                        </tr>
+                        <tr>
+                            <td>SEO Tools (SEMrush, Ahrefs)</td>
+                            <td>$100-200</td>
+                            <td>MEDIUM</td>
+                        </tr>
+                        <tr>
+                            <td>Email Marketing Platform</td>
+                            <td>$20-100</td>
+                            <td>HIGH</td>
+                        </tr>
+                        <tr>
+                            <td>Call Tracking (CallRail)</td>
+                            <td>$45-145</td>
+                            <td>MEDIUM</td>
+                        </tr>
+                        <tr>
+                            <td>Heatmap Tool (Hotjar/Clarity)</td>
+                            <td>$0-80 (Clarity is free)</td>
+                            <td>MEDIUM</td>
+                        </tr>
+                        <tr>
+                            <td>Content Writing (if outsourcing)</td>
+                            <td>$500-2,000</td>
+                            <td>MEDIUM</td>
+                        </tr>
+                        <tr>
+                            <td>Social Media Management Tool</td>
+                            <td>$15-50</td>
+                            <td>LOW</td>
+                        </tr>
+                        <tr>
+                            <td>Google Ads (Optional)</td>
+                            <td>$1,000-3,000</td>
+                            <td>LOW (Start after organic is optimized)</td>
+                        </tr>
+                        <tr>
+                            <td>Houzz Pro (Optional)</td>
+                            <td>$65-165</td>
+                            <td>MEDIUM</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TOTAL (Essential Only)</strong></td>
+                            <td><strong>$200-500/month</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>TOTAL (All Recommended)</strong></td>
+                            <td><strong>$2,000-5,000/month</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Note:</strong> Much of the work can be done in-house to reduce costs. Prioritize based on budget and bandwidth.</p>
+            </div>
+        </section>
+
+        <section id="squarespace-implementation" class="section">
+            <h2>14. Squarespace-Specific Implementation Plan <span class="priority priority-high">High Priority</span></h2>
+
+            <div class="insight">
+                <strong>Current Platform Context:</strong> The Mattéo Designs website (https://www.matteodesigns.com/) is currently hosted on Squarespace. This section provides platform-specific implementation guidance for executing the recommendations outlined in this document.
+            </div>
+
+            <h3>Platform Analysis: Current State</h3>
+
+            <div class="recommendation">
+                <h4>Strengths:</h4>
+                <ul>
+                    <li>Clean, professional layout with intuitive navigation (Portfolio, Services, Media, About, Contact)</li>
+                    <li>Responsive design supporting mobile and desktop views</li>
+                    <li>Strong visual-first design appropriate for interior design portfolio</li>
+                    <li>High-quality project imagery showcasing work</li>
+                    <li>Compelling value proposition emphasizing design impact</li>
+                    <li>Clear service categories (Residential, Commercial, Real Estate Development)</li>
+                    <li>LEED compliance and sustainable design messaging</li>
+                </ul>
+            </div>
+
+            <div class="warning">
+                <h4>Critical Issues Identified:</h4>
+                <ul>
+                    <li>No visible H1 tags optimized for primary keywords</li>
+                    <li>Limited internal linking between portfolio projects</li>
+                    <li>Missing schema markup for local business data</li>
+                    <li>Minimal blog content for organic search visibility</li>
+                    <li>Service descriptions lack geographic targeting beyond "Santa Fe"</li>
+                    <li>Contact CTAs buried in footer instead of prominent placement</li>
+                    <li>No email subscription or newsletter signup</li>
+                    <li>Missing lead capture mechanisms throughout user journey</li>
+                    <li>Page loading performance could be improved (multiple Squarespace asset requests)</li>
+                </ul>
+            </div>
+
+            <h3>Week 1: Critical Quick Wins</h3>
+
+            <div class="metric">
+                <strong>Goal:</strong> Implement highest-impact changes that can be done immediately within Squarespace
+            </div>
+
+            <div class="recommendation">
+                <h4>1. SEO Configuration (Day 1-2)</h4>
+                <ul class="checklist">
+                    <li><strong>Page Title & Meta Descriptions:</strong>
+                        <ul>
+                            <li>Homepage: "Interior Designer Santa Fe | LEED Certified Sustainable Design | Mattéo Designs"</li>
+                            <li>Services: "Interior Design Services Santa Fe | Residential & Commercial | Mattéo Designs"</li>
+                            <li>Portfolio: "LEED Certified Design Portfolio | Santa Fe Projects | Mattéo Designs"</li>
+                            <li>Update via Settings → SEO → Page SEO for each page</li>
+                        </ul>
+                    </li>
+                    <li><strong>Site-Wide SEO Settings:</strong>
+                        <ul>
+                            <li>Navigate to Settings → Marketing → SEO</li>
+                            <li>Enable SSL (ensure HTTPS)</li>
+                            <li>Verify XML sitemap is enabled (auto-generated at /sitemap.xml)</li>
+                            <li>Submit sitemap to Google Search Console</li>
+                            <li>Enable AMP (Accelerated Mobile Pages) if available</li>
+                        </ul>
+                    </li>
+                    <li><strong>Image Optimization:</strong>
+                        <ul>
+                            <li>Add descriptive alt text to all portfolio images via Design → Custom CSS → Image Block Settings</li>
+                            <li>Rename uploaded files to descriptive names (e.g., "santa-fe-sustainable-kitchen-design.jpg")</li>
+                            <li>Compress images before upload using TinyPNG or Squarespace's built-in compression</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>2. Header CTA Implementation (Day 2)</h4>
+                <ul class="checklist">
+                    <li>Add "Schedule Consultation" button to main navigation header</li>
+                    <li>Navigate to Design → Site Styles → Header</li>
+                    <li>Link button to dedicated consultation booking page (create if needed)</li>
+                    <li>Use contrasting color to make CTA stand out</li>
+                    <li>Make button sticky on scroll for persistent visibility</li>
+                </ul>
+
+                <h4>3. Schema Markup Installation (Day 3)</h4>
+                <ul class="checklist">
+                    <li>Navigate to Settings → Advanced → Code Injection</li>
+                    <li>Add LocalBusiness schema to Header:</li>
+                </ul>
+
+                <div class="code-block">
+                    <pre>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "InteriorDesigner",
+  "name": "Mattéo Designs",
+  "image": "https://www.matteodesigns.com/logo.png",
+  "@id": "https://www.matteodesigns.com",
+  "url": "https://www.matteodesigns.com",
+  "telephone": "[PHONE NUMBER]",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[STREET ADDRESS]",
+    "addressLocality": "Santa Fe",
+    "addressRegion": "NM",
+    "postalCode": "[ZIP]",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": [LAT],
+    "longitude": [LONG]
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "17:00"
+  },
+  "priceRange": "$$$",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Santa Fe"
+    },
+    {
+      "@type": "State",
+      "name": "New Mexico"
+    }
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Residential Interior Design"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Commercial Interior Design"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "LEED Certified Design"
+      }
+    }
+  ]
+}
+&lt;/script&gt;</pre>
+                </div>
+
+                <h4>4. Analytics Setup (Day 3-4)</h4>
+                <ul class="checklist">
+                    <li>Navigate to Settings → Analytics → Google Analytics</li>
+                    <li>Connect Google Analytics 4 property</li>
+                    <li>Install via Settings → Advanced → Code Injection (Header)</li>
+                    <li>Setup Google Search Console and verify ownership</li>
+                    <li>Install Microsoft Clarity for heatmaps (free)</li>
+                    <li>Configure goal tracking for form submissions and phone clicks</li>
+                </ul>
+
+                <h4>5. Business Profile Optimization (Day 4-5)</h4>
+                <ul class="checklist">
+                    <li>Claim/verify Google Business Profile</li>
+                    <li>Complete all profile fields (hours, services, attributes)</li>
+                    <li>Upload 15-20 high-quality project photos</li>
+                    <li>Add service categories (Interior Designer, Design Agency)</li>
+                    <li>Create first weekly Google Post</li>
+                    <li>Enable messaging for direct customer contact</li>
+                </ul>
+            </div>
+
+            <h3>Week 2: Conversion Optimization</h3>
+
+            <div class="metric">
+                <strong>Goal:</strong> Build landing pages and lead capture mechanisms
+            </div>
+
+            <div class="recommendation">
+                <h4>1. Create Service Landing Pages</h4>
+                <ul class="checklist">
+                    <li><strong>Santa Fe Interior Design Page:</strong>
+                        <ul>
+                            <li>Create new page: /santa-fe-interior-designer</li>
+                            <li>Target keywords: "interior designer Santa Fe", "Santa Fe interior design"</li>
+                            <li>Include: local portfolio examples, service process, pricing guide, consultation CTA</li>
+                            <li>Add embedded Google Map showing Santa Fe service area</li>
+                        </ul>
+                    </li>
+                    <li><strong>LEED Certified Design Page:</strong>
+                        <ul>
+                            <li>Create new page: /leed-certified-interior-design</li>
+                            <li>Target keywords: "LEED certified designer", "sustainable interior design"</li>
+                            <li>Include: LEED credentials, sustainable project case studies, certification process</li>
+                        </ul>
+                    </li>
+                    <li><strong>Service Package Page:</strong>
+                        <ul>
+                            <li>Create new page: /design-packages</li>
+                            <li>Display 3-4 service tiers with pricing ranges</li>
+                            <li>Use Squarespace pricing table block for clean presentation</li>
+                            <li>Add "Request Quote" CTA for each package</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>2. Contact Form Enhancement</h4>
+                <ul class="checklist">
+                    <li>Navigate to existing contact page and enhance form fields:
+                        <ul>
+                            <li>Add: Project Type (dropdown: Residential, Commercial, Both)</li>
+                            <li>Add: Project Timeline (dropdown: 0-3 months, 3-6 months, 6+ months, Just exploring)</li>
+                            <li>Add: Budget Range (dropdown ranges)</li>
+                            <li>Add: How did you hear about us? (for attribution tracking)</li>
+                        </ul>
+                    </li>
+                    <li>Setup form notifications to go to primary email</li>
+                    <li>Create auto-responder email template thanking leads</li>
+                    <li>Add form to footer site-wide via Design → Footer</li>
+                </ul>
+
+                <h4>3. Lead Magnet Setup</h4>
+                <ul class="checklist">
+                    <li>Create "Kitchen Remodeling Planning Guide" PDF (or similar)</li>
+                    <li>Create dedicated landing page: /guides/kitchen-planning-guide</li>
+                    <li>Add form requiring email to download</li>
+                    <li>Use Squarespace's File Block to deliver PDF</li>
+                    <li>Add exit-intent popup using Code Injection + custom JavaScript</li>
+                </ul>
+
+                <h4>4. Email Marketing Integration</h4>
+                <ul class="checklist">
+                    <li>Choose platform: Mailchimp (native Squarespace integration) or ConvertKit</li>
+                    <li>Navigate to Settings → Marketing → Email Campaigns</li>
+                    <li>Connect Mailchimp or use Squarespace Email Campaigns</li>
+                    <li>Setup newsletter signup form in footer</li>
+                    <li>Create 5-email welcome sequence</li>
+                    <li>Design email template matching brand</li>
+                </ul>
+            </div>
+
+            <h3>Weeks 3-4: Content Foundation</h3>
+
+            <div class="recommendation">
+                <h4>1. Blog Setup & Initial Posts</h4>
+                <ul class="checklist">
+                    <li>Navigate to Pages → Add Page → Blog</li>
+                    <li>Configure blog URL: /blog or /insights</li>
+                    <li>Setup categories: Residential Design, Commercial Design, Sustainable Design, Design Tips</li>
+                    <li>Design blog post template in Design → Blog</li>
+                    <li>Write and publish 2-4 initial posts:
+                        <ul>
+                            <li>"5 Principles of Sustainable Interior Design in Santa Fe"</li>
+                            <li>"How to Choose an Interior Designer: A Complete Guide"</li>
+                            <li>"What is LEED Certification and Why Does It Matter?"</li>
+                            <li>"Kitchen Design Trends for Santa Fe Homes in 2024"</li>
+                        </ul>
+                    </li>
+                    <li>Optimize each post with target keywords</li>
+                    <li>Add internal links to service pages</li>
+                    <li>Include CTAs at end of each post</li>
+                </ul>
+
+                <h4>2. Portfolio Case Studies Enhancement</h4>
+                <ul class="checklist">
+                    <li>Identify top 5 projects for detailed case studies</li>
+                    <li>For each project, create expanded portfolio page including:
+                        <ul>
+                            <li>Project overview and client goals</li>
+                            <li>Design challenges and solutions</li>
+                            <li>Before and after photos (use Gallery Block)</li>
+                            <li>Sustainability features and LEED elements</li>
+                            <li>Client testimonial</li>
+                            <li>Project timeline and budget range</li>
+                            <li>Related projects (internal linking)</li>
+                        </ul>
+                    </li>
+                    <li>Add schema markup for CreativeWork to each case study</li>
+                </ul>
+
+                <h4>3. Footer & Site-Wide Elements</h4>
+                <ul class="checklist">
+                    <li>Add to footer via Design → Footer:
+                        <ul>
+                            <li>NAP (Name, Address, Phone) in consistent format</li>
+                            <li>Quick links to key service pages</li>
+                            <li>Newsletter signup form</li>
+                            <li>Social proof: "4.9★ Rating on Google | 25+ Reviews"</li>
+                            <li>Trust badges: LEED certified logo, awards, certifications</li>
+                        </ul>
+                    </li>
+                    <li>Add click-to-call phone number in mobile header</li>
+                    <li>Implement sticky header with CTA button</li>
+                </ul>
+            </div>
+
+            <h3>Weeks 5-6: Integration & Automation</h3>
+
+            <div class="recommendation">
+                <h4>1. CRM Integration (GoHighLevel)</h4>
+                <ul class="checklist">
+                    <li>Connect Squarespace forms to GoHighLevel via:
+                        <ul>
+                            <li>Zapier (Squarespace Form Submission → GoHighLevel Contact)</li>
+                            <li>Or use GoHighLevel's custom webhook URL in form settings</li>
+                        </ul>
+                    </li>
+                    <li>Map form fields to CRM fields</li>
+                    <li>Test automation: submit test form and verify contact appears in GHL</li>
+                    <li>Setup automated email sequences in GHL for new leads</li>
+                </ul>
+
+                <h4>2. Tracking & Conversion Setup</h4>
+                <ul class="checklist">
+                    <li>Add Facebook Pixel via Settings → Advanced → Code Injection</li>
+                    <li>Add Google Ads conversion tracking (if/when ads are launched)</li>
+                    <li>Setup call tracking with CallRail or similar:
+                        <ul>
+                            <li>Use dynamic number insertion script in Code Injection</li>
+                            <li>Track phone call conversions</li>
+                        </ul>
+                    </li>
+                    <li>Configure e-commerce tracking if selling products/packages online</li>
+                </ul>
+
+                <h4>3. Review Generation System</h4>
+                <ul class="checklist">
+                    <li>Create review request page: /leave-a-review</li>
+                    <li>Add direct links to Google, Yelp, Houzz review forms</li>
+                    <li>Design email template for review requests</li>
+                    <li>Setup automated sequence in GoHighLevel:
+                        <ul>
+                            <li>Trigger: 2 weeks after project completion</li>
+                            <li>Email 1: Thank you + review request</li>
+                            <li>Email 2: Follow-up reminder (if no review after 1 week)</li>
+                        </ul>
+                    </li>
+                    <li>Embed Google reviews widget on homepage</li>
+                </ul>
+
+                <h4>4. Social Proof Elements</h4>
+                <ul class="checklist">
+                    <li>Add testimonial section to homepage using Testimonial Block</li>
+                    <li>Create rotating testimonial carousel</li>
+                    <li>Add logos of publications/awards</li>
+                    <li>Include "As Featured In" section if applicable</li>
+                    <li>Add Google review badge with star rating</li>
+                </ul>
+            </div>
+
+            <h3>Ongoing: Performance & Optimization</h3>
+
+            <div class="recommendation">
+                <h4>Weekly Tasks:</h4>
+                <ul class="checklist">
+                    <li>Publish 2 new blog posts (targeting keyword research)</li>
+                    <li>Post to Google Business Profile (2-3 times/week)</li>
+                    <li>Monitor Google Analytics and Search Console</li>
+                    <li>Respond to all leads within 1 hour</li>
+                    <li>Request reviews from completed projects</li>
+                    <li>Update portfolio with new project photos</li>
+                </ul>
+
+                <h4>Monthly Tasks:</h4>
+                <ul class="checklist">
+                    <li>Review heatmaps and session recordings (Clarity)</li>
+                    <li>Analyze top-performing content and create similar pieces</li>
+                    <li>Update old blog posts with new information</li>
+                    <li>Check for broken links and fix</li>
+                    <li>Review and optimize underperforming pages</li>
+                    <li>A/B test different CTA button text/placement</li>
+                    <li>Send monthly newsletter to email list</li>
+                    <li>Review conversion rates and optimize low performers</li>
+                </ul>
+
+                <h4>Quarterly Tasks:</h4>
+                <ul class="checklist">
+                    <li>Full SEO audit and keyword ranking review</li>
+                    <li>Competitive analysis update</li>
+                    <li>Review and update service packages/pricing</li>
+                    <li>Refresh homepage with latest projects</li>
+                    <li>Update schema markup with new offerings</li>
+                    <li>Review and optimize site speed (compress images, minimize code)</li>
+                </ul>
+            </div>
+
+            <h3>Squarespace Limitations & Workarounds</h3>
+
+            <div class="warning">
+                <h4>Known Platform Limitations:</h4>
+                <ul>
+                    <li><strong>Limited A/B testing:</strong>
+                        <ul>
+                            <li>Workaround: Use Google Optimize (free) integrated via Code Injection</li>
+                            <li>Or duplicate pages and split traffic manually, tracking in Analytics</li>
+                        </ul>
+                    </li>
+                    <li><strong>No native multivariate testing:</strong>
+                        <ul>
+                            <li>Workaround: Use third-party tools like Optimizely or VWO</li>
+                        </ul>
+                    </li>
+                    <li><strong>Limited CRM integration:</strong>
+                        <ul>
+                            <li>Workaround: Use Zapier or Make (formerly Integromat) as middleware</li>
+                            <li>GoHighLevel can accept webhooks from Squarespace forms</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cannot fully customize checkout/forms:</strong>
+                        <ul>
+                            <li>Workaround: Use embedded Typeform, Jotform, or Calendly for advanced functionality</li>
+                        </ul>
+                    </li>
+                    <li><strong>Limited dynamic content:</strong>
+                        <ul>
+                            <li>Workaround: Use custom JavaScript in Code Injection for personalization</li>
+                        </ul>
+                    </li>
+                    <li><strong>No native popup builder:</strong>
+                        <ul>
+                            <li>Workaround: Use OptinMonster, Sumo, or custom JavaScript for exit-intent popups</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Technical Performance Optimizations</h3>
+
+            <div class="recommendation">
+                <h4>Speed Optimization Checklist:</h4>
+                <ul class="checklist">
+                    <li><strong>Image Optimization:</strong>
+                        <ul>
+                            <li>Enable lazy loading: Design → Site Styles → Advanced → Progressive Image Loading</li>
+                            <li>Compress all images before upload (target: under 200KB each)</li>
+                            <li>Use WebP format where possible</li>
+                            <li>Set max image width to actual display size (no oversized images)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Code Optimization:</strong>
+                        <ul>
+                            <li>Minimize custom CSS in Code Injection (combine selectors, remove unused rules)</li>
+                            <li>Defer non-critical JavaScript using async/defer attributes</li>
+                            <li>Remove unused Squarespace features (Settings → Connected Services)</li>
+                            <li>Minimize third-party scripts (only essential tracking/tools)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Caching & Delivery:</strong>
+                        <ul>
+                            <li>Squarespace CDN is automatic (no configuration needed)</li>
+                            <li>Ensure SSL is enabled (Settings → Advanced → SSL)</li>
+                            <li>Enable HTTP/2 (automatic on Squarespace)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Mobile Optimization:</h4>
+                <ul class="checklist">
+                    <li>Test mobile layout on multiple devices (use Chrome DevTools)</li>
+                    <li>Ensure tap targets are minimum 48x48px</li>
+                    <li>Make phone numbers clickable on mobile</li>
+                    <li>Simplify forms for mobile (fewer fields, larger inputs)</li>
+                    <li>Optimize image sizes for mobile viewports</li>
+                    <li>Test load time on 3G connection (target: under 5 seconds)</li>
+                </ul>
+            </div>
+
+            <h3>Success Metrics: Squarespace Dashboard</h3>
+
+            <div class="metric">
+                <h4>Key Metrics to Track in Squarespace Analytics:</h4>
+                <ul>
+                    <li><strong>Traffic Sources:</strong> Analytics → Traffic Sources
+                        <ul>
+                            <li>Monitor organic search growth (target: 10-15% month-over-month)</li>
+                            <li>Track referral sources (local directories, social media)</li>
+                            <li>Measure direct traffic (brand awareness)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Top Pages:</strong> Analytics → Top Pages
+                        <ul>
+                            <li>Identify most-viewed service pages</li>
+                            <li>Track blog post performance</li>
+                            <li>Monitor portfolio page engagement</li>
+                        </ul>
+                    </li>
+                    <li><strong>Form Submissions:</strong> Via email notifications or Zapier
+                        <ul>
+                            <li>Track lead volume per week</li>
+                            <li>Identify which pages drive most conversions</li>
+                            <li>Calculate conversion rate by traffic source</li>
+                        </ul>
+                    </li>
+                    <li><strong>Search Queries:</strong> Google Search Console integration
+                        <ul>
+                            <li>Monitor keyword rankings</li>
+                            <li>Track impressions and clicks</li>
+                            <li>Identify ranking opportunities</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="insight">
+                <h4>Expected Timeline & Results:</h4>
+                <p><strong>After implementing this Squarespace-specific plan:</strong></p>
+                <ul>
+                    <li><strong>Weeks 1-2:</strong> Foundation in place, tracking active, first leads starting to come in</li>
+                    <li><strong>Weeks 3-6:</strong> Blog traffic building, local SEO improving, 5-10 leads/month</li>
+                    <li><strong>Months 2-3:</strong> Ranking improvements visible, 15-25 leads/month</li>
+                    <li><strong>Months 4-6:</strong> Established local presence, 25-40 leads/month</li>
+                    <li><strong>Month 12:</strong> Market leader position, 40-60+ qualified leads/month</li>
+                </ul>
+            </div>
+
+            <div class="warning">
+                <h4>Important Squarespace Best Practices:</h4>
+                <ul>
+                    <li>Never delete pages—use 301 redirects if restructuring (Settings → Advanced → URL Mappings)</li>
+                    <li>Backup site regularly (Export → Export Site to get XML)</li>
+                    <li>Test all changes in preview mode before publishing</li>
+                    <li>Use consistent URL structure (avoid special characters, use hyphens)</li>
+                    <li>Maintain consistent branding across all pages (use Style Editor)</li>
+                    <li>Keep Squarespace platform updated (auto-updates enabled by default)</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p><strong>Mattéo Designs SEO & Conversion Optimization Recommendations</strong></p>
+            <p>Created: <span id="currentDate"></span></p>
+            <p style="font-size: 0.9em; margin-top: 10px;">This is a living document. Review and update quarterly based on results.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Set current date
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

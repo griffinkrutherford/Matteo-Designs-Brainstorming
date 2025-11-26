@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Fe Interior Designer | LEED Certified Sustainable Design | Mattéo Designs</title>
+    <meta name="description" content="Award-winning Santa Fe interior designer specializing in sustainable, LEED-certified residential and commercial design. Transform your space with expert design services in Santa Fe, NM.">
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InteriorDesigner",
+      "name": "Mattéo Designs",
+      "image": "https://www.matteodesigns.com/logo.png",
+      "@id": "https://www.matteodesigns.com",
+      "url": "https://www.matteodesigns.com/santa-fe-interior-designer",
+      "telephone": "(505) XXX-XXXX",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santa Fe",
+        "addressRegion": "NM",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.6870,
+        "longitude": -105.9378
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Santa Fe",
+        "sameAs": "https://en.wikipedia.org/wiki/Santa_Fe,_New_Mexico"
+      },
+      "priceRange": "$$$",
+      "servesCuisine": ["Residential Interior Design", "Commercial Interior Design", "LEED Certified Design"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "28"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="base-styles.css">
+    <style>
+        /* Page-specific styles */
+        .hero-santa-fe {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600') center/cover;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .location-badge {
+            display: inline-block;
+            background: rgba(39, 174, 96, 0.9);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-top: 4px solid #27ae60;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #7f8c8d;
+        }
+
+        .service-card li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .portfolio-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 2rem 1rem 1rem;
+            color: white;
+        }
+
+        .portfolio-overlay h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .why-choose {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .process-step {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #27ae60;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 12px;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: #27ae60;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #27ae60;
+        }
+
+        .map-section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .map-container {
+            height: 400px;
+            background: #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .hero-santa-fe {
+                padding: 4rem 1rem;
+            }
+
+            .hero-santa-fe h1 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" style="font-size: 1.5rem; font-weight: 700; color: #2c3e50; text-decoration: none;">Mattéo Designs</a>
+            <nav style="display: flex; gap: 2rem; align-items: center;">
+                <a href="/portfolio" style="color: #2c3e50; text-decoration: none; font-weight: 500;">Portfolio</a>
+                <a href="/services" style="color: #2c3e50; text-decoration: none; font-weight: 500;">Services</a>
+                <a href="/blog" style="color: #2c3e50; text-decoration: none; font-weight: 500;">Blog</a>
+                <a href="/about" style="color: #2c3e50; text-decoration: none; font-weight: 500;">About</a>
+                <a href="/contact" style="color: #2c3e50; text-decoration: none; font-weight: 500;">Contact</a>
+                <a href="/free-consultation" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 600;">Free Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-santa-fe">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="location-badge">📍 Based in Santa Fe, NM</div>
+            <h1>Santa Fe's Premier Interior Designer</h1>
+            <p>Creating Sustainable, Beautiful Spaces that Transform How You Live and Work</p>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">LEED Certified | Residential & Commercial Design | 15+ Years Experience</p>
+            <div class="cta-buttons">
+                <a href="/free-consultation" class="btn-white">Schedule Free Consultation</a>
+                <a href="#portfolio" class="btn-outline">View Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section style="background: #f8f9fa; padding: 2rem;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2rem; text-align: center;">
+            <div>
+                <div style="font-size: 2.5rem; font-weight: bold; color: #27ae60;">15+</div>
+                <div style="color: #7f8c8d;">Years Experience</div>
+            </div>
+            <div>
+                <div style="font-size: 2.5rem; font-weight: bold; color: #27ae60;">50+</div>
+                <div style="color: #7f8c8d;">Projects Completed</div>
+            </div>
+            <div>
+                <div style="font-size: 2.5rem; font-weight: bold; color: #27ae60;">4.9★</div>
+                <div style="color: #7f8c8d;">Client Rating</div>
+            </div>
+            <div>
+                <div style="font-size: 2.5rem; font-weight: bold; color: #27ae60;">LEED</div>
+                <div style="color: #7f8c8d;">Certified Designer</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Introduction -->
+        <section style="padding: 4rem 2rem;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2.5rem; color: #2c3e50; margin-bottom: 1rem;">Interior Design that Reflects Santa Fe's Unique Character</h2>
+                    <p style="font-size: 1.2rem; color: #7f8c8d; max-width: 800px; margin: 0 auto;">
+                        As a Santa Fe-based interior designer, I understand the unique aesthetic and lifestyle of Northern New Mexico.
+                        Whether you're renovating a historic adobe home, building a contemporary masterpiece, or transforming a commercial space,
+                        I bring 15+ years of experience creating spaces that honor Santa Fe's rich design tradition while incorporating sustainable, modern solutions.
+                    </p>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="service-grid">
+                    <div class="service-card">
+                        <h3>🏡 Residential Design</h3>
+                        <p>Transform your Santa Fe home into a sanctuary that reflects your lifestyle and the beauty of the Southwest.</p>
+                        <ul>
+                            <li>Kitchen & Bathroom Remodels</li>
+                            <li>Whole Home Renovations</li>
+                            <li>Adobe & Historic Home Updates</li>
+                            <li>Custom Home Design</li>
+                            <li>Living Spaces & Bedrooms</li>
+                        </ul>
+                        <a href="/services/residential" style="color: #27ae60; font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem;">Learn More →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>🏢 Commercial Design</h3>
+                        <p>Create welcoming, functional commercial spaces that attract customers and inspire your team.</p>
+                        <ul>
+                            <li>Office Design</li>
+                            <li>Medical & Dental Offices</li>
+                            <li>Retail Spaces</li>
+                            <li>Restaurants & Hospitality</li>
+                            <li>Corporate Branding</li>
+                        </ul>
+                        <a href="/services/commercial" style="color: #27ae60; font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem;">Learn More →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>🌿 LEED Certified Design</h3>
+                        <p>Sustainable design solutions that reduce environmental impact while creating healthier spaces.</p>
+                        <ul>
+                            <li>LEED Certification Support</li>
+                            <li>Sustainable Material Selection</li>
+                            <li>Energy-Efficient Design</li>
+                            <li>Green Building Consulting</li>
+                            <li>Eco-Friendly Solutions</li>
+                        </ul>
+                        <a href="/services/leed-certified-design" style="color: #27ae60; font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem;">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section class="why-choose">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2.5rem; color: #2c3e50; margin-bottom: 1rem;">Why Santa Fe Homeowners Choose Mattéo Designs</h2>
+                    <p style="font-size: 1.2rem; color: #7f8c8d;">Local expertise meets sustainable design innovation</p>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🏜️</div>
+                        <h3>Local Expertise</h3>
+                        <p style="color: #7f8c8d;">Deep understanding of Santa Fe's architectural heritage, climate considerations, and local building codes.</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🌱</div>
+                        <h3>Sustainable Focus</h3>
+                        <p style="color: #7f8c8d;">LEED certified designer committed to eco-friendly materials and energy-efficient solutions.</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">✨</div>
+                        <h3>Personalized Service</h3>
+                        <p style="color: #7f8c8d;">Direct collaboration with Mattéo on every project—no junior designers or outsourced work.</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💎</div>
+                        <h3>Full-Service Design</h3>
+                        <p style="color: #7f8c8d;">From concept to completion, we handle every detail including contractor coordination.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Preview -->
+        <section style="padding: 4rem 2rem;" id="portfolio">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2.5rem; color: #2c3e50; margin-bottom: 1rem;">Featured Santa Fe Projects</h2>
+                    <p style="font-size: 1.2rem; color: #7f8c8d;">See how we've transformed homes and businesses throughout Santa Fe</p>
+                </div>
+
+                <div class="portfolio-preview">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Coastal Farmhouse Project">
+                        <div class="portfolio-overlay">
+                            <h4>Historic Adobe Renovation</h4>
+                            <p>Residential | Santa Fe Historic District</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="Modern Kitchen">
+                        <div class="portfolio-overlay">
+                            <h4>Contemporary Kitchen Remodel</h4>
+                            <p>Residential | Santa Fe</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Medical Office">
+                        <div class="portfolio-overlay">
+                            <h4>Medical Office Design</h4>
+                            <p>Commercial | Santa Fe</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600" alt="Living Room">
+                        <div class="portfolio-overlay">
+                            <h4>Sustainable Living Space</h4>
+                            <p>Residential | LEED Certified</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="/portfolio" style="background: #27ae60; color: white; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block;">View Full Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Process -->
+        <section style="padding: 4rem 2rem; background: #f8f9fa;">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2.5rem; color: #2c3e50; margin-bottom: 1rem;">Our Design Process</h2>
+                    <p style="font-size: 1.2rem; color: #7f8c8d;">A proven 5-step approach to creating your dream space</p>
+                </div>
+
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Discovery & Consultation</h3>
+                            <p style="color: #7f8c8d;">We start with a free consultation to understand your vision, needs, budget, and timeline. I'll visit your space and discuss possibilities.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Concept Development</h3>
+                            <p style="color: #7f8c8d;">I create mood boards, color palettes, and initial concepts that capture your style while addressing functional requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Design & Planning</h3>
+                            <p style="color: #7f8c8d;">Detailed floor plans, 3D renderings, material selections, and comprehensive specifications are developed and refined.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Implementation</h3>
+                            <p style="color: #7f8c8d;">I coordinate with contractors, manage timelines, source materials, and oversee installation to ensure flawless execution.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Final Reveal</h3>
+                            <p style="color: #7f8c8d;">Your transformed space is ready! I handle final styling, walk you through everything, and ensure you're thrilled with the result.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="/resources/design-process" style="color: #27ae60; font-weight: 600; text-decoration: none;">Learn More About Our Process →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section style="padding: 4rem 2rem;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2.5rem; color: #2c3e50; margin-bottom: 1rem;">What Santa Fe Clients Say</h2>
+                    <p style="font-size: 1.2rem; color: #7f8c8d;">Don't just take our word for it</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="color: #f39c12; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; color: #2c3e50; margin-bottom: 1rem;">
+                            "Mattéo completely transformed our historic adobe home while respecting its character. His sustainable design choices reduced our energy bills by 30%. Couldn't be happier!"
+                        </p>
+                        <p style="font-weight: 600; color: #2c3e50;">— Sarah M.</p>
+                        <p style="color: #7f8c8d; font-size: 0.9rem;">Historic Home Renovation, Santa Fe</p>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="color: #f39c12; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; color: #2c3e50; margin-bottom: 1rem;">
+                            "Our medical office needed to be welcoming yet professional. Mattéo nailed it. Patient feedback has been overwhelmingly positive, and our staff loves the space."
+                        </p>
+                        <p style="font-weight: 600; color: #2c3e50;">— Dr. James R.</p>
+                        <p style="color: #7f8c8d; font-size: 0.9rem;">Medical Office Design, Santa Fe</p>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="color: #f39c12; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; color: #2c3e50; margin-bottom: 1rem;">
+                            "Working with Mattéo was seamless from start to finish. He listened to our needs, respected our budget, and delivered beyond our expectations. True professional."
+                        </p>
+                        <p style="font-weight: 600; color: #2c3e50;">— Michael & Lisa T.</p>
+                        <p style="color: #7f8c8d; font-size: 0.9rem;">Kitchen Remodel, Santa Fe</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="/resources/testimonials" style="color: #27ae60; font-weight: 600; text-decoration: none;">Read More Reviews →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Areas -->
+        <section class="map-section">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h2 style="font-size: 2.5rem; color: #2c3e50; margin-bottom: 1rem;">Serving Santa Fe & Surrounding Areas</h2>
+                    <p style="font-size: 1.2rem; color: #7f8c8d;">Based in Santa Fe, proudly serving Northern New Mexico</p>
+                </div>
+
+                <div class="map-container">
+                    <!-- Replace with actual Google Maps embed -->
+                    <p>📍 [Google Maps Embed Here]</p>
+                </div>
+
+                <div style="margin-top: 2rem; text-align: center;">
+                    <p style="font-size: 1.1rem; color: #2c3e50; margin-bottom: 1rem;">
+                        <strong>Primary Service Areas:</strong> Santa Fe, Los Alamos, Española, Taos, Albuquerque
+                    </p>
+                    <p style="color: #7f8c8d;">
+                        Also offering virtual design consultations for projects nationwide
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2>Ready to Transform Your Space?</h2>
+                <p>Schedule a free consultation to discuss your project. No obligation—just expert advice tailored to your vision and budget.</p>
+                <div class="cta-buttons">
+                    <a href="/free-consultation" class="btn-white">Schedule Free Consultation</a>
+                    <a href="tel:505XXXXXXX" class="btn-outline">📞 Call (505) XXX-XXXX</a>
+                </div>
+                <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                    Free consultations available in Santa Fe | Virtual consultations available nationwide
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section style="padding: 4rem 2rem;">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2.5rem; color: #2c3e50; margin-bottom: 1rem;">Frequently Asked Questions</h2>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">How much does interior design cost in Santa Fe?</h3>
+                    <p style="color: #7f8c8d;">
+                        Project costs vary based on scope and complexity. Typical residential projects range from $15,000 to $75,000+.
+                        I offer flexible packages starting with consultations to fit various budgets. <a href="/services/packages" style="color: #27ae60;">View our packages →</a>
+                    </p>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Do you work on historic adobe homes?</h3>
+                    <p style="color: #7f8c8d;">
+                        Absolutely! I have extensive experience with Santa Fe's historic properties and understand the unique considerations
+                        required for adobe homes, including preservation requirements and appropriate design approaches.
+                    </p>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">How long does a typical project take?</h3>
+                    <p style="color: #7f8c8d;">
+                        Timelines vary by project scope. A kitchen remodel typically takes 3-4 months from design to completion.
+                        Whole home renovations may take 6-12 months. I'll provide a detailed timeline during our consultation.
+                    </p>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">What is LEED certification and do I need it?</h3>
+                    <p style="color: #7f8c8d;">
+                        LEED (Leadership in Energy and Environmental Design) certification recognizes sustainable building practices.
+                        While not required, LEED principles can reduce energy costs and environmental impact.
+                        <a href="/services/leed-certified-design" style="color: #27ae60;">Learn more about sustainable design →</a>
+                    </p>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="/resources/faq" style="color: #27ae60; font-weight: 600; text-decoration: none;">View All FAQs →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: #2c3e50; color: white; padding: 4rem 2rem 2rem;">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem;">
+            <div>
+                <h3 style="margin-bottom: 1rem;">About</h3>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 0.5rem;"><a href="/about" style="color: rgba(255,255,255,0.8); text-decoration: none;">About Mattéo Designs</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="/services/leed-certified-design" style="color: rgba(255,255,255,0.8); text-decoration: none;">LEED Certification</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="/media" style="color: rgba(255,255,255,0.8); text-decoration: none;">Press & Media</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 style="margin-bottom: 1rem;">Services</h3>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 0.5rem;"><a href="/services/residential" style="color: rgba(255,255,255,0.8); text-decoration: none;">Residential Design</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="/services/commercial" style="color: rgba(255,255,255,0.8); text-decoration: none;">Commercial Design</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="/services/real-estate-development" style="color: rgba(255,255,255,0.8); text-decoration: none;">Real Estate Development</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="/services/packages" style="color: rgba(255,255,255,0.8); text-decoration: none;">Packages & Pricing</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 style="margin-bottom: 1rem;">Resources</h3>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 0.5rem;"><a href="/portfolio" style="color: rgba(255,255,255,0.8); text-decoration: none;">Portfolio</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="/blog" style="color: rgba(255,255,255,0.8); text-decoration: none;">Blog</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="/resources/guides" style="color: rgba(255,255,255,0.8); text-decoration: none;">Free Guides</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="/resources/testimonials" style="color: rgba(255,255,255,0.8); text-decoration: none;">Testimonials</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 style="margin-bottom: 1rem;">Contact</h3>
+                <p><strong>Phone:</strong> <a href="tel:505XXXXXXX" style="color: rgba(255,255,255,0.8); text-decoration: none;">(505) XXX-XXXX</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@matteodesigns.com" style="color: rgba(255,255,255,0.8); text-decoration: none;">info@matteodesigns.com</a></p>
+                <p><strong>Location:</strong> Santa Fe, NM</p>
+                <a href="/free-consultation" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 1rem;">Schedule Consultation</a>
+            </div>
+        </div>
+
+        <div style="max-width: 1200px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: rgba(255,255,255,0.6);">
+            <p>&copy; 2025 Mattéo Designs. All rights reserved. | <a href="/privacy-policy" style="color: inherit; text-decoration: none;">Privacy Policy</a> | <a href="/terms-of-service" style="color: inherit; text-decoration: none;">Terms</a></p>
+        </div>
+    </footer>
+
+    <!-- Mobile Call Button -->
+    <a href="tel:505XXXXXXX" style="display: none; position: fixed; bottom: 20px; right: 20px; background: #27ae60; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); text-decoration: none; font-size: 1.5rem; z-index: 999;" id="mobileCallBtn">📞</a>
+
+    <script>
+        // Show mobile call button on mobile
+        if (window.innerWidth < 768) {
+            document.getElementById('mobileCallBtn').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>

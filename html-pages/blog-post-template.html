@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ BLOG_TITLE }} | Mattéo Designs Blog</title>
+    <meta name="description" content="{{ META_DESCRIPTION }}">
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ BLOG_TITLE }}",
+      "image": "{{ FEATURED_IMAGE }}",
+      "author": {
+        "@type": "Person",
+        "name": "Mattéo Bitetti"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mattéo Designs",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.matteodesigns.com/logo.png"
+        }
+      },
+      "datePublished": "2025-01-24"
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .article-header {
+            max-width: 800px;
+            margin: 4rem auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .breadcrumbs {
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumbs a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+
+        .category-badge {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin-bottom: 2rem;
+        }
+
+        .featured-image {
+            width: 100%;
+            max-width: 1000px;
+            margin: 2rem auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .article-content h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.9;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin: 1.5rem 0 1.5rem 2rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid #27ae60;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            background: #f8f9fa;
+            font-style: italic;
+            color: #555;
+        }
+
+        .article-content img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #27ae60;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .related-posts {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .related-posts h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .post-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .post-card-content {
+            padding: 1.5rem;
+        }
+
+        .post-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-card p {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+
+        .author-bio {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .author-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .article-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .author-bio {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Mattéo Designs</a>
+            <nav>
+                <a href="/portfolio">Portfolio</a>
+                <a href="/services">Services</a>
+                <a href="/blog">Blog</a>
+                <a href="/contact">Contact</a>
+                <a href="/free-consultation" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; font-weight: 600;">Free Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Article Header -->
+    <article>
+        <div class="article-header">
+            <div class="breadcrumbs">
+                <a href="/">Home</a> / <a href="/blog">Blog</a> / <a href="/blog/design-tips">Design Tips</a>
+            </div>
+
+            <span class="category-badge">Design Tips</span>
+
+            <h1>5 Principles of Sustainable Interior Design in Santa Fe</h1>
+
+            <div class="article-meta">
+                By Mattéo Bitetti | January 24, 2025 | 8 min read
+            </div>
+        </div>
+
+        <!-- Featured Image -->
+        <div class="featured-image">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200" alt="Sustainable interior design Santa Fe">
+        </div>
+
+        <!-- Article Content -->
+        <div class="article-content">
+            <p class="intro" style="font-size: 1.3rem; color: #555; font-style: italic;">
+                Santa Fe's unique climate, culture, and architectural heritage create both opportunities and challenges for sustainable design. Here's how to create beautiful, eco-friendly spaces that honor our high desert environment.
+            </p>
+
+            <h2>1. Embrace Passive Solar Design</h2>
+            <p>
+                Santa Fe's 310 days of sunshine per year make passive solar design not just sustainable—it's smart. By orienting your space to maximize southern exposure and minimize eastern and western windows, you can dramatically reduce heating costs while creating naturally bright, warm interiors.
+            </p>
+
+            <p>
+                <strong>Key strategies include:</strong>
+            </p>
+            <ul>
+                <li>Positioning living spaces on the south side for maximum winter sun</li>
+                <li>Installing thermal mass materials (tile, concrete, adobe) to store and release heat</li>
+                <li>Using overhangs and portales to shade summer sun while welcoming winter light</li>
+                <li>Selecting high-performance windows with low-E coatings</li>
+            </ul>
+
+            <blockquote>
+                "The best energy is the energy you don't use. Passive solar design can reduce heating costs by 30-50% in Santa Fe homes." — U.S. Department of Energy
+            </blockquote>
+
+            <h2>2. Choose Local, Natural Materials</h2>
+            <p>
+                Santa Fe's building tradition evolved from materials available within the region. Modern sustainable design continues this practice by sourcing materials locally whenever possible, reducing transportation emissions while supporting local economies.
+            </p>
+
+            <p>
+                Excellent sustainable material choices for Santa Fe homes include:
+            </p>
+            <ul>
+                <li><strong>Adobe:</strong> Made from local earth, highly insulating, regulates humidity</li>
+                <li><strong>Reclaimed wood:</strong> Adds character while preventing waste</li>
+                <li><strong>Natural stone:</strong> Durable, locally quarried, zero VOCs</li>
+                <li><strong>Cork flooring:</strong> Renewable, comfortable, excellent insulation</li>
+                <li><strong>Clay plaster:</strong> Beautiful finish, no VOCs, regulates humidity</li>
+            </ul>
+
+            <h2>3. Water Conservation is Essential</h2>
+            <p>
+                In New Mexico's high desert climate, water conservation isn't optional—it's a responsibility. Sustainable interior design includes water-efficient fixtures and systems that reduce consumption without sacrificing comfort.
+            </p>
+
+            <p>
+                Modern water-saving strategies include:
+            </p>
+            <ul>
+                <li>Low-flow faucets and showerheads (saving 30-50% water usage)</li>
+                <li>Dual-flush toilets (using as little as 0.8 gallons per flush)</li>
+                <li>Tankless water heaters (reducing energy use by 24-34%)</li>
+                <li>Greywater systems for landscape irrigation</li>
+            </ul>
+
+            <h2>4. Indoor Air Quality Matters</h2>
+            <p>
+                At 7,000 feet elevation, Santa Fe's air is already thin. Maintaining excellent indoor air quality is crucial for health and comfort. Sustainable design prioritizes materials and systems that keep indoor air clean.
+            </p>
+
+            <p>
+                <strong>Key considerations:</strong>
+            </p>
+            <ul>
+                <li>Zero-VOC paints and finishes</li>
+                <li>Formaldehyde-free cabinetry and furniture</li>
+                <li>Natural fiber textiles (wool, cotton, linen)</li>
+                <li>Proper ventilation systems with heat recovery</li>
+                <li>Indoor plants for natural air purification</li>
+            </ul>
+
+            <h2>5. Design for Longevity</h2>
+            <p>
+                The most sustainable design is design that lasts. Creating timeless interiors with quality materials and classic aesthetics means your space won't need frequent updates—reducing waste and resource consumption over time.
+            </p>
+
+            <p>
+                Longevity strategies include:
+            </p>
+            <ul>
+                <li>Investing in quality over quantity</li>
+                <li>Choosing classic designs that won't feel dated</li>
+                <li>Selecting durable, maintainable materials</li>
+                <li>Creating flexible spaces that adapt as needs change</li>
+                <li>Incorporating timeless Santa Fe design elements</li>
+            </ul>
+
+            <blockquote>
+                "In my 15 years designing Santa Fe homes, I've learned that the most beautiful spaces are also the most sustainable. Good design honors both tradition and environment."
+            </blockquote>
+
+            <h2>The LEED Advantage</h2>
+            <p>
+                As a LEED certified designer, I help clients implement these principles systematically while potentially achieving LEED certification—adding value and recognition to their sustainable investment.
+            </p>
+
+            <p>
+                <a href="/services/leed-certified-design" style="color: #27ae60; font-weight: 600;">Learn more about LEED certified design →</a>
+            </p>
+
+            <!-- CTA Box -->
+            <div class="cta-box">
+                <h3>Ready to Create Your Sustainable Space?</h3>
+                <p>Let's discuss how sustainable design can transform your Santa Fe home while reducing environmental impact and operating costs.</p>
+                <a href="/free-consultation" class="cta-button">Schedule Free Consultation</a>
+            </div>
+
+            <h2>Conclusion</h2>
+            <p>
+                Sustainable interior design in Santa Fe isn't about sacrifice—it's about creating beautiful, comfortable spaces that work with our unique environment rather than against it. By embracing these five principles, you can reduce your environmental footprint while creating a home that feels authentically Santa Fe.
+            </p>
+
+            <p>
+                Whether you're building new, renovating, or simply refreshing a space, sustainable design strategies can be incorporated at any budget level. The key is starting with intention and working with designers who understand both sustainability and Santa Fe's unique character.
+            </p>
+        </div>
+
+        <!-- Author Bio -->
+        <div class="author-bio">
+            <img src="https://via.placeholder.com/100" alt="Mattéo Bitetti" class="author-image">
+            <div>
+                <h3 style="margin-bottom: 0.5rem; color: #2c3e50;">About Mattéo Bitetti</h3>
+                <p style="color: #7f8c8d; font-size: 0.95rem; margin-bottom: 0.5rem;">
+                    LEED Certified Interior Designer with 15+ years creating sustainable, beautiful spaces in Santa Fe. Passionate about honoring architectural heritage while incorporating modern, eco-friendly solutions.
+                </p>
+                <a href="/about" style="color: #27ae60; font-weight: 600; text-decoration: none; font-size: 0.9rem;">Learn more about Mattéo →</a>
+            </div>
+        </div>
+
+        <!-- Related Posts -->
+        <div class="related-posts">
+            <h2 style="color: #2c3e50;">Related Articles</h2>
+
+            <div class="post-grid">
+                <a href="/blog/how-to-choose-interior-designer" style="text-decoration: none;">
+                    <div class="post-card">
+                        <img src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=600" alt="Choosing an interior designer">
+                        <div class="post-card-content">
+                            <h3>How to Choose an Interior Designer: Complete Guide</h3>
+                            <p>What to look for when hiring a designer and questions to ask before signing a contract.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/leed-certification-explained" style="text-decoration: none;">
+                    <div class="post-card">
+                        <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600" alt="LEED certification">
+                        <div class="post-card-content">
+                            <h3>What is LEED Certification and Why Does It Matter?</h3>
+                            <p>Understanding the benefits of LEED certification for your home or business.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/santa-fe-design-trends-2025" style="text-decoration: none;">
+                    <div class="post-card">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="Santa Fe design trends">
+                        <div class="post-card-content">
+                            <h3>Santa Fe Design Trends for 2025</h3>
+                            <p>The latest trends in Santa Fe interior design, from modern adobe to sustainable luxury.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer style="background: #2c3e50; color: white; padding: 4rem 2rem; margin-top: 4rem;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <p>&copy; 2025 Mattéo Designs. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
