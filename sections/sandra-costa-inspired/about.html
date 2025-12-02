@@ -26,6 +26,15 @@
         .timeline { margin-top: 3rem; border-left: 3px solid rgba(255,255,255,0.2); padding-left: 1.5rem; }
         .timeline article { margin-bottom: 1.5rem; }
         .timeline h3 { color: var(--gold); letter-spacing: 0.15em; }
+        .info-section { margin-top: 3rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .info-card { border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.03); }
+        .info-card h3 { margin-bottom: 0.75rem; }
+        .testimonials { margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 3rem; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+        .testimonial-card { border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.03); }
+        .testimonial-card p { color: rgba(255,255,255,0.8); }
+        .testimonial-card strong { display: block; margin-top: 1rem; }
         footer { margin-top: 4rem; text-align: center; color: var(--muted); text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.7rem; }
         @media (max-width: 640px) { nav ul { display: none; } main { padding: 3rem 1.5rem 4rem; } }
     </style>
@@ -49,23 +58,40 @@
 
     <main>
         <p style="letter-spacing:0.35em; text-transform:uppercase; font-size:0.75rem; color:var(--muted);">About Mattéo</p>
-        <h1>Santa Fe interior designer focused on sustainable design.</h1>
-        <p style="max-width:720px;">Mattéo Designs specializes in creating interiors that reflect the unique character of Northern New Mexico. From historic adobe homes to contemporary spaces, our work honors the region's architectural beauty while meeting modern standards for sustainability and comfort.</p>
+        <h1>25+ years of transformative interior design.</h1>
+        <p style="max-width:720px;">Mattéo Designs has been in business for over 25 years with interiors suited to modern lifestyles. We marry traditional glamour with cutting-edge design across the United States, bringing every client vision to life from concept to completion.</p>
 
         <div class="about-grid">
             <div>
                 <h2 style="margin-bottom:1rem;">Design Leadership</h2>
-                <p>Since 2011, we've been transforming homes and commercial spaces through thoughtful design that combines beauty with function. Residential design involves psychology and an understanding of human behavior—we create custom homes, bathrooms, and kitchens that reflect your personal preferences and enhance how you live.</p>
-                <p style="margin-top:1rem;">As a LEED certified studio, we integrate the latest building technologies and sustainable materials to create healthier, greener spaces that support modern living in Santa Fe.</p>
+                <p>We focus on construction methodologies that balance traditional glamour with modern efficiencies. Residential design involves psychology and an understanding of human behavior—we create custom homes, bathrooms, and kitchens that reflect your personal preferences and enhance how you live.</p>
+                <p style="margin-top:1rem;">As a LEED certified studio, we integrate the latest building technologies, sustainable materials, and project management oversight to create healthier, greener spaces in Santa Fe and beyond.</p>
             </div>
             <img src="../../legacy/images/Vanderhoof%20Photos/Front%20Room%202.jpg" alt="Santa Fe interior design project">
         </div>
 
         <div class="stats">
-            <div class="stat"><span>15+</span>Years of Santa Fe interior design experience.</div>
-            <div class="stat"><span>4.9</span>Average client rating across residential and commercial work.</div>
-            <div class="stat"><span>28</span>Documented reviews highlighting sustainable design results.</div>
+            <div class="stat"><span>25+</span>Years delivering livable interiors.</div>
+            <div class="stat"><span>4.9</span>Average client rating across residential + commercial work.</div>
+            <div class="stat"><span>50+</span>Projects guided from concept to completion nationwide.</div>
         </div>
+
+        <section class="info-section">
+            <div class="info-grid">
+                <article class="info-card">
+                    <h3>Who We Are</h3>
+                    <p>Mattéo Designs has been serving clients for over two decades with interiors suited to the urban lifestyle and modern aesthetics of today. Our portfolio spans historic adobe residences, boutique hotels, and coastal escapes—all unified by thoughtful detailing.</p>
+                </article>
+                <article class="info-card">
+                    <h3>What We Do</h3>
+                    <p>We work in both residential and commercial design. Services include design development, space planning, lighting design, material selection, FF&amp;E specification, and full project management for restaurants, boutique hotels, primary residences, and vacation homes.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Our Philosophy</h3>
+                    <p>We believe interior design can change lives. Every project prioritizes functional solutions paired with artfully rendered spaces, creating interiors that transform the way clients experience their daily routines.</p>
+                </article>
+            </div>
+        </section>
 
         <div class="timeline">
             <article>
@@ -89,6 +115,24 @@
                 <p>Final styling, quality review, and detailed walkthrough to ensure every element meets project specifications.</p>
             </article>
         </div>
+
+        <section class="testimonials">
+            <h2>Client Stories</h2>
+            <div class="testimonial-grid">
+                <article class="testimonial-card">
+                    <p>“When I first bought this house I wasn’t sure what to do. Mattéo’s ideas blossomed into a full makeover and I couldn’t be happier. Anyone who sees it is blown away.”</p>
+                    <strong>Halsey W.</strong>
+                </article>
+                <article class="testimonial-card">
+                    <p>“Mattéo turned our nightmare project into a breathtakingly beautiful home. He is passionate, a problem solver, diligent, and honest. Our home will be featured in a professional design publication.”</p>
+                    <strong>Dorothy O.</strong>
+                </article>
+                <article class="testimonial-card">
+                    <p>“Our newly completed bathroom surpassed our wildest imagination. Because the finished project looks so ideal, it’s difficult to adequately express our satisfaction.”</p>
+                    <strong>Arfield &amp; Julia D.</strong>
+                </article>
+            </div>
+        </section>
 
         <footer>Mattéo Designs · Santa Fe · info@matteodesigns.com</footer>
     </main>

@@ -225,6 +225,36 @@
             font-size: 0.75rem;
         }
 
+        .about-band {
+            margin: 5rem 0;
+            padding: 3rem;
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            background: var(--linen);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            background: #fff;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        .info-card h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.75rem;
+        }
+
         .split {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -316,6 +346,37 @@
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.2em;
+        }
+
+        .testimonial-section {
+            margin: 5rem 0;
+            border-top: 1px solid var(--border);
+            padding-top: 3rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-card p {
+            color: rgba(31,27,23,0.75);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card strong {
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
         }
 
         .studio-grid {
@@ -479,6 +540,26 @@
             <div class="hero-image" aria-label="Warm wooden living space"></div>
         </section>
 
+        <section class="about-band">
+            <p class="serif-label">Who We Are</p>
+            <h2>25+ years designing livable interiors.</h2>
+            <p style="color: rgba(31,27,23,0.75); max-width: 900px;">Mattéo Designs has been in business for over 25 years, marrying traditional glamour with cutting-edge design for urban lifestyles nationwide. Our team delivers construction methodologies, FF&amp;E selection, and project management that carry every concept through to completion.</p>
+            <div class="info-grid">
+                <article class="info-card">
+                    <h3>What We Do</h3>
+                    <p>Full-service residential and commercial design including restaurants, boutique hotels, primary residences, and vacation homes. Services cover design development, space planning, lighting, material selection, FF&amp;E, and installation oversight.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Our Philosophy</h3>
+                    <p>We believe interior design can change lives. Every space is artfully rendered yet deeply functional, delivering the powerful impact clients feel in daily routines.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Where We Work</h3>
+                    <p>Projects stretch across the United States—from Santa Fe adobe restorations to coastal condominiums—each tailored to the surrounding architecture and lifestyle.</p>
+                </article>
+            </div>
+        </section>
+
         <section id="collections">
             <div class="serif-label">Our Services</div>
             <h2>Custom residential design tailored to you.</h2>
@@ -622,6 +703,29 @@
                     <img src="../../legacy/images/Vanderhoof%20Photos/Master%20Bedroom.jpg" alt="Master bedroom with arched headboard and warm lighting">
                     <figcaption>Owner's suite</figcaption>
                 </figure>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="serif-label">Testimonials</div>
+            <h2>Clients on working with Mattéo Designs.</h2>
+            <div class="testimonial-grid">
+                <article class="testimonial-card">
+                    <p>“When I first bought this house I wasn’t sure what to do. Mattéo’s ideas blossomed into a full makeover and I couldn’t be happier. Anyone who sees it is blown away.”</p>
+                    <strong>Halsey W.</strong>
+                </article>
+                <article class="testimonial-card">
+                    <p>“Mattéo dealt with the contractor and turned our nightmare project into a breathtakingly beautiful home. He is passionate, a problem solver, diligent, and honest.”</p>
+                    <strong>Dorothy O.</strong>
+                </article>
+                <article class="testimonial-card">
+                    <p>“We had a vision, but the results of your design surpassed our imagination. The finished project looks so ideal it’s hard to describe.”</p>
+                    <strong>Arfield &amp; Julia D.</strong>
+                </article>
+                <article class="testimonial-card">
+                    <p>“Mattéo Designs did an excellent job redecorating my dental office. Patients constantly comment on how wonderful the space now looks.”</p>
+                    <strong>H.F.</strong>
+                </article>
             </div>
         </section>
 
