@@ -16,9 +16,17 @@
 
         const panel = document.createElement('div');
         panel.className = 'chat-panel';
+        const avatarPath = '../../legacy/images/matteo-cartoon.png';
+
         panel.innerHTML = `
             <div class="chat-header">
-                <span>Mattéo Designs</span>
+                <div class="chat-header-info">
+                    <img src="${avatarPath}" alt="Mattéo Designs" class="chat-avatar">
+                    <div>
+                        <strong>Mattéo Designs</strong>
+                        <span>Typically replies same day</span>
+                    </div>
+                </div>
                 <button class="chat-close" aria-label="Close chat">×</button>
             </div>
             <div class="chat-body">
