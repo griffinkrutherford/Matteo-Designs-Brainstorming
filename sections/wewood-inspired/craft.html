@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Craft | Mattéo Designs</title>
-    <meta name="description" content="Discover Mattéo Designs' interior design process from matteodesigns.com, including sustainable materials, LEED-certified practices, and Santa Fe project insights.">
+    <title>Services | Mattéo Designs</title>
+    <meta name="description" content="Full-scale interior design services from Mattéo Designs, inspired by the original matteodesigns.com offerings: custom kitchens, bathrooms, cabinetry, drawings, and project management.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root { --bg: #f4efe9; --text: #1f1b17; --border: rgba(0,0,0,0.1); }
@@ -20,15 +20,19 @@
         h1, h2, h3 { font-family: 'Playfair Display', serif; letter-spacing: -0.01em; }
         h1 { font-size: clamp(2rem, 5vw, 3.4rem); }
         h2 { font-size: 1.9rem; margin-top: 3rem; }
-        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin-top: 2rem; }
-        .process-card { border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.8); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
-        .process-card span { display: block; text-transform: uppercase; letter-spacing: 0.35em; font-size: 0.75rem; margin-bottom: 0.8rem; }
-        .split { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: center; margin-top: 3rem; }
-        .material-board { border-radius: 1.2rem; min-height: 360px; background: url('../../legacy/images/Vanderhoof%20Photos/Best%20Bath%201.jpg') center/cover; box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
-        .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        .stat { border-top: 1px solid var(--border); padding-top: 1rem; }
-        .stat strong { display: block; font-size: 2rem; }
-        .notes { margin-top: 3rem; border-left: 4px solid #c0a07a; padding-left: 1.5rem; }
+        .hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: center; }
+        .hero-card { border: 1px solid var(--border); border-radius: 1.25rem; padding: 2rem; background: #fff; box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+        .hero-card ul { list-style: none; margin-top: 1rem; }
+        .hero-card li { padding: 0.4rem 0; letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.75rem; color: rgba(0,0,0,0.65); }
+        .core-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .core-card { border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.9); box-shadow: 0 12px 24px rgba(0,0,0,0.05); }
+        .core-card h3 { text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.8rem; margin-bottom: 0.6rem; }
+        .service-list { columns: 2; column-gap: 2rem; margin-top: 1.5rem; }
+        .service-list li { margin-bottom: 0.5rem; }
+        .highlight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin-top: 2rem; }
+        .highlight-card { border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.95); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+        .highlight-card span { text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.72rem; color: rgba(0,0,0,0.6); }
+        .cta-block { margin-top: 3rem; border-left: 4px solid #c0a07a; padding-left: 1.5rem; }
         footer { margin-top: 4rem; text-transform: uppercase; letter-spacing: 0.25em; font-size: 0.7rem; color: rgba(0,0,0,0.6); text-align: center; }
         @media (max-width: 640px) { nav ul { display: none; } main { padding: 3rem 1.5rem 4rem; } }
     </style>
@@ -50,63 +54,93 @@
     </header>
 
     <main>
-        <p style="text-transform: uppercase; letter-spacing: 0.35em; font-size: 0.75rem;">Crafted by Hand</p>
-        <h1>Interior design shaped by Santa Fe craftsmanship.</h1>
-        <p style="max-width: 720px; color: rgba(0,0,0,0.7);">Each commission follows the process outlined on matteodesigns.com—thoughtful collaboration that balances beauty, function, and sustainable materials.</p>
+        <p style="text-transform: uppercase; letter-spacing: 0.35em; font-size: 0.75rem;">Full Scale Service</p>
+        <h1>Mattéo Designs studio services.</h1>
+        <p style="max-width: 720px; color: rgba(0,0,0,0.7);">Originally from Los Angeles and now headquartered in Santa Fe, Mattéo Designs takes projects from concept to completion. We deliver cutting-edge construction methodologies, state-of-the-art kitchens and bathrooms, and seamless integration of interior and exterior space.</p>
 
-        <div class="process-grid">
-            <article class="process-card">
-                <span>Phase 01</span>
-                <h3>Discovery & Consultation</h3>
-                <p>We start with a comprehensive consultation to understand your vision, needs, budget, and timeline.</p>
+        <div class="hero-grid" style="margin-top:2rem;">
+            <article class="hero-card">
+                <h2 style="margin-top:0;">Full Scale Interior Design</h2>
+                <p>Renovations, remodels, and new construction guided by comprehensive design development, drawings, and procurement.</p>
+                <ul>
+                    <li>Architectural coordination</li>
+                    <li>Interior + exterior integration</li>
+                    <li>Custom furniture + cabinetry</li>
+                </ul>
             </article>
-            <article class="process-card">
-                <span>Phase 02</span>
-                <h3>Concept Development</h3>
-                <p>Creating mood boards, color palettes, and initial concepts that capture your style.</p>
-            </article>
-            <article class="process-card">
-                <span>Phase 03</span>
-                <h3>Design & Planning</h3>
-                <p>Development of detailed plans, 3D renderings, material selections, and comprehensive project specifications.</p>
-            </article>
-            <article class="process-card">
-                <span>Phase 04</span>
-                <h3>Implementation</h3>
-                <p>Coordination with contractors, timeline management, and comprehensive oversight of installation processes.</p>
-            </article>
-            <article class="process-card">
-                <span>Phase 05</span>
-                <h3>Completion</h3>
-                <p>Final styling, quality review, and walkthroughs to ensure every element meets project specifications.</p>
+            <article class="hero-card">
+                <h2 style="margin-top:0;">Project Management</h2>
+                <p>Consultations, schematic design review, and on-site oversight to ensure every detail aligns with the plan.</p>
+                <ul>
+                    <li>Virtual 3D presentations</li>
+                    <li>Trade + supplier consultation</li>
+                    <li>Historic home restoration</li>
+                </ul>
             </article>
         </div>
 
-        <div class="split">
-            <div>
-                <h2>Material studies from Santa Fe projects.</h2>
-                <p>From historic adobe homes to contemporary residences, we vet every finish under Santa Fe light and select sustainable materials that support healthier spaces.</p>
-                <div class="stat-grid">
-                    <div class="stat">
-                        <strong>15+</strong>
-                        <span>Years of Santa Fe design experience.</span>
-                    </div>
-                    <div class="stat">
-                        <strong>30%</strong>
-                        <span>Energy reduction reported by clients after sustainable renovations.</span>
-                    </div>
-                    <div class="stat">
-                        <strong>4.9</strong>
-                        <span>Average client rating across residential and commercial work.</span>
-                    </div>
-                </div>
+        <section>
+            <h2>Core services</h2>
+            <p style="color: rgba(0,0,0,0.7);">Directly adapted from matteodesigns.com.</p>
+            <ul class="service-list" style="list-style:none; padding-left:0; color: rgba(0,0,0,0.75);">
+                <li>Architectural Drawings</li>
+                <li>Virtual 3D Presentations</li>
+                <li>Consultations</li>
+                <li>Schematic Design & Design Review</li>
+                <li>Project Management</li>
+                <li>Space Planning</li>
+                <li>Custom Kitchens & Bathrooms</li>
+                <li>Custom Furniture</li>
+                <li>Custom Cabinetry & Millwork</li>
+                <li>Exterior Room & Landscape Design</li>
+                <li>Personal Shopping</li>
+                <li>Trade & Supplier Consultation</li>
+                <li>Historic Home Restoration</li>
+                <li>Art Selection</li>
+                <li>Material Selection</li>
+                <li>Product Specification & Procurement</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Focused capabilities</h2>
+            <div class="highlight-grid">
+                <article class="highlight-card">
+                    <span>Custom Furniture</span>
+                    <h3>Made-to-measure pieces</h3>
+                    <p>Bespoke furnishings tailored to each residence with archival documentation and sustainable materials.</p>
+                </article>
+                <article class="highlight-card">
+                    <span>Kitchens & Baths</span>
+                    <h3>State-of-the-art installations</h3>
+                    <p>Smart storage, spa-like fixtures, and performance finishes that elevate daily rituals.</p>
+                </article>
+                <article class="highlight-card">
+                    <span>Cabinetry & Millwork</span>
+                    <h3>In-house detailing</h3>
+                    <p>Custom millwork packages aligning with architectural drawings and project schedules.</p>
+                </article>
+                <article class="highlight-card">
+                    <span>Exterior Design</span>
+                    <h3>Landscape rooms</h3>
+                    <p>Outdoor living concepts that extend interior palettes into gardens, terraces, and courtyards.</p>
+                </article>
+                <article class="highlight-card">
+                    <span>Consulting</span>
+                    <h3>Trade partnerships</h3>
+                    <p>Personal shopping, supplier sourcing, and art selection ensuring cohesive storytelling.</p>
+                </article>
+                <article class="highlight-card">
+                    <span>Drawings & 3D</span>
+                    <h3>Visualization</h3>
+                    <p>Architectural drawings, virtual walkthroughs, and schematic reviews used to align teams.</p>
+                </article>
             </div>
-            <div class="material-board" aria-label="Santa Fe bathroom detail"></div>
-        </div>
+        </section>
 
-        <div class="notes">
-            <h2>Field Notes</h2>
-            <p>“Mattéo completely transformed our historic adobe home while respecting its character. His sustainable design choices reduced our energy bills by 30%.” — Client testimonial featured on matteodesigns.com</p>
+        <div class="cta-block">
+            <h2>Ready to discuss your project?</h2>
+            <p>Email <a href="mailto:info@matteodesigns.com">info@matteodesigns.com</a> to schedule a consultation or visit the Santa Fe studio Wednesday–Saturday by appointment.</p>
         </div>
 
         <footer>Mattéo Designs · Santa Fe, NM</footer>

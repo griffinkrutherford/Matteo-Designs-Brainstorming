@@ -255,6 +255,31 @@
             margin-bottom: 0.75rem;
         }
 
+        .about-profile {
+            margin-top: 2.5rem;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 1.25rem;
+            background: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .about-profile img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 999px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-profile p {
+            color: rgba(31,27,23,0.75);
+        }
+
         .split {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -557,6 +582,14 @@
                     <h3>Where We Work</h3>
                     <p>Projects stretch across the United States—from Santa Fe adobe restorations to coastal condominiums—each tailored to the surrounding architecture and lifestyle.</p>
                 </article>
+            </div>
+
+            <div class="about-profile">
+                <img src="../../legacy/images/matteo-cartoon.png" alt="Portrait of Mattéo Designs founder">
+                <div>
+                    <p style="text-transform: uppercase; letter-spacing: 0.25em; font-size: 0.75rem; margin-bottom: 0.5rem;">Mattéo Bitetti</p>
+                    <p>Founder Mattéo brings 25+ years of design leadership from Los Angeles to Santa Fe. His on-site presence ensures construction methodologies, artisans, and suppliers align with the design intent throughout every phase.</p>
+                </div>
             </div>
         </section>
 
