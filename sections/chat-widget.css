@@ -10,7 +10,7 @@
 .chat-launcher {
     position: fixed;
     bottom: 1.5rem;
-    right: 1.5rem;
+    right: 9rem;
     background: var(--chat-launcher-bg);
     color: var(--chat-launcher-text);
     border: none;
@@ -34,7 +34,7 @@
 .chat-panel {
     position: fixed;
     bottom: 4.5rem;
-    right: 1.5rem;
+    right: 9rem;
     width: 320px;
     max-height: 440px;
     background: var(--chat-surface);
@@ -150,4 +150,10 @@
         right: 1rem;
         bottom: 4rem;
     }
+}
+
+
+@media (max-width: 480px) {
+    .chat-launcher { right: 1rem; }
+    .chat-panel { right: 1rem; width: calc(100% - 2rem); }
 }
