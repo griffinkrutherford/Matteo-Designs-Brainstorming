@@ -12,11 +12,11 @@
         const launcher = document.createElement('button');
         launcher.className = 'chat-launcher';
         launcher.type = 'button';
-        launcher.innerHTML = '<span>Chat with Mattéo</span>';
+        launcher.innerHTML = '<span aria-hidden="true">💬</span><span class="sr-only">Chat</span>';
 
         const panel = document.createElement('div');
         panel.className = 'chat-panel';
-        const avatarPath = (document.currentScript && document.currentScript.dataset && document.currentScript.dataset.avatar) || '../../legacy/images/matteo-cartoon.png';
+        const avatarPath = '../../legacy/images/matteo-cartoon.png';
 
         panel.innerHTML = `
             <div class="chat-header">
