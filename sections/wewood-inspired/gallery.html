@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | Mattéo Designs</title>
+    <meta name="description" content="Explore Mattéo Designs interiors from matteodesigns.com, including historic adobe renovations, contemporary residences, and commercial projects across Santa Fe.">
+    <link rel="icon" href="../../legacy/images/matteo-cartoon.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="../chat-widget.css">
+    <script defer src="../chat-widget.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+    --chat-surface: #ffffff;
+    --chat-surface-alt: #f7f3ed;
+    --chat-text: #1f1b17;
+    --chat-launcher-bg: #1f1b17;
+    --chat-launcher-text: #f4efe9;
+    --chat-border: rgba(0,0,0,0.08);
+
+            --sand: #f4efe9;
+            --linen: #f8f5f0;
+            --charcoal: #1f1b17;
+            --border: rgba(31, 27, 23, 0.12);
+        }
+        /* Font palette overrides */
+        body { font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', serif; }
+        h1, h2, h3, h4 { font-family: 'Garamond', 'Palatino', serif; }
+        nav, .nav-inner, .btn-outline, .header-cta, .hero-meta, .slider-controls { font-family: 'Optima', 'Palatino', serif; }
+        .serif, .serif-label { font-family: 'Chalkduster', 'Optima', 'Palatino', serif; }
+
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--sand);
+            color: var(--charcoal);
+            font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', serif;
+            line-height: 1.7;
+        }
+
+        header {
+            background: rgba(244,239,233,0.9);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(6px);
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-family: 'Garamond', 'Palatino', serif; letter-spacing: 0.05em; text-transform: uppercase; }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.8rem; }
+        nav a { color: inherit; text-decoration: none; }
+
+        .header-cta { border: 1px solid var(--charcoal); padding: 0.6rem 1.4rem; border-radius: 999px; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; }
+
+        main { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem 5rem; }
+
+        h1, h2, h3 { font-family: 'Garamond', 'Palatino', serif; letter-spacing: -0.01em; }
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.5rem; }
+        h2 { font-size: 2rem; margin-bottom: 1rem; }
+        h3 { font-size: 1.3rem; }
+
+        .serif-label { text-transform: uppercase; letter-spacing: 0.35em; font-size: 0.75rem; color: rgba(31,27,23,0.7); }
+
+        .collection-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; margin-top: 2.5rem; }
+        .collection-card { background: var(--linen); border-radius: 1.2rem; padding: 2rem; border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .collection-card p { color: rgba(31,27,23,0.75); margin-top: 0.75rem; }
+
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 2rem; }
+        .gallery-card { position: relative; border-radius: 1rem; overflow: hidden; height: 230px; box-shadow: 0 16px 30px rgba(0,0,0,0.1); }
+        .gallery-card img { width: 100%; height: 100%; object-fit: cover; }
+        .gallery-card span { position: absolute; left: 0; right: 0; bottom: 0; padding: 0.9rem 1rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.25em; color: white; background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8)); }
+
+        .cta { margin-top: 3rem; display: flex; flex-wrap: wrap; gap: 1rem; }
+        .cta a { border-radius: 999px; padding: 0.85rem 1.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; text-decoration: none; }
+        .cta .primary { background: var(--charcoal); color: var(--sand); }
+        .cta .ghost { border: 1px solid var(--charcoal); color: var(--charcoal); }
+
+        footer { margin-top: 4rem; text-align: center; color: rgba(31,27,23,0.7); letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.75rem; }
+
+        @media (max-width: 640px) {
+            nav ul { display: none; }
+            main { padding: 3rem 1.5rem 4rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">Mattéo Designs</a>
+            <nav>
+                <ul>
+                    <li><a href="gallery.html">PORTFOLIO</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="media.html">MEDIA</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <a href="about.html" class="header-cta">Free Consultation</a>
+        </div>
+    </header>
+
+    <main>
+        <p class="serif-label">Signatures</p>
+        <h1>Signature interiors rooted in Santa Fe.</h1>
+        <p style="max-width: 720px; color: rgba(31,27,23,0.75);">Mattéo Designs specializes in creating interiors that reflect the unique character of Northern New Mexico. From historic adobe homes to contemporary spaces, our work honors the region's architectural beauty while meeting modern standards for sustainability and comfort.</p>
+
+        <div class="collection-grid">
+            <article class="collection-card">
+                <h3>Historic Adobe Renovations</h3>
+                <p>Residential interiors that honor Santa Fe's architectural heritage while incorporating modern systems and sustainability goals.</p>
+            </article>
+            <article class="collection-card">
+                <h3>Contemporary Residences</h3>
+                <p>Whole home renovations and new construction that layer custom kitchens, bathrooms, and interior architecture with magazine-worthy finishes.</p>
+            </article>
+            <article class="collection-card">
+                <h3>Commercial & Hospitality</h3>
+                <p>Professional spaces that enhance your brand, meet code requirements, and create welcoming environments for clients.</p>
+            </article>
+        </div>
+
+        <h2 style="margin-top:3rem;">Santa Fe highlights</h2>
+        <div class="gallery-grid">
+            <figure class="gallery-card">
+                <img src="../../legacy/images/Vanderhoof%20Photos/Best%20Kitchen%202.jpg" alt="Custom kitchen renovation">
+                <span>Historic adobe renovation</span>
+            </figure>
+            <figure class="gallery-card">
+                <img src="../../legacy/images/Vanderhoof%20Photos/Front%20Room.jpg" alt="Santa Fe living room design">
+                <span>Sunlit living room</span>
+            </figure>
+            <figure class="gallery-card">
+                <img src="../../legacy/images/Vanderhoof%20Photos/Transition%20Space.jpg" alt="Custom hallway cabinetry">
+                <span>Transition space</span>
+            </figure>
+            <figure class="gallery-card">
+                <img src="../../legacy/images/Vanderhoof%20Photos/Storage%20Bench.jpg" alt="Custom storage bench">
+                <span>Custom storage</span>
+            </figure>
+        </div>
+
+        <div class="cta">
+            <a class="primary" href="about.html">Schedule a consultation</a>
+            <a class="ghost" href="media.html">Read journal notes</a>
+        </div>
+
+        <section style="margin-top:4rem; border-top:1px solid var(--border); padding-top:3rem;">
+            <p class="serif-label">Project Capsules</p>
+            <div class="collection-grid">
+                <article class="collection-card" style="background: var(--linen);">
+                    <h3>Hartwell Residence</h3>
+                    <p>Custom millwork, sustainable finishes, and LEED-guided lighting.</p>
+                    <a href="hartwell.html" class="header-cta" style="display:inline-block; margin-top:auto;">View Hartwell</a>
+                </article>
+                <article class="collection-card" style="background: var(--linen);">
+                    <h3>Rustic Ranch</h3>
+                    <p>Natural timber beams and stonework grounded in Santa Fe light.</p>
+                    <a href="rustic-ranch.html" class="header-cta" style="display:inline-block; margin-top:auto;">View Ranch</a>
+                </article>
+                <article class="collection-card" style="background: var(--linen);">
+                    <h3>Wickser Project</h3>
+                    <p>Immersive interiors with brass accents and multi-level circulation.</p>
+                    <a href="wickser.html" class="header-cta" style="display:inline-block; margin-top:auto;">View Wickser</a>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            <p>Mattéo Designs · Santa Fe · info@matteodesigns.com</p>
+        </footer>
+    </main>
+</body>
+</html>
