@@ -48,6 +48,7 @@
             background: var(--charcoal);
             color: #fff;
             line-height: 1.7;
+            transition: background 0.3s, color 0.3s;
         }
 
         a {
@@ -103,7 +104,7 @@
             padding: 0.6rem 1.5rem;
             border-radius: 999px;
             font-size: 0.75rem;
-            transition: background 0.3s, color 0.3s;
+            transition: background 0.3s, color 0.3s, border 0.3s;
         }
 
         .btn-outline:hover {
@@ -432,6 +433,79 @@
             letter-spacing: 0.2em;
         }
 
+        .theme-toggle {
+            border: 1px solid rgba(255,255,255,0.4);
+            background: transparent;
+            color: #fff;
+            border-radius: 999px;
+            padding: 0.45rem 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.65rem;
+            cursor: pointer;
+            margin-left: 1rem;
+        }
+
+        .hero, .hero * {
+            color: #fff;
+        }
+
+        body.theme-light {
+            background: #f7f4ea;
+            color: #1a1f23;
+        }
+
+        body.theme-light header {
+            background: rgba(255,255,255,0.95);
+            border-bottom-color: rgba(0,0,0,0.08);
+        }
+
+        body.theme-light nav a,
+        body.theme-light .nav-inner div,
+        body.theme-light .scroll-message,
+        body.theme-light .hero-meta span,
+        body.theme-light .stats h3,
+        body.theme-light strong,
+        body.theme-light h2,
+        body.theme-light h3 {
+            color: #1a1f23;
+        }
+
+        body.theme-light p,
+        body.theme-light .stats p,
+        body.theme-light .projects-grid p,
+        body.theme-light .category-card p,
+        body.theme-light .contact-card p,
+        body.theme-light .category-card span {
+            color: rgba(26,31,35,0.8) !important;
+        }
+
+        body.theme-light .btn-outline {
+            border-color: #1a1f23;
+            color: #1a1f23;
+        }
+
+        body.theme-light .btn-outline:hover {
+            background: #1a1f23;
+            color: #fff;
+        }
+
+        body.theme-light .stats div,
+        body.theme-light .project-card,
+        body.theme-light .category-card,
+        body.theme-light .contact-card {
+            background: rgba(0,0,0,0.04);
+            border-color: rgba(0,0,0,0.08);
+        }
+
+        body.theme-light footer {
+            color: rgba(26,31,35,0.7);
+        }
+
+        body.theme-light footer .socials span {
+            color: rgba(26,31,35,0.8);
+        }
+
         @media (max-width: 768px) {
             nav ul {
                 display: none;
@@ -463,7 +537,10 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <a class="btn-outline" href="tel:1505XXXXXXX">Call or Text</a>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+                <a class="btn-outline" href="tel:1505XXXXXXX">Call or Text</a>
+                <button class="theme-toggle" type="button">Light Mode</button>
+            </div>
         </div>
     </header>
 
@@ -785,5 +862,33 @@
         </div>
         <p style="margin-top:1rem; letter-spacing:0.2em;">Scroll to Top</p>
     </footer>
+
+    <script>
+        (function() {
+            const STORAGE_KEY = 'matteo-theme';
+            const body = document.body;
+            const toggle = document.querySelector('.theme-toggle');
+            if (!toggle) return;
+
+            function applyTheme(theme) {
+                if (theme === 'light') {
+                    body.classList.add('theme-light');
+                    toggle.textContent = 'Dark Mode';
+                } else {
+                    body.classList.remove('theme-light');
+                    toggle.textContent = 'Light Mode';
+                }
+            }
+
+            const saved = localStorage.getItem(STORAGE_KEY);
+            applyTheme(saved);
+
+            toggle.addEventListener('click', () => {
+                const isLight = body.classList.toggle('theme-light');
+                localStorage.setItem(STORAGE_KEY, isLight ? 'light' : 'dark');
+                applyTheme(isLight ? 'light' : 'dark');
+            });
+        })();
+    </script>
 </body>
 </html>
