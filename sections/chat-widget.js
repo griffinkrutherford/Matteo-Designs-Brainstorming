@@ -16,7 +16,7 @@
 
         const panel = document.createElement('div');
         panel.className = 'chat-panel';
-        const avatarPath = '../../legacy/images/matteo-cartoon.png';
+        const avatarPath = (document.currentScript && document.currentScript.dataset && document.currentScript.dataset.avatar) || '../../legacy/images/matteo-cartoon.png';
 
         panel.innerHTML = `
             <div class="chat-header">
