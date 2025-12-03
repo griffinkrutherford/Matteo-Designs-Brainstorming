@@ -12,7 +12,7 @@
         const launcher = document.createElement('button');
         launcher.className = 'chat-launcher';
         launcher.type = 'button';
-        launcher.innerHTML = '<span aria-hidden="true">💬</span><span class="sr-only">Chat</span>';
+        launcher.innerHTML = `<svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4 4h16v11H6l-2 3V4z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/></svg><span class=\"sr-only\">Chat</span>`;
 
         const panel = document.createElement('div');
         panel.className = 'chat-panel';
