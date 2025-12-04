@@ -256,6 +256,10 @@
             color: var(--charcoal);
         }
 
+        .proper-case {
+            text-transform: none !important;
+        }
+
         .collection-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -626,7 +630,7 @@
     <main>
         <section class="hero" aria-label="Project showcase">
             <div>
-                <p class="serif-label">Founded in Santa Fe · 2022</p>
+                <p class="serif-label">Founded in <span class="proper-case">Santa Fe</span> · 2022</p>
                 <h1>Interior design has the power to change lives.</h1>
                 <p style="color: rgba(31,27,23,0.75);">
                     Your space should reflect everything you want out of life—beautifully designed and functionally efficient. We create custom residential interiors using sustainable materials and time-honored craftsmanship that transform how you live.
@@ -661,7 +665,7 @@
                 </article>
                 <article class="info-card">
                     <h3>Our Philosophy</h3>
-                    <p>We believe interior design can change lives. Every space is artfully rendered yet deeply functional, delivering the powerful impact clients feel in daily routines.</p>
+                    <p>We believe materials can change lives. Every space is artfully rendered yet deeply functional, so clients feel the impact each day in how they move through their routines.</p>
                 </article>
                 <article class="info-card">
                     <h3>Where We Work</h3>
@@ -849,7 +853,7 @@
         </section>
 
         <section id="studio">
-            <div class="serif-label">Santa Fe Office</div>
+            <div class="serif-label"><span class="proper-case">Santa Fe</span> Office</div>
             <h2>Comprehensive design services for every project.</h2>
             <p style="max-width: 760px; color: rgba(31,27,23,0.75);">
                 From initial consultation to final installation, we provide complete design services tailored to your vision. Our team handles every detail so you can focus on enjoying the transformation of your space.
@@ -899,7 +903,7 @@
 
     <footer>
         <div class="footer-inner">
-            <div>Mattéo Designs · Santa Fe</div>
+            <div>Mattéo Designs · <span class="proper-case">Santa Fe</span></div>
             <div>By Appointment · Wed-Sat</div>
             <div>info@matteodesigns.com · (505) XXX-XXXX</div>
             <div>Instagram · Pinterest · Journal</div>
