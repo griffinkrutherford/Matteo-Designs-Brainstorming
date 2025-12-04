@@ -159,51 +159,41 @@
             padding: 6rem 0 5rem;
         }
 
-        .slider-wrapper {
+        .hero-gallery {
             position: relative;
             overflow: hidden;
             border: 1px solid var(--border);
             border-radius: 1.5rem;
+            min-height: 420px;
+            box-shadow: 0 20px 40px rgba(31, 27, 23, 0.2);
+            background: var(--charcoal);
         }
 
-        .slides-track {
-            display: flex;
-            transition: transform 0.6s ease;
-        }
-
-        .slide {
-            min-height: 360px;
-            padding: 3rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-            align-items: center;
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            flex: 0 0 100%;
-        }
-
-        .slides-track .slide::before {
-            content: '';
+        .hero-frame {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(0,0,0,0.65), rgba(0,0,0,0.25));
-            border-radius: 1.5rem;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transform: scale(1.04);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
-        .slides-track .slide > * { position: relative; z-index: 1; }
+        .hero-frame.active {
+            opacity: 1;
+            transform: scale(1);
+        }
 
-        .carousel-controls {
+        .hero-gallery-controls {
             position: absolute;
             bottom: 1rem;
             right: 1rem;
             display: flex;
             gap: 0.5rem;
+            z-index: 2;
         }
 
-        .carousel-button {
+        .hero-gallery-controls button {
             width: 10px;
             height: 10px;
             border-radius: 999px;
@@ -212,28 +202,8 @@
             cursor: pointer;
         }
 
-        .carousel-button.active {
+        .hero-gallery-controls button.active {
             background: rgba(255,255,255,0.9);
-        }
-
-        .hero-image {
-            background: url('../../matteo-designs-assets/Rustic%20Ranch/yYZ4fpO4.jpeg') center/cover no-repeat;
-            min-height: 420px;
-            border-radius: 1.5rem;
-            position: relative;
-            box-shadow: 0 20px 40px rgba(31, 27, 23, 0.2);
-        }
-
-        .hero-image::after {
-            content: "Limited Series Nº07";
-            position: absolute;
-            bottom: 1.5rem;
-            left: 1.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(255,255,255,0.8);
-            border-radius: 999px;
-            font-size: 0.8rem;
-            letter-spacing: 0.3em;
         }
 
         .hero-meta {
@@ -261,6 +231,11 @@
             text-transform: uppercase;
             letter-spacing: 0.2em;
             font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+            font-weight: 600;
         }
 
         .hero-actions .primary {
@@ -596,6 +571,19 @@
                 padding-top: 3rem;
             }
 
+            .hero-gallery {
+                min-height: 320px;
+                margin-top: 1.5rem;
+                background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .hero-gallery .hero-frame,
+            .hero-gallery-controls {
+                display: none;
+            }
+
             .hero-meta {
                 flex-direction: column;
                 gap: 1.5rem;
@@ -629,47 +617,28 @@
 
     <main>
         <section class="hero" aria-label="Project showcase">
-            <div class="slider-controls" style="display:none;"></div>
-            <div class="slider-wrapper" aria-live="polite">
-                <div class="slides-track">
-                    <article class="slide" style="background-image:url('../../matteo-designs-assets/Wickser%20Project/IMG_1243.jpg');">
-                        <div>
-                            <p class="serif-label" style="color:#fff;">Founded in Santa Fe · 2022</p>
-                            <h1 style="color:#fff;">Interior design has the power to change lives.</h1>
-                            <p style="color:rgba(255,255,255,0.85);">
-                                Your space should reflect everything you want out of life—beautifully designed and functionally efficient. We create custom residential interiors using sustainable materials and time-honored craftsmanship that transform how you live.
-                            </p>
-                            <div class="hero-meta">
-                                <div>Residential Design</div>
-                                <div>LEED Certified</div>
-                                <div>Sustainable Materials</div>
-                            </div>
-                            <div class="hero-actions">
-                                <a class="primary" href="contact.html">Free Consultation</a>
-                                <a class="ghost" href="gallery.html">View Portfolio</a>
-                            </div>
-                        </div>
-                        <div class="hero-image" style="background-image:url('../../matteo-designs-assets/Wickser%20Project/IMG_1247.jpg'); border-radius:1.5rem;"></div>
-                    </article>
-                    <article class="slide" style="background-image:url('../../matteo-designs-assets/Rustic%20Ranch/DeFxD84w.jpeg');">
-                        <div>
-                            <p class="serif-label" style="color:#fff;">Edition · 2025</p>
-                            <h1 style="color:#fff;">Furniture & interiors with a global edge.</h1>
-                            <p style="color:rgba(255,255,255,0.85);">Inspired by iconic studios like Sandra Costa Design Group, we deliver bespoke environments that pair bold architecture with handcrafted materials.</p>
-                            <div class="hero-meta">
-                                <div>Edition / 2025</div>
-                                <div>Lead Time / 12 Weeks</div>
-                                <div>Global Service</div>
-                            </div>
-                            <div class="hero-actions">
-                                <a class="primary" href="gallery.html">View Gallery</a>
-                                <a class="ghost" href="services.html">Explore Services</a>
-                            </div>
-                        </div>
-                        <div class="hero-image" style="background-image:url('../../matteo-designs-assets/Rustic%20Ranch/2OXqT1wA.jpeg'); border-radius:1.5rem;"></div>
-                    </article>
+            <div>
+                <p class="serif-label">Founded in Santa Fe · 2022</p>
+                <h1>Interior design has the power to change lives.</h1>
+                <p style="color: rgba(31,27,23,0.75);">
+                    Your space should reflect everything you want out of life—beautifully designed and functionally efficient. We create custom residential interiors using sustainable materials and time-honored craftsmanship that transform how you live.
+                </p>
+                <div class="hero-meta">
+                    <div>Residential Design</div>
+                    <div>Sustainable Design &amp; Materials</div>
+                    <div>Whole-Home Renovations</div>
                 </div>
-                <div class="carousel-controls" role="tablist"></div>
+                <div class="hero-actions">
+                    <a class="primary" href="contact.html">Free Consultation</a>
+                    <a class="ghost" href="gallery.html">View Portfolio</a>
+                </div>
+            </div>
+            <div class="hero-gallery" aria-live="polite">
+                <div class="hero-frame active" data-label="Wixer Tudor Façade" style="background-image:url('../../matteo-designs-assets/Wickser%20Project/IMG_1424.jpg');"></div>
+                <div class="hero-frame" data-label="Rustic Ranch Lounge" style="background-image:url('../../matteo-designs-assets/Rustic%20Ranch/2OXqT1wA.jpeg');"></div>
+                <div class="hero-frame" data-label="Vanderhoof Residence" style="background-image:url('../../legacy/images/Vanderhoof%20Photos/Front%20Room.jpg');"></div>
+                <div class="hero-frame" data-label="Santa Fe Adobe" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600');"></div>
+                <div class="hero-gallery-controls" role="tablist"></div>
             </div>
         </section>
 
@@ -954,16 +923,22 @@
 
     <script>
         (function(){
-            const track=document.querySelector('.slides-track');
-            const slides=track?Array.from(track.children):[];
-            const controls=document.querySelector('.carousel-controls');
-            if(!track||!slides.length||!controls) return;
+            const gallery=document.querySelector('.hero-gallery');
+            const controls=document.querySelector('.hero-gallery-controls');
+            if(!gallery||!controls) return;
+            const frames=Array.from(gallery.querySelectorAll('.hero-frame'));
+            if(frames.length<=1){
+                controls.style.display='none';
+                if(frames[0]) frames[0].classList.add('active');
+                return;
+            }
             let index=0;
-            slides.forEach((_,i)=>{
+            frames.forEach((frame,i)=>{
                 const btn=document.createElement('button');
-                btn.className='carousel-button'+(i===0?' active':'');
                 btn.type='button';
-                btn.setAttribute('aria-label',`Show slide ${i+1}`);
+                if(i===0) btn.classList.add('active');
+                const label=frame.dataset.label||`slide ${i+1}`;
+                btn.setAttribute('aria-label',`Show ${label}`);
                 btn.addEventListener('click',()=>{
                     index=i;
                     update();
@@ -973,19 +948,17 @@
             });
             const buttons=Array.from(controls.children);
             function update(){
-                track.style.transform=`translateX(-${index*100}%)`;
+                frames.forEach((frame,i)=>frame.classList.toggle('active',i===index));
                 buttons.forEach((btn,i)=>btn.classList.toggle('active',i===index));
             }
-            let interval=setInterval(()=>{
-                index=(index+1)%slides.length;
+            function nextSlide(){
+                index=(index+1)%frames.length;
                 update();
-            },6000);
+            }
+            let interval=setInterval(nextSlide,7000);
             function resetInterval(){
                 clearInterval(interval);
-                interval=setInterval(()=>{
-                    index=(index+1)%slides.length;
-                    update();
-                },6000);
+                interval=setInterval(nextSlide,7000);
             }
         })();
     </script>

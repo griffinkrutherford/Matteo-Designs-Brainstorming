@@ -56,6 +56,15 @@
         .questionnaire textarea { min-height: 120px; grid-column: 1 / -1; resize: vertical; }
         .questionnaire .full-width { grid-column: 1 / -1; }
         .questionnaire button { margin-top: 1rem; padding: 0.9rem 1.8rem; border: none; border-radius: 999px; background: var(--charcoal); color: var(--sand); letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.75rem; cursor: pointer; }
+        .schedule-options { display: none; margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 2rem; }
+        .schedule-options.active { display: block; }
+        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+        .schedule-card { border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; background: #fdfbf8; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .schedule-card h4 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+        .schedule-card p { margin: 0; color: rgba(0,0,0,0.7); }
+        .schedule-card button { margin-top: 1rem; padding: 0.8rem 1.5rem; border-radius: 999px; border: 1px solid var(--charcoal); background: transparent; color: var(--charcoal); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.72rem; cursor: pointer; }
+        .schedule-card button:hover { background: var(--charcoal); color: var(--sand); }
+        .schedule-note { margin-top: 1.25rem; font-size: 0.9rem; color: rgba(31,27,23,0.75); }
         footer { margin-top: 4rem; text-align: center; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; color: rgba(31,27,23,0.7); }
         @media (max-width: 640px) { nav ul { display: none; } main { padding: 3rem 1.5rem 4rem; } }
     </style>
@@ -173,9 +182,47 @@
                 </label>
                 <button type="submit">Submit Questionnaire</button>
             </form>
+            <div class="schedule-options" aria-live="polite">
+                <h4>Choose how you'd like to meet</h4>
+                <p style="color: rgba(0,0,0,0.7);">Thanks for reaching out—select the consultation format that matches your schedule and location.</p>
+                <div class="schedule-grid">
+                    <div class="schedule-card">
+                        <h4>Zoom Call</h4>
+                        <p>45-minute video consultation with screen sharing, concept review, and immediate next steps.</p>
+                        <button type="button" data-mode="zoom">Schedule Zoom</button>
+                    </div>
+                    <div class="schedule-card">
+                        <h4>In-Person Home Visit</h4>
+                        <p>We'll meet at your residence to discuss scope, see the space, and review materials in person.</p>
+                        <button type="button" data-mode="in_person">Schedule Visit</button>
+                    </div>
+                </div>
+                <p class="schedule-note">In-person meetings are complimentary within 25 miles of Santa Fe. A $150 travel fee applies beyond that radius.</p>
+            </div>
         </section>
 
 <footer>Mattéo Designs · Free Consultation · info@matteodesigns.com</footer>
     </main>
+    <script>
+        (function(){
+            const form=document.querySelector('.questionnaire form');
+            const schedule=document.querySelector('.schedule-options');
+            if(!form||!schedule) return;
+            form.addEventListener('submit',event=>{
+                event.preventDefault();
+                form.reset();
+                form.style.display='none';
+                schedule.classList.add('active');
+            });
+            schedule.addEventListener('click',event=>{
+                const button=event.target.closest('button[data-mode]');
+                if(!button) return;
+                const mode=button.dataset.mode==='zoom'?'Zoom Consultation':'In-Person Consultation';
+                const subject=encodeURIComponent(`${mode} Request`);
+                const body=encodeURIComponent('Hi Mattéo Designs,%0D%0A%0D%0AThanks for reviewing my questionnaire. I would like to schedule a '+mode.toLowerCase()+'.');
+                window.location.href=`mailto:info@matteodesigns.com?subject=${subject}&body=${body}`;
+            });
+        })();
+    </script>
 </body>
 </html>
