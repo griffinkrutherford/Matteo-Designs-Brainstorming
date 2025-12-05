@@ -159,12 +159,16 @@
             padding: 6rem 0 5rem;
         }
 
-        .hero > div:first-child {
-            background: rgba(244, 239, 233, 0.95);
+        .hero-copy {
+            background: rgba(255, 255, 255, 0.9);
             padding: 2.5rem;
             border-radius: 1.5rem;
             border: 1px solid var(--border);
-            box-shadow: 0 10px 30px rgba(31, 27, 23, 0.08);
+            box-shadow: 0 25px 45px rgba(31, 27, 23, 0.12);
+        }
+
+        .hero-copy h1 {
+            font-size: clamp(1.9rem, 4.5vw, 3.3rem);
         }
 
         .hero-gallery {
@@ -185,11 +189,14 @@
             opacity: 0;
             transform: scale(1.04);
             transition: opacity 0.8s ease, transform 0.8s ease;
+            pointer-events: none;
         }
 
         .hero-frame.active {
             opacity: 1;
             transform: scale(1);
+            pointer-events: auto;
+            cursor: pointer;
         }
 
         .hero-gallery-controls {
@@ -254,6 +261,119 @@
         .hero-actions .ghost {
             border: 1px solid var(--charcoal);
             color: var(--charcoal);
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .highlight-card {
+            position: relative;
+            border-radius: 1.25rem;
+            overflow: hidden;
+            min-height: 260px;
+            box-shadow: 0 25px 45px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+            cursor: pointer;
+        }
+
+        .highlight-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .highlight-card span {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            padding: 0.4rem 1rem;
+            background: rgba(0,0,0,0.65);
+            color: #fff;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            border-radius: 999px;
+        }
+
+        .highlight-card:focus-visible {
+            outline: 2px solid var(--charcoal);
+            outline-offset: 4px;
+        }
+
+        .project-modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.65);
+            z-index: 20;
+            padding: 1.5rem;
+        }
+
+        .project-modal.active {
+            display: flex;
+        }
+
+        .project-modal-content {
+            background: #fff;
+            border-radius: 1.25rem;
+            max-width: 900px;
+            width: 100%;
+            padding: 1.5rem;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+        }
+
+        .project-modal-content img {
+            width: 100%;
+            border-radius: 1rem;
+            max-height: 520px;
+            object-fit: cover;
+        }
+
+        .project-modal caption {
+            display: block;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            border: none;
+            background: rgba(0,0,0,0.08);
+            color: var(--charcoal);
+            border-radius: 999px;
+            padding: 0.35rem 0.9rem;
+            cursor: pointer;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-size: 0.65rem;
+        }
+
+        .modal-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+
+        .modal-controls button {
+            border: 1px solid var(--charcoal);
+            background: transparent;
+            color: var(--charcoal);
+            padding: 0.6rem 1.4rem;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.7rem;
+            cursor: pointer;
         }
 
         .proper-case {
@@ -409,6 +529,12 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            cursor: pointer;
+        }
+
+        .piece-card:focus-visible {
+            outline: 2px solid var(--charcoal);
+            outline-offset: 4px;
         }
 
         .piece-image {
@@ -596,6 +722,10 @@
                 display: none;
             }
 
+            .hero-copy {
+                padding: 2rem;
+            }
+
             .hero-meta {
                 flex-direction: column;
                 gap: 1.5rem;
@@ -616,20 +746,21 @@
             <a class="logo" href="index.html">Mattéo Designs</a>
             <nav>
                 <ul>
+                    <li><a href="index.html">HOME</a></li>
                     <li><a href="gallery.html">PORTFOLIO</a></li>
                     <li><a href="services.html">SERVICES</a></li>
-                    <li><a href="media.html">MEDIA</a></li>
+                    <li><a href="media.html">BLOG</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
-            <a href="contact.html" class="header-cta">Free Consultation</a>
+            <a href="contact.html" class="header-cta">Plan a Consultation</a>
         </div>
     </header>
 
     <main>
         <section class="hero" aria-label="Project showcase">
-            <div>
+            <div class="hero-copy">
                 <p class="serif-label">Founded in <span class="proper-case">Santa Fe</span> · 2022</p>
                 <h1>Interior design has the power to change lives.</h1>
                 <p style="color: rgba(31,27,23,0.75);">
@@ -646,11 +777,33 @@
                 </div>
             </div>
             <div class="hero-gallery" aria-live="polite">
-                <div class="hero-frame active" data-label="Wixer Tudor Façade" style="background-image:url('../../matteo-designs-assets/Wickser%20Project/IMG_1419.jpg');"></div>
-                <div class="hero-frame" data-label="Rustic Ranch Lounge" style="background-image:url('../../matteo-designs-assets/Rustic%20Ranch/2OXqT1wA.jpeg');"></div>
-                <div class="hero-frame" data-label="Vanderhoof Residence" style="background-image:url('../../legacy/images/Vanderhoof%20Photos/Front%20Room.jpg');"></div>
-                <div class="hero-frame" data-label="Santa Fe Adobe" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600');"></div>
+                <div class="hero-frame active" data-project="wixer" data-label="Wixer Tudor Façade" style="background-image:url('../../matteo-designs-assets/Wickser%20Project/IMG_1419.jpg');"></div>
+                <div class="hero-frame" data-project="rustic" data-label="Rustic Ranch Lounge" style="background-image:url('../../matteo-designs-assets/Rustic%20Ranch/2OXqT1wA.jpeg');"></div>
+                <div class="hero-frame" data-project="vanderhoof" data-label="Vanderhoof Residence" style="background-image:url('../../legacy/images/Vanderhoof%20Photos/Front%20Room.jpg');"></div>
+                <div class="hero-frame" data-project="santafe" data-label="Santa Fe Adobe" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600');"></div>
                 <div class="hero-gallery-controls" role="tablist"></div>
+            </div>
+        </section>
+
+        <section class="project-highlights" aria-label="Featured residences">
+            <div class="serif-label">Project Highlights</div>
+            <h2>Material stories from recent work.</h2>
+            <p style="max-width: 900px; color: rgba(31,27,23,0.75); margin-bottom: 2.5rem;">
+                Each commission blends site-specific architecture with layered materials. Tap any vignette to open a quick gallery from the studio archive.
+            </p>
+            <div class="highlight-grid">
+                <article class="highlight-card project-trigger" data-project="wixer" role="button" tabindex="0" aria-label="View Wickser project gallery">
+                    <img src="../../matteo-designs-assets/Wickser%20Project/IMG_1247.jpg" alt="Wixer project entry">
+                    <span>Wixer Residence</span>
+                </article>
+                <article class="highlight-card project-trigger" data-project="rustic" role="button" tabindex="0" aria-label="View Rustic Ranch gallery">
+                    <img src="../../matteo-designs-assets/Rustic%20Ranch/Brts2Y6w.jpeg" alt="Rustic ranch living room">
+                    <span>Rustic Ranch</span>
+                </article>
+                <article class="highlight-card project-trigger" data-project="vanderhoof" role="button" tabindex="0" aria-label="View Vanderhoof gallery">
+                    <img src="../../legacy/images/Vanderhoof%20Photos/Home%20Office.jpg" alt="Vanderhoof office built-ins">
+                    <span>Vanderhoof Residence</span>
+                </article>
             </div>
         </section>
 
@@ -661,15 +814,15 @@
             <div class="info-grid">
                 <article class="info-card">
                     <h3>What We Do</h3>
-                    <p>Full-service residential and commercial design including Santa Fe restaurants, boutique hotels, primary residences, adobe restorations, and vacation homes. Services cover design development, space planning, material selection, custom furniture, architectural drawings, and project management—working both locally and remotely via Zoom and digital collaboration.</p>
+                    <p>Full-service residential and commercial design for Santa Fe restaurants, boutique hotels, primary residences, and destination vacation homes. Services span design development, space planning, material selection, custom furniture, architectural drawings, and project management—delivered on-site or via Zoom-first collaboration with architects and builders worldwide.</p>
                 </article>
                 <article class="info-card">
                     <h3>Our Philosophy</h3>
-                    <p>We believe materials can change lives. Every space is artfully rendered yet deeply functional, so clients feel the impact each day in how they move through their routines.</p>
+                    <p>We believe materials can change lives. Natural plasters, hand-rubbed woods, and layered textiles are specified not just for beauty but for how they support airflow, acoustics, and the rituals of daily living—from the first espresso to evening entertaining.</p>
                 </article>
                 <article class="info-card">
                     <h3>Where We Work</h3>
-                    <p>Projects stretch across the United States—from Santa Fe adobe restorations to coastal condominiums—each tailored to the surrounding architecture and lifestyle.</p>
+                    <p>Projects stretch across the United States—from chef-driven restaurants in Santa Fe to luxury residences, real-estate developments, and commercial work along both coasts. Each scope leverages LEED-informed guidelines, advanced building technologies, and remote coordination to honor the surrounding architecture.</p>
                 </article>
             </div>
 
@@ -711,10 +864,10 @@
                         <p>Detailed technical drawings and virtual 3D presentations to visualize your project before construction begins.</p>
                     </div>
                 </article>
-                <article class="collection-card">
+                <article class="collection-card project-trigger" data-project="wixer">
                     <div>
-                        <h3>Custom Furniture &amp; Cabinetry</h3>
-                        <p>Bespoke furniture pieces and millwork designed specifically for your space and lifestyle.</p>
+                        <h3>Made-to-Measure Furniture</h3>
+                        <p>Bespoke design for cabinetry, banquettes, and freestanding pieces—drawn, prototyped, and finished to fit your exact rituals.</p>
                     </div>
                 </article>
                 <article class="collection-card">
@@ -781,7 +934,7 @@
             <div class="serif-label">Recent Projects</div>
             <h2>Transformative spaces that reflect how you live.</h2>
             <div class="featured-pieces">
-                <article class="piece-card">
+                <article class="piece-card project-trigger" data-project="rustic" role="button" tabindex="0">
                     <div class="piece-image" style="background-image: url('../../matteo-designs-assets/Rustic%20Ranch/G15KmfdA.jpeg');">
                         <span>Completed</span>
                     </div>
@@ -794,7 +947,7 @@
                         <span>Santa Fe, NM</span>
                     </footer>
                 </article>
-                <article class="piece-card">
+                <article class="piece-card project-trigger" data-project="hartwell" role="button" tabindex="0">
                     <div class="piece-image" style="background-image: url('../../matteo-designs-assets/Hartwell/XX6sm6Fc.jpeg');">
                         <span>Completed</span>
                     </div>
@@ -807,7 +960,7 @@
                         <span>Custom Home</span>
                     </footer>
                 </article>
-                <article class="piece-card">
+                <article class="piece-card project-trigger" data-project="rustic" role="button" tabindex="0">
                     <div class="piece-image" style="background-image: url('../../matteo-designs-assets/Rustic%20Ranch/7n3BlSC0.jpeg');">
                         <span>Completed</span>
                     </div>
@@ -937,11 +1090,23 @@
         </section>
     </main>
 
+    <div class="project-modal" aria-hidden="true" role="dialog" aria-label="Project gallery" tabindex="-1">
+        <div class="project-modal-content">
+            <button type="button" class="modal-close">Close</button>
+            <img src="" alt="Project preview" loading="lazy">
+            <p class="modal-caption"></p>
+            <div class="modal-controls">
+                <button type="button" data-direction="prev">Previous</button>
+                <button type="button" data-direction="next">Next</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-inner">
             <div>Mattéo Designs · <span class="proper-case">Santa Fe</span></div>
             <div>By Appointment · Wed-Sat</div>
-            <div>info@matteodesigns.com · (505) XXX-XXXX</div>
+            <div>Matteo@MatteoDesigns.com · (505) XXX-XXXX</div>
             <div>Instagram · Pinterest · Journal</div>
         </div>
     </footer>
@@ -971,43 +1136,171 @@
 
     <script>
         (function(){
-            const gallery=document.querySelector('.hero-gallery');
-            const controls=document.querySelector('.hero-gallery-controls');
-            if(!gallery||!controls) return;
-            const frames=Array.from(gallery.querySelectorAll('.hero-frame'));
-            if(frames.length<=1){
-                controls.style.display='none';
-                if(frames[0]) frames[0].classList.add('active');
-                return;
-            }
-            let index=0;
-            frames.forEach((frame,i)=>{
-                const btn=document.createElement('button');
-                btn.type='button';
-                if(i===0) btn.classList.add('active');
-                const label=frame.dataset.label||`slide ${i+1}`;
-                btn.setAttribute('aria-label',`Show ${label}`);
-                btn.addEventListener('click',()=>{
-                    index=i;
-                    update();
-                    resetInterval();
+            const projectGalleries={
+                wixer:[
+                    {src:"../../matteo-designs-assets/Wickser%20Project/IMG_1243.jpg",alt:"Wixer residence facade",caption:"Wixer residence · entry"},
+                    {src:"../../matteo-designs-assets/Wickser%20Project/IMG_1246.jpg",alt:"Wixer dining room",caption:"Dining room layers"},
+                    {src:"../../matteo-designs-assets/Wickser%20Project/IMG_1267.jpg",alt:"Sunken lounge",caption:"Sunken lounge"},
+                    {src:"../../matteo-designs-assets/Wickser%20Project/IMG_1286.jpg",alt:"Bedroom detail",caption:"Tudor bedroom detail"}
+                ],
+                rustic:[
+                    {src:"../../matteo-designs-assets/Rustic%20Ranch/G15KmfdA.jpeg",alt:"Rustic ranch kitchen",caption:"Rustic Ranch · kitchen"},
+                    {src:"../../matteo-designs-assets/Rustic%20Ranch/DeFxD84w.jpeg",alt:"Rustic living room",caption:"Lounge with custom furniture"},
+                    {src:"../../matteo-designs-assets/Rustic%20Ranch/7n3BlSC0.jpeg",alt:"Rustic staircase",caption:"Oak staircase"},
+                    {src:"../../matteo-designs-assets/Rustic%20Ranch/Qn72u3ew.jpeg",alt:"Rustic bedroom",caption:"Warm bedroom palette"}
+                ],
+                vanderhoof:[
+                    {src:"../../legacy/images/Vanderhoof%20Photos/Front%20Room.jpg",alt:"Vanderhoof living room",caption:"Vanderhoof · living room"},
+                    {src:"../../legacy/images/Vanderhoof%20Photos/Best%20Kitchen.jpg",alt:"Vanderhoof kitchen",caption:"Kitchen cabinetry"},
+                    {src:"../../legacy/images/Vanderhoof%20Photos/Master%20Bedroom.jpg",alt:"Vanderhoof bedroom",caption:"Master bedroom"},
+                    {src:"../../legacy/images/Vanderhoof%20Photos/Play%20Room.jpg",alt:"Vanderhoof play room",caption:"Children's lounge"}
+                ],
+                hartwell:[
+                    {src:"../../matteo-designs-assets/Hartwell/XX6sm6Fc.jpeg",alt:"Hartwell living room",caption:"Hartwell residence"},
+                    {src:"../../matteo-designs-assets/Hartwell/jsXnjAhk.jpeg",alt:"Hartwell seating",caption:"Layered seating nook"},
+                    {src:"../../matteo-designs-assets/Hartwell/Mvj68BGU.jpeg",alt:"Hartwell materials",caption:"Material study"}
+                ],
+                santafe:[
+                    {src:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600",alt:"Santa Fe exterior",caption:"Santa Fe adobe inspiration"},
+                    {src:"../../matteo-designs-assets/Rustic%20Ranch/10V_28dE.jpeg",alt:"Desert courtyard",caption:"Desert courtyard"}
+                ]
+            };
+
+            const modalState={
+                element:null,
+                image:null,
+                caption:null,
+                activeProject:null,
+                index:0
+            };
+
+            function initHeroSlider(){
+                const gallery=document.querySelector('.hero-gallery');
+                const frames=gallery?Array.from(gallery.querySelectorAll('.hero-frame')):[];
+                const controls=document.querySelector('.hero-gallery-controls');
+                if(!gallery||!controls||!frames.length) return;
+                let index=0;
+                controls.innerHTML='';
+                frames.forEach((frame,i)=>{
+                    const btn=document.createElement('button');
+                    btn.type='button';
+                    if(i===0) btn.classList.add('active');
+                    const label=frame.dataset.label||`Slide ${i+1}`;
+                    btn.setAttribute('aria-label',`Show ${label}`);
+                    btn.addEventListener('click',()=>{
+                        index=i;
+                        update();
+                        resetInterval();
+                    });
+                    controls.appendChild(btn);
                 });
-                controls.appendChild(btn);
-            });
-            const buttons=Array.from(controls.children);
-            function update(){
-                frames.forEach((frame,i)=>frame.classList.toggle('active',i===index));
-                buttons.forEach((btn,i)=>btn.classList.toggle('active',i===index));
+                const buttons=Array.from(controls.children);
+                function update(){
+                    frames.forEach((frame,i)=>frame.classList.toggle('active',i===index));
+                    buttons.forEach((btn,i)=>btn.classList.toggle('active',i===index));
+                }
+                function next(){
+                    index=(index+1)%frames.length;
+                    update();
+                }
+                let interval=setInterval(next,7000);
+                function resetInterval(){
+                    clearInterval(interval);
+                    interval=setInterval(next,7000);
+                }
+                gallery.addEventListener('click',event=>{
+                    const frame=event.target.closest('.hero-frame.active');
+                    if(!frame) return;
+                    const key=frame.dataset.project;
+                    if(key && projectGalleries[key]){
+                        openProject(key);
+                    }
+                });
             }
-            function nextSlide(){
-                index=(index+1)%frames.length;
-                update();
+
+            function initModal(){
+                modalState.element=document.querySelector('.project-modal');
+                if(!modalState.element) return;
+                modalState.element.setAttribute('tabindex','-1');
+                modalState.image=modalState.element.querySelector('img');
+                modalState.caption=modalState.element.querySelector('.modal-caption');
+                const prev=modalState.element.querySelector('[data-direction="prev"]');
+                const next=modalState.element.querySelector('[data-direction="next"]');
+                const closeBtn=modalState.element.querySelector('.modal-close');
+                prev.addEventListener('click',()=>changeSlide(-1));
+                next.addEventListener('click',()=>changeSlide(1));
+                closeBtn.addEventListener('click',closeModal);
+                modalState.element.addEventListener('click',event=>{
+                    if(event.target===modalState.element){
+                        closeModal();
+                    }
+                });
+                document.addEventListener('keydown',event=>{
+                    if(!modalState.element.classList.contains('active')) return;
+                    if(event.key==='Escape'){
+                        closeModal();
+                    } else if(event.key==='ArrowRight'){
+                        changeSlide(1);
+                    } else if(event.key==='ArrowLeft'){
+                        changeSlide(-1);
+                    }
+                });
             }
-            let interval=setInterval(nextSlide,7000);
-            function resetInterval(){
-                clearInterval(interval);
-                interval=setInterval(nextSlide,7000);
+
+            function initProjectTriggers(){
+                const triggers=document.querySelectorAll('.project-trigger');
+                triggers.forEach(trigger=>{
+                    trigger.addEventListener('click',()=>{
+                        const key=trigger.dataset.project;
+                        if(key){
+                            openProject(key);
+                        }
+                    });
+                    trigger.addEventListener('keydown',event=>{
+                        if(event.key==='Enter'||event.key===' '){
+                            event.preventDefault();
+                            trigger.click();
+                        }
+                    });
+                });
             }
+
+            function openProject(key){
+                if(!projectGalleries[key]||!modalState.element) return;
+                modalState.activeProject=key;
+                modalState.index=0;
+                updateModal();
+                modalState.element.classList.add('active');
+                modalState.element.setAttribute('aria-hidden','false');
+                modalState.element.focus({preventScroll:true});
+            }
+
+            function updateModal(){
+                const slides=projectGalleries[modalState.activeProject];
+                if(!slides) return;
+                const slide=slides[modalState.index];
+                modalState.image.src=slide.src;
+                modalState.image.alt=slide.alt;
+                modalState.caption.textContent=slide.caption;
+            }
+
+            function changeSlide(delta){
+                if(modalState.activeProject==null) return;
+                const slides=projectGalleries[modalState.activeProject];
+                modalState.index=(modalState.index+delta+slides.length)%slides.length;
+                updateModal();
+            }
+
+            function closeModal(){
+                if(!modalState.element) return;
+                modalState.element.classList.remove('active');
+                modalState.element.setAttribute('aria-hidden','true');
+                modalState.activeProject=null;
+            }
+
+            initModal();
+            initHeroSlider();
+            initProjectTriggers();
         })();
     </script>
 
