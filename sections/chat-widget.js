@@ -296,3 +296,22 @@
         initWidget();
     }
 })();
+
+(function(){
+    function optimizeImages(){
+        document.querySelectorAll('img').forEach(img=>{
+            if(!img.hasAttribute('loading')){
+                img.setAttribute('loading','lazy');
+            }
+            if(!img.hasAttribute('decoding')){
+                img.setAttribute('decoding','async');
+            }
+        });
+    }
+
+    if(document.readyState==='loading'){
+        document.addEventListener('DOMContentLoaded', optimizeImages);
+    } else {
+        optimizeImages();
+    }
+})();

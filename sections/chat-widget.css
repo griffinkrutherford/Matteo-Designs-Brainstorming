@@ -36,7 +36,7 @@
     bottom: 4.5rem;
     right: 16rem;
     width: 320px;
-    max-height: 440px;
+    height: 480px;
     background: var(--chat-surface);
     color: var(--chat-text);
     border-radius: 1rem;
@@ -170,17 +170,18 @@
         right: 1rem;
     }
 
-    .chat-panel {
+.chat-panel {
         width: calc(100% - 2rem);
         right: 1rem;
         bottom: 4rem;
+        height: 420px;
     }
 }
 
 
 @media (max-width: 480px) {
     .chat-launcher { right: 1rem; }
-    .chat-panel { right: 1rem; width: calc(100% - 2rem); }
+    .chat-panel { right: 1rem; width: calc(100% - 2rem); height: 400px; }
 }
 
 .sr-only {

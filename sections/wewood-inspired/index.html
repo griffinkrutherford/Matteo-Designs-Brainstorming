@@ -777,10 +777,10 @@
                 </div>
             </div>
             <div class="hero-gallery" aria-live="polite">
-                <div class="hero-frame active" data-project="wixer" data-label="Wixer Tudor Façade" style="background-image:url('../../matteo-designs-assets/Wickser%20Project/IMG_1419.jpg');"></div>
-                <div class="hero-frame" data-project="rustic" data-label="Rustic Ranch Lounge" style="background-image:url('../../matteo-designs-assets/Rustic%20Ranch/2OXqT1wA.jpeg');"></div>
-                <div class="hero-frame" data-project="vanderhoof" data-label="Vanderhoof Residence" style="background-image:url('../../legacy/images/Vanderhoof%20Photos/Front%20Room.jpg');"></div>
-                <div class="hero-frame" data-project="santafe" data-label="Santa Fe Adobe" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600');"></div>
+                <div class="hero-frame active" data-project="wixer" data-label="Wixer Tudor Façade" data-bg="../../matteo-designs-assets/Wickser%20Project/IMG_1419.jpg"></div>
+                <div class="hero-frame" data-project="rustic" data-label="Rustic Ranch Lounge" data-bg="../../matteo-designs-assets/Rustic%20Ranch/2OXqT1wA.jpeg"></div>
+                <div class="hero-frame" data-project="vanderhoof" data-label="Vanderhoof Residence" data-bg="../../legacy/images/Vanderhoof%20Photos/Front%20Room.jpg"></div>
+                <div class="hero-frame" data-project="santafe" data-label="Santa Fe Adobe" data-bg="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600"></div>
                 <div class="hero-gallery-controls" role="tablist"></div>
             </div>
         </section>
@@ -1174,6 +1174,14 @@
                 index:0
             };
 
+            function ensureFrameBg(frame){
+                if(!frame||frame.style.backgroundImage) return;
+                const src=frame.dataset.bg;
+                if(src){
+                    frame.style.backgroundImage=`url('${src}')`;
+                }
+            }
+
             function initHeroSlider(){
                 const gallery=document.querySelector('.hero-gallery');
                 const frames=gallery?Array.from(gallery.querySelectorAll('.hero-frame')):[];
@@ -1181,6 +1189,7 @@
                 if(!gallery||!controls||!frames.length) return;
                 let index=0;
                 controls.innerHTML='';
+                ensureFrameBg(frames[0]);
                 frames.forEach((frame,i)=>{
                     const btn=document.createElement('button');
                     btn.type='button';
@@ -1196,6 +1205,9 @@
                 });
                 const buttons=Array.from(controls.children);
                 function update(){
+                    ensureFrameBg(frames[index]);
+                    const nextIndex=(index+1)%frames.length;
+                    ensureFrameBg(frames[nextIndex]);
                     frames.forEach((frame,i)=>frame.classList.toggle('active',i===index));
                     buttons.forEach((btn,i)=>btn.classList.toggle('active',i===index));
                 }
