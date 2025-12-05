@@ -1,4 +1,11 @@
 (function () {
+    const questionnairePush = 'Our questionnaire captures your priorities so we can tailor services, budget, and scheduling. Sharing details there is the fastest way to craft a proposal that matches your lifestyle.';
+    const fitStatements = [
+        'Mattéo Designs suits clients who want custom interiors that balance artful materials with livable function—everything from Santa Fe restaurants to coastal vacation homes.',
+        'Because we align LEED-informed practices with made-to-measure furnishings, we’re a strong fit for homeowners who value sustainability, wellness, and bespoke craftsmanship.',
+        'Clients who travel often or live outside New Mexico appreciate our Zoom-first collaboration, material libraries, and on-site visits within 25 miles of Santa Fe.'
+    ];
+
     const knowledgeBase = [
         {
             keywords: ['service', 'offer', 'do you', 'capabilit', 'scope'],
@@ -226,8 +233,13 @@
             }
         }
 
+        function composeFitResponse(context){
+            const fitLine = fitStatements[Math.floor(Math.random()*fitStatements.length)];
+            return `${context}\n\n${fitLine}\n\n${questionnairePush}`;
+        }
+
         async function respond(message) {
-            const context = gatherContext(message);
+            const context = composeFitResponse(gatherContext(message));
             const pending = appendAssistantMessage('Thinking…');
             pending.classList.add('assistant-pending');
             try {
