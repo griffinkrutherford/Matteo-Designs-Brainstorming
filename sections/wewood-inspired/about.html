@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visit | Mattéo Designs</title>
     <meta name="description" content="Discover Mattéo Designs services, in-person visits, and Santa Fe project details featured on matteodesigns.com.">
-    <link rel="icon" href="../../legacy/images/matteo-cartoon.png" type="image/png">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2712%27%20fill%3D%27%231f1b17%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2742%27%20text-anchor%3D%27middle%27%20font-family%3D%27Garamond%2CPalatino%2Cserif%27%20font-size%3D%2730%27%20fill%3D%27%23f4efe9%27%3EMD%3C/text%3E%3C/svg%3E" type="image/svg+xml">
 
         <link rel="stylesheet" href="../chat-widget.css">
     <script defer src="../chat-widget.js"></script>
@@ -35,87 +35,31 @@
         .header-cta { border: 1px solid var(--text); padding: 0.6rem 1.5rem; border-radius: 999px; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.75rem; }
         main { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem 5rem; }
         h1, h2, h3 { font-family: 'Garamond', 'Palatino', serif; }
-        h1 { font-size: clamp(2rem, 5vw, 3.4rem); }
+        h1 { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 1rem; }
         h2 { font-size: 1.9rem; margin-top: 3rem; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        .service-card { border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.9); box-shadow: 0 15px 30px rgba(0,0,0,0.06); }
-        .service-card span { text-transform: uppercase; letter-spacing: 0.35em; font-size: 0.7rem; display: block; margin-bottom: 0.6rem; color: rgba(0,0,0,0.7); }
-        .highlight { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: center; margin-top: 3rem; }
-        .highlight img { width: 100%; border-radius: 1.2rem; box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 2rem; }
-        .contact-card { border-radius: 1rem; border: 1px solid var(--border); padding: 1.5rem; background: #fff; }
-        .contact-card strong { display: block; text-transform: uppercase; letter-spacing: 0.35em; font-size: 0.7rem; margin-bottom: 0.6rem; }
-        .contact-card a { color: inherit; text-decoration: none; font-weight: 600; }
-        .questionnaire {
-            margin-top: 3rem;
-            border: 1px solid var(--border);
-            border-radius: 1rem;
-            padding: 2rem;
-            background: #fff;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-        }
-
-        .questionnaire h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-        }
-
-        .questionnaire p {
-            color: rgba(0,0,0,0.7);
-            margin-bottom: 1.5rem;
-        }
-
-        .questionnaire form {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-        }
-
-        .questionnaire form label {
-            display: flex;
-            flex-direction: column;
-            font-size: 0.85rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: rgba(0,0,0,0.65);
-        }
-
-        .questionnaire form input,
-        .questionnaire form select,
-        .questionnaire form textarea {
-            margin-top: 0.4rem;
-            padding: 0.9rem 1rem;
-            border-radius: 0.6rem;
-            border: 1px solid var(--border);
-            font-family: inherit;
-            background: #fdfbf8;
-        }
-
-        .questionnaire form textarea {
-            min-height: 120px;
-            grid-column: 1 / -1;
-            resize: vertical;
-        }
-
-        .questionnaire .full-width {
-            grid-column: 1 / -1;
-        }
-
-        .questionnaire button {
-            margin-top: 1rem;
-            padding: 0.9rem 1.8rem;
-            border: none;
-            border-radius: 999px;
-            background: var(--text);
-            color: var(--bg);
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            cursor: pointer;
-        }
+        .eyebrow { text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.75rem; color: rgba(0,0,0,0.65); }
+        .lede { max-width: 760px; color: rgba(0,0,0,0.72); margin-top: 1rem; }
+        .about-pillars { margin-top: 2.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+        .about-pillars article { border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.92); box-shadow: 0 15px 30px rgba(0,0,0,0.06); }
+        .about-pillars h2 { font-size: 1.35rem; margin: 0 0 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+        .about-pillars p + p { margin-top: 0.7rem; }
+        .tagline { margin-top: 2.5rem; font-size: 0.95rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(0,0,0,0.8); }
+        .testimonials { margin-top: 3rem; }
+        .testimonials h2 { font-size: 1.7rem; margin-bottom: 1.5rem; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+        .testimonial-card { border: 1px solid var(--border); border-radius: 1rem; padding: 1.25rem 1.5rem; background: #fff; box-shadow: 0 20px 35px rgba(0,0,0,0.05); }
+        .testimonial-quote { font-style: italic; margin-bottom: 0.9rem; }
+        .testimonial-author { text-transform: uppercase; letter-spacing: 0.25em; font-size: 0.7rem; color: rgba(0,0,0,0.65); }
+        .about-links { margin-top: 3rem; display: flex; flex-wrap: wrap; gap: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.78rem; }
+        .about-links a { border: 1px solid var(--text); border-radius: 999px; padding: 0.55rem 1.25rem; text-decoration: none; color: inherit; }
+        .about-links a:hover { background: var(--text); color: var(--bg); }
 
         footer { margin-top: 4rem; text-align: center; text-transform: uppercase; letter-spacing: 0.25em; font-size: 0.75rem; color: rgba(0,0,0,0.65); }
-        @media (max-width: 640px) { nav ul { display: none; } main { padding: 3rem 1.5rem 4rem; } }
+        @media (max-width: 640px) {
+            nav ul { display: none; }
+            main { padding: 3rem 1.5rem 4rem; }
+            .about-links { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
@@ -137,49 +81,58 @@
     </header>
 
     <main>
-        <p style="text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.75rem;">Santa Fe Office</p>
-        <h1>Santa Fe office for residential and commercial design.</h1>
-        <p style="max-width: 720px; color: rgba(0,0,0,0.7);">Creating sustainable, beautiful spaces that honor Santa Fe's architectural heritage while incorporating modern design principles for homeowners and business owners.</p>
+        <p class="eyebrow">About Mattéo Designs</p>
+        <h1>Who We Are</h1>
+        <p class="lede">Mattéo Designs has been in business for over 25 years. Our interiors are well suited to the urban lifestyle and modern design aesthetics of today. We focus on construction methodologies that marry traditional glamour with cutting edge design.</p>
+        <p class="lede">With projects located throughout the United States, we specialize in creating livable spaces that bring our clients’ vision to life from concept to completion.</p>
 
-        <div class="services">
-            <article class="service-card">
-                <span>Residential</span>
-                <h3>Residential Design</h3>
-                <p>Custom homes, kitchens, and bathrooms designed with psychology and understanding of how you live.</p>
+        <div class="about-pillars">
+            <article>
+                <h2>What We Do</h2>
+                <p>We work in both residential and commercial design. Whether it be a restaurant, a boutique hotel, a primary residence or a vacation home, we do it all.</p>
+                <p><strong>Our services include:</strong> Design Development, Space Planning, Lighting Design, Material Selection, FF&amp;E (Furniture, Fixtures &amp; Equipment) Selection, and Project Management.</p>
             </article>
-            <article class="service-card">
-                <span>Commercial</span>
-                <h3>Commercial Design</h3>
-                <p>Professional spaces that enhance your brand and create welcoming environments for clients.</p>
-            </article>
-            <article class="service-card">
-                <span>Sustainability</span>
-                <h3>LEED Certified Design</h3>
-                <p>LEED certified designer committed to eco-friendly materials and energy-efficient solutions.</p>
-            </article>
-            <article class="service-card">
-                <span>Development</span>
-                <h3>Real Estate Development</h3>
-                <p>Project consultation, historic renovation, construction management, and staging support.</p>
+            <article>
+                <h2>Our Philosophy</h2>
+                <p>We believe that Interior Design can change lives and that there is nothing more transformative than an artfully rendered space.</p>
+                <p>We focus on functional solutions to design challenges and we create interior spaces that have a powerful impact on the way our clients live their daily lives.</p>
             </article>
         </div>
 
-        <div class="highlight">
-            <img src="../../legacy/images/Vanderhoof%20Photos/Home%20Office.jpg" alt="Mattéo Designs vignette">
-            <div>
-                <h2>Client visit itinerary.</h2>
-                <p>Preview case studies, review finish samples, and explore mood boards tailored to your project. We outline timelines, budgets, and sustainable options during every visit.</p>
-                <ul style="margin-top: 1rem; color: rgba(0,0,0,0.75);">
-                    <li>Guided lookbook + case study review</li>
-                    <li>Material lab featuring eco-friendly finishes</li>
-                    <li>Project road-mapping &amp; budget ranges</li>
-                </ul>
+        <p class="tagline">Mattéo Designs interiors are well suited to the urban lifestyle that has become so intrinsic to the Interior Design landscape of today.</p>
+
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial-grid">
+                <article class="testimonial-card">
+                    <p class="testimonial-quote">“When I first bought this house earlier this year I wasn’t sure what to do. Fortunately on the initial inspection right after it closed Mattéo was there. I suggested he give me some ideas that blossomed into a full blown makeover and I couldn’t be happier. The house was aesthetic and nice to begin with but after the makeover it is what you’d call the ideal house for me. Anyone who sees it is just blown away. Needless to say I’m very pleased and would recommend Matt’s services to anyone.”</p>
+                    <p class="testimonial-author">Halsey W.</p>
+                </article>
+                <article class="testimonial-card">
+                    <p class="testimonial-quote">“We are blessed to have found Mattéo in Dec. 2015. Not only did Matteo deal with the contractor for us, he turned our nightmare project into a breathtakingly beautiful home. He is passionate about his work, a problem solver, diligent, and honest. His work is magazine-worthy, and then some. In fact, our home will be featured in a professional design publication in Los Angeles. That speaks volumes.”</p>
+                    <p class="testimonial-author">Dorothy O.</p>
+                </article>
+                <article class="testimonial-card">
+                    <p class="testimonial-quote">“Mr. Mattéo Bitetti, Please accept our sincere gratitude for our newly completed bathroom. We had a vision, but the results of your design surpassed our wildest, and most vivid imagination. Because the finished project looks so ideal, it’s difficult to find the words to adequately express our satisfaction.”</p>
+                    <p class="testimonial-author">Arfield &amp; Julia D.</p>
+                </article>
+                <article class="testimonial-card">
+                    <p class="testimonial-quote">“Mattéo Designs did an excellent job in redecorating my dental office. The result has been impressive, with my patients commenting on how wonderful the office now looks.”</p>
+                    <p class="testimonial-author">H.F.</p>
+                </article>
             </div>
-        </div>
+        </section>
 
+        <nav class="about-links" aria-label="Page shortcuts">
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="media.html">Media</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html#questionnaire">Free Consultation</a>
+        </nav>
 
-
-        <footer>Mattéo Designs · Schedule your tour</footer>
+        <footer>Mattéo Designs · Boutique interior studio</footer>
     </main>
 </body>
 </html>

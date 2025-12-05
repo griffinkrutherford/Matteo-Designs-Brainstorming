@@ -125,6 +125,60 @@
     box-shadow: 0 8px 15px rgba(0,0,0,0.08);
 }
 
+.chat-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+    padding: 0.85rem;
+    border-radius: 0.85rem;
+    background: var(--chat-surface);
+    border: 1px solid var(--chat-border);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.chat-actions button {
+    border: 1px solid var(--chat-border);
+    border-radius: 999px;
+    padding: 0.6rem 0.9rem;
+    background: var(--chat-surface-alt);
+    color: var(--chat-text);
+    font-family: inherit;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease, border 0.15s ease;
+}
+
+.chat-actions button:hover,
+.chat-actions button:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.chat-actions button:focus-visible {
+    outline: 2px solid var(--chat-launcher-bg);
+    outline-offset: 2px;
+}
+
+.chat-actions button[data-action="questionnaire"] {
+    background: var(--chat-launcher-bg);
+    color: var(--chat-launcher-text);
+    border-color: transparent;
+}
+
+.chat-actions button[data-action="schedule"] {
+    background: transparent;
+    color: var(--chat-launcher-bg);
+    border-color: currentColor;
+}
+
+.chat-actions button[data-action="contact"] {
+    background: var(--chat-surface-alt);
+    color: var(--chat-text);
+}
+
 .chat-message.user {
     background: var(--chat-launcher-bg);
     color: var(--chat-launcher-text);

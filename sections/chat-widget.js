@@ -124,6 +124,25 @@
         const form = panel.querySelector('.chat-input');
         const input = form.querySelector('input');
 
+        const scrollMessagesToBottom = () => {
+            messages.scrollTop = messages.scrollHeight;
+        };
+
+        const scheduleScroll = () => {
+            if (typeof requestAnimationFrame === 'function') {
+                requestAnimationFrame(scrollMessagesToBottom);
+            } else {
+                scrollMessagesToBottom();
+            }
+        };
+
+        if (typeof MutationObserver === 'function') {
+            const scrollObserver = new MutationObserver(() => {
+                scheduleScroll();
+            });
+            scrollObserver.observe(messages, { childList: true, subtree: true, characterData: true });
+        }
+
         const chatEndpoint = window.MATTEO_CHAT_ENDPOINT || (document.body && document.body.dataset && document.body.dataset.chatEndpoint) || '/api/chat';
         const leadEndpointDefault = window.MATTEO_LEAD_ENDPOINT || (document.body && document.body.dataset && document.body.dataset.leadEndpoint) || '/api/lead';
         const conversationHistory = [];
@@ -131,14 +150,14 @@
         function appendAssistantMessage(text) {
             const node = createMessage(text, 'assistant');
             messages.appendChild(node);
-            messages.scrollTop = messages.scrollHeight;
+            scheduleScroll();
             return node;
         }
 
         function appendUserMessage(text) {
             const node = createMessage(text, 'user');
             messages.appendChild(node);
-            messages.scrollTop = messages.scrollHeight;
+            scheduleScroll();
             return node;
         }
 
@@ -160,6 +179,7 @@
                 }
             });
             messages.appendChild(actions);
+            scheduleScroll();
         }
 
         function findKnowledgeResponse(message) {
@@ -194,7 +214,7 @@
                 appendAssistantMessage('Thank you! I just shared those details with Mattéo so the team can follow up.');
             });
             messages.appendChild(form);
-            messages.scrollTop = messages.scrollHeight;
+            scheduleScroll();
         }
 
         function notifyLead(payload) {
@@ -277,6 +297,7 @@
         launcher.addEventListener('click', () => {
             const isOpen = panel.classList.toggle('open');
             if (isOpen) {
+                scheduleScroll();
                 input.focus();
             }
         });
